@@ -1,0 +1,44 @@
+[
+  {
+    "postId": 1,
+    "from": "Meyri Carles",
+    "time": "1602131139130",
+    "img": ["static/img/profile/post/postImage.png"],
+    "author": "static/img/chat-author/t1.jpg",
+    "content": "Nam malesuada dolor tellus pretium amet was hendrerit facilisi  tempor quis enim sed ornare there suspendisse sed orci neque ac sed aliquet risus faucibus in pretium molestee.",
+    "like": 4,
+    "comment": [
+      {
+        "time": "1602131139130",
+        "from": "Alexendra Dhadio",
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      }
+    ]
+  },
+  {
+    "postId": 2,
+    "from": "Alexendra Dhadio",
+    "time": "1602131061491",
+    "img": [],
+    "author": "static/img/chat-author/t2.jpg",
+    "content": "Nam malesuada dolor tellus pretium amet was hendrerit facilisi  tempor quis enim sed ornare there suspendisse sed orci neque ac sed aliquet risus faucibus in pretium molestee.",
+    "like": 4,
+    "comment": []
+  },
+  {
+    "postId": 3,
+    "from": "Olivia Jon",
+    "time": "1602130144787",
+    "img": [
+      "static/img/profile/post/506.png",
+      "static/img/profile/post/907.png",
+      "static/img/profile/post/brightland_3744.png",
+      "static/img/profile/post/70.png",
+      "static/img/profile/post/165.png"
+    ],
+    "author": "static/img/chat-author/t3.jpg",
+    "content": "",
+    "like": 4,
+    "comment": []
+  }
+]

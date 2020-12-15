@@ -1,0 +1,170 @@
+{
+    "cardOne": [
+        {
+            "id": 1,
+            "title": "Technology Change the World",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled",
+            "img": "static/img/sampleCards/1.png"
+        },
+        {
+            "id": 2,
+            "title": "Power of Unity And Strength",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled",
+            "img": "static/img/sampleCards/9.png"
+        },
+        {
+            "id": 3,
+            "title": "A Success Story Entrepreneur",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled",
+            "img": "static/img/sampleCards/10.png"
+        },
+        {
+            "id": 4,
+            "title": "Important of Team Works",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled",
+            "img": "static/img/sampleCards/11.png"
+        }
+    ],
+    "cardTwo": [
+        {
+            "id": 1,
+            "title": "Creative Planning",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled and typesetting industry.",
+            "img": "static/img/icon/strategy.svg"
+        },
+        {
+            "id": 2,
+            "title": "Perfect Design",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled and typesetting industry.",
+            "img": "static/img/icon/paint.svg"
+        },
+        {
+            "id": 3,
+            "title": "Code Standard",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled and typesetting industry.",
+            "img": "static/img/icon/theme.svg"
+        },
+        {
+            "id": 4,
+            "title": "User Friendly",
+            "content": "Lorem Ipsum is simply dummy text of the printer took a galley of type and scrambled and typesetting industry.",
+            "img": "static/img/icon/protection.svg"
+        }
+    ],
+    "cardThree": [
+        {
+            "id": 1,
+            "title": "Perfect Design",
+            "content": "Lorem Ipsum is simply dummy text of the",
+            "img": "static/img/sampleCards/2.svg"
+        },
+        {
+            "id": 2,
+            "title": "Code Standard",
+            "content": "Lorem Ipsum is simply dummy text of the",
+            "img": "static/img/sampleCards/3.svg"
+        },
+        {
+            "id": 3,
+            "title": "Nice Environment ",
+            "content": "Lorem Ipsum is simply dummy text of the",
+            "img": "static/img/sampleCards/4.svg"
+        },
+        {
+            "id": 4,
+            "title": "User Friendly",
+            "content": "Lorem Ipsum is simply dummy text of the",
+            "img": "static/img/sampleCards/1.svg"
+        }
+    ],
+    "cardFive": [
+        {
+            "id": 1,
+            "title": "Advancer Places",
+            "content": "Lorem Ipsum is simply dummy text of the printing ",
+            "img": "static/img/sampleCards/7.png",
+            "auth": "static/img/chat-author/t1.jpg"
+        },
+        {
+            "id": 2,            
+            "title": "Latest Features of Apples Products",
+            "content": "Lorem Ipsum is simply dummy text of the printing ",
+            "img": "static/img/sampleCards/8.png",
+            "auth": "static/img/chat-author/t2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Best Resort Around the World",
+            "content": "Lorem Ipsum is simply dummy text of the printing ",
+            "img": "static/img/sampleCards/13.png",
+            "auth": "static/img/chat-author/t3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "How to find a Best Lawyers",
+            "content": "Lorem Ipsum is simply dummy text of the printing ",
+            "img": "static/img/sampleCards/2.png",
+            "auth": "static/img/chat-author/t4.jpg"
+        }
+    ],
+    "cardSix": [
+        {
+            "id": 1,
+            "title": "47",
+            "content": "Total tasks",
+            "img": "static/img/icon/1.svg" ,
+            "className": "primary"           
+        },
+        {
+            "id": 2,            
+            "title": "34",
+            "content": "Tasks completed",
+            "img": "static/img/icon/2.svg",
+            "className": "secondary"
+        },
+        {
+            "id": 3,
+            "title": "$27,500",
+            "content": "Spendings",
+            "img": "static/img/icon/4.svg",
+            "className": "success"
+        },
+        {
+            "id": 4,
+            "title": "250",
+            "content": "Hours spent",
+            "img": "static/img/icon/3.svg",
+            "className": "warning"
+        }
+    ],
+    "cardSeven": [
+        {
+            "id": 1,
+            "title": "Adobe CC",
+            "installed": true,
+            "content": "Lorem Ipsum is simply dummy text of the and the",
+            "img": "static/img/icon/adobe.svg"
+        },
+        {
+            "id": 2,            
+            "title": "Slack",
+            "installed": false,
+            "content": "Lorem Ipsum is simply dummy text of the and the",
+            "img": "static/img/icon/Slack.svg"
+        },
+        {
+            "id": 3,
+            "title": "Trello",
+            "installed": true,
+            "content": "Lorem Ipsum is simply dummy text of the and the",
+            "img": "static/img/icon/iconfinder_trello_2317760.svg"
+        },
+        {
+            "id": 4,
+            "title": "Whatspp",
+            "installed": false,
+            "content": "Lorem Ipsum is simply dummy text of the and the",
+            "img": "static/img/icon/flat.svg"
+        }
+    ]
+}

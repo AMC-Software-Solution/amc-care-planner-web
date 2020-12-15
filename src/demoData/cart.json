@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "Montes Scelerisque",
+    "size": "Large",
+    "color": "Brown",
+    "price": "248.66",
+    "quantity": "1",
+    "img": "static/img/products/1.png",
+    "total": "248.66"
+  },
+  {
+    "id": "2",
+    "name": "Leo Sodales Varius",
+    "size": "Small",
+    "color": "Golden",
+    "price": "240",
+    "quantity": "1",
+    "img": "static/img/products/2.png",
+    "total": "240"
+  }
+]

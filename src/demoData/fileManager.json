@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "name": "Design",
+        "path": "Design",        
+        "className": "active",
+        "file": [
+            {
+                "id": 1,
+                "name": "one",
+                "type": "png",
+                "size": "1000"
+            }
+        ],
+        "folder": [
+            {
+                "id": 1,
+                "name": "Newfolder",
+                "path": "Design/Newfolder",
+                "className": "",
+                "folder": [],
+                "file": [
+                    {
+                        "id": 1,
+                        "name": "one",
+                        "type": "png",
+                        "size": "1000"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Newfolder2",
+                "path": "Design/Newfolder2",
+                "className": "",
+                "folder": [],
+                "file": []
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Prototypes",
+        "path": "Prototypes",
+        "className": "",
+        "file": [
+            {
+                "id": 1,
+                "name": "hello",
+                "type": "svg",
+                "size": "10000"
+            }
+        ],
+        "folder": [
+            {
+                "id": 1,
+                "name": "Newfolder",
+                "path": "Prototypes/Newfolder",
+                "className": "",
+                "folder": [],
+                "file": [
+                    {
+                        "id": 1,
+                        "name": "one",
+                        "type": "png",
+                        "size": "1000"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Newfolder2",
+                "path": "Prototypes/Newfolder2",
+                "className": "",
+                "folder": [
+                    {
+                        "id": 1,
+                        "name": "Newfolder",
+                        "path": "Prototypes/Newfolder/Newfolder",
+                        "className": "",
+                        "folder": [],
+                        "file": [
+                            {
+                                "id": 1,
+                                "name": "one",
+                                "type": "png",
+                                "size": "1000"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Newfolder2",
+                        "path": "Prototypes/Newfolder2/Newfolder2",
+                        "className": "",
+                        "folder": [],
+                        "file": []
+                    }
+                ],
+                "file": []
+            }
+        ]
+    }
+]

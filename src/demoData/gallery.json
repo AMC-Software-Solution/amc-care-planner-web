@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Snow Covered Mountain",
+    "category": "Presentation",
+    "img": "static/img/gallery/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Snow Covered Mountain",
+    "category": "webDesign",
+    "img": "static/img/gallery/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Snow Covered Mountain",
+    "category": "uiDesign",
+    "img": "static/img/gallery/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Snow Covered Mountain",
+    "category": "wireframe",
+    "img": "static/img/gallery/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Snow Covered Mountain",
+    "category": "Presentation",
+    "img": "static/img/gallery/5.png"
+  },
+  {
+    "id": 6,
+    "name": "Snow Covered Mountain",
+    "category": "wireframe",
+    "img": "static/img/gallery/6.png"
+  },
+  {
+    "id": 7,
+    "name": "Snow Covered Mountain",
+    "category": "Presentation",
+    "img": "static/img/gallery/7.png"
+  },
+  {
+    "id": 8,
+    "name": "Snow Covered Mountain",
+    "category": "webDesign",
+    "img": "static/img/gallery/8.png"
+  },
+  {
+    "id": 9,
+    "name": "Snow Covered Mountain",
+    "category": "Presentation",
+    "img": "static/img/gallery/9.png"
+  },
+  {
+    "id": 10,
+    "name": "Snow Covered Mountain",
+    "category": "uiDesign",
+    "img": "static/img/gallery/10.png"
+  },
+  {
+    "id": 11,
+    "name": "Snow Covered Mountain",
+    "category": "Presentation",
+    "img": "static/img/gallery/11.png"
+  },
+  {
+    "id": 12,
+    "name": "Snow Covered Mountain",
+    "category": "webDesign",
+    "img": "static/img/gallery/12.png"
+  }
+]

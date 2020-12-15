@@ -1,0 +1,37 @@
+[
+  {
+    "key": 1,
+    "name": "Meyri Carles",
+    "designation": "UI Designer",
+    "status": true,
+    "img": "static/img/chat-author/t1.jpg"
+  },
+  {
+    "key": 2,
+    "name": "Shreyu Neu",
+    "designation": "Product Designer",
+    "status": false,
+    "img": "static/img/chat-author/t2.jpg"
+  },
+  {
+    "key": 3,
+    "name": "Domnic Harris",
+    "designation": "Executive Assistant",
+    "status": false,
+    "img": "static/img/chat-author/t3.jpg"
+  },
+  {
+    "key": 4,
+    "name": "Khalid Hasan",
+    "designation": "UI Director",
+    "status": false,
+    "img": "static/img/chat-author/t4.jpg"
+  },
+  {
+    "key": 5,
+    "name": "Tuhin Molla",
+    "designation": "System Administrator",
+    "status": false,
+    "img": "static/img/chat-author/t5.png"
+  }
+]

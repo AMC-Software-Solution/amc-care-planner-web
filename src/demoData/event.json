@@ -1,0 +1,49 @@
+[
+    
+    {
+        "title": "Family Events",
+        "date": ["10/12/2020", "10/12/2020"],
+        "id": 1,
+        "label": "success",
+        "time": ["2:00 pm", "3:00 pm"],
+        "type": "event",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+        "title": "Product Launch",
+        "date": ["10/12/2020", "10/14/2020"],
+        "id": 2,
+        "label": "primary",
+        "time": ["4:00 pm", "5:00 pm"],
+        "type": "reminder",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+        "title": "Team Meeting",
+        "id": 3,
+        "date": ["10/10/2020", "10/10/2020"],
+        "label": "secondary",
+        "time": ["2:00 pm", "3:00 pm"],
+        "type": "event",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+        "title": "UI/UX Tasks",
+        "id": 4,
+        "date": ["09/12/2020", "09/12/2020"],
+        "label": "info",
+        "time": ["9:00 am", "3:00 pm"],
+        "type": "event",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    },
+    {
+        "title": "Project Update",
+        "id": 5,
+        "date": ["10/13/2020", "10/13/2020"],
+        "label": "warning",
+        "time": ["12:00 pm", "2:30 pm"],
+        "type": "event",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
+    }
+    
+]

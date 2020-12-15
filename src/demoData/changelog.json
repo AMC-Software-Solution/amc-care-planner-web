@@ -1,0 +1,152 @@
+[   {
+        "id": 12,
+        "date": "Dec 06, 2020",
+        "version":"2.1.0",
+        "new":[
+            "CRM Dashboard Demo",
+            "Sales Dashboard Demo",
+            "4 New Users Card Styles",
+            "Testimonials Page",
+            "13+ Banners Styles"            
+        ],
+        "fixed": [
+            "Style issue"
+        ],
+        "updated": [
+            "Update Timeline In components"            
+        ]
+    },
+    {
+        "id": 11,
+        "date": "Nov 12, 2020",
+        "version":"2.0.0",
+        "new":[
+            "New 8 card styles",
+            "Contact App 'add new contact' page",
+            "Contact App grid style",
+            "Editor Page",
+            "Wizard Page",
+            "Widgets Page",
+            "Coming Soon Page",
+            "Changelog Page"
+        ],
+        "fixed": [
+            "Content app button style issue"
+        ],
+        "updated": [
+            "Cards",
+            "Contact App",
+            "Menu Item Rearrange",
+            "Update note app with drag & drop"
+        ]
+    },
+    {
+        "id": 10,
+        "date": "Oct 29, 2020",
+        "version":"1.8.0",
+        "new":["StrikingDash Boilerplate"],
+        "fixed": false,
+        "updated": false
+    },
+    {
+        "id": 9,
+        "date": "Oct 28, 2020",
+        "version":"1.7.0",
+        "new":["Firebase Authentication", "Auth0 Authentication"],
+        "fixed": false,
+        "updated": false
+    },
+    {
+        "id": 8,
+        "date": "Oct 26, 2020",
+        "version":"1.6.0",
+        "new":["Blank Page"],
+        "fixed": ["Console Error"],
+        "updated": false
+    },
+    {
+        "id": 7,
+        "date": "Oct 20, 2020",
+        "version":"1.5.0",
+        "new":["Calendar App"],
+        "fixed": false,
+        "updated": false
+    },
+    {
+        "id": 6,
+        "date": "Oct 19, 2020",
+        "version":"1.4.1",
+        "new":false,
+        "fixed": false,
+        "updated": [
+            "Update Top Navbar"
+        ]
+    },
+    {
+        "id": 5,
+        "date": "Oct 11, 2020",
+        "version":"1.4.0",
+        "new":[
+            "Social App",
+            "Top Navbar Settings"
+        ],
+        "fixed": 
+        [
+            "image error from chat app"
+        ],
+        "updated": [
+            "Chat app emoji"
+        ]
+      },
+    {
+    "id": 4,
+    "date": "Oct 06, 2020",
+    "version":"1.3.0",
+    "new":false,
+    "fixed": 
+    [
+        "Fixed Css Issues"
+    ],
+    "updated": ["Optimized Loading time"]
+  },
+    {
+      "id": 3,
+      "date": "Oct 02, 2020",
+      "version":"1.2.0",
+      "new": 
+      [
+          "To-do App",
+          "Note App",
+          "Contact App",
+          "Table Dragging Support"          
+      ],
+      "fixed": 
+      [
+          "Fixed Issues"
+      ],
+      "updated": false
+    },    
+    {
+        "id": 2,
+        "date": "Sep 30, 2020",
+        "version":"1.1.0",
+        "new": 
+        [
+            "Added RTL Support"
+        ],
+        "fixed":false,
+        "updated":false
+      },
+      {
+        "id": 1,
+        "date": "Sep 27, 2020",
+        "version":"1.0.0",
+        "new": 
+        [
+            "Initial Release"
+        ],
+        "fixed": false,
+        "updated": false
+      }
+  ]
+  
