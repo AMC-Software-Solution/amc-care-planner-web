@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import FeatherIcon from 'feather-icons-react';
 import { InfoWraper, NavAuth, UserDropDwon } from './auth-info-style';
 import Message from './message';
@@ -15,6 +15,8 @@ import Heading from '../../heading/heading';
 
 const AuthInfo = () => {
   const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth);
+  const {firstName, lastName, imageUrl} = auth.login;
   const [state, setState] = useState({
     flag: 'english',
   });
@@ -31,7 +33,7 @@ const AuthInfo = () => {
         <figure className="user-dropdwon__info">
           <img src={require('../../../static/img/avatar/chat-auth.png')} alt="" />
           <figcaption>
-            <Heading as="h5">Abdullah Bin Talha</Heading>
+            <Heading as="h5">{firstName} {lastName}</Heading>
             <p>UI Expert</p>
           </figcaption>
         </figure>
@@ -115,7 +117,7 @@ const AuthInfo = () => {
       <div className="nav-author">
         <Popover placement="bottomRight" content={userContent} action="click">
           <Link to="#" className="head-example">
-            <Avatar src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png" />
+            <Avatar src={imageUrl} />
           </Link>
         </Popover>
       </div>
