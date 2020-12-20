@@ -47,7 +47,7 @@ const login = (username, password) => (dispatch) => {
   return DataService.login(username, password).then(
     (data) => {
        return DataService.getAccount().then(  (success) =>{
-         success.data.imageUrl = 'https://img.apmcdn.org/12ed7a29f3f7e1f57770a5a1c4d001986ec24fd4/portrait/6a53a7-20110607-farah-mohamed-beledi.jpg';
+         //success.data.imageUrl = 'https://img.apmcdn.org/12ed7a29f3f7e1f57770a5a1c4d001986ec24fd4/portrait/6a53a7-20110607-farah-mohamed-beledi.jpg';
          dispatch(loginSuccess(success.data));
          return Promise.resolve();
        },
