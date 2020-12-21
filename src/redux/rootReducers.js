@@ -23,8 +23,6 @@ import Profile from './profile/reducers';
 import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
 
-import { employeeReducer } from './employees/reducers';
-
 const rootReducers = combineReducers({
   themeUsers: themeUsersReducer,
   headerSearchData: headerSearchReducer,
@@ -50,7 +48,6 @@ const rootReducers = combineReducers({
   ChangeLayoutMode,
   chartContent: chartContentReducer,
   cart: cartData,
-  employees: employeeReducer,
   Todo,
   Note,
   Contact,
