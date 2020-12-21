@@ -24,6 +24,8 @@ const ContactAddNew = lazy(() => import('../../container/contact/AddNew'));
 const Calendar = lazy(() => import('../../container/calendar/Calendar'));
 const FileManager = lazy(() => import('../../container/fileManager/FileManager'));
 
+const Employees = lazy(() => import('./employee'));
+
 const Admin = () => {
   const { path } = useRouteMatch();
 
@@ -43,6 +45,7 @@ const Admin = () => {
         <Route path={`${path}/users`} component={Users} />
         <Route path={`${path}/gallery`} component={Gallery} />
         <Route path={`${path}/project`} component={Projects} />
+        <Route path={`${path}/employee`} component={Employees} />
         <Route path={`${path}/calendar`} component={Calendars} />
         <Route path={`${path}/app/fileManager`} component={FileManager} />
         <Route path={`${path}/email/:page`} component={Inbox} />
