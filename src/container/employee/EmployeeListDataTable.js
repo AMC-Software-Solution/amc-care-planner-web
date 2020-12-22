@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Row, Col } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
@@ -9,8 +10,10 @@ import { Main, CardToolbox } from '../styled';
 import Heading from '../../components/heading/heading';
 import { AutoComplete } from '../../components/autoComplete/autoComplete';
 import { Button } from '../../components/buttons/buttons';
+import { getAllEmployees } from '../../redux/employees/actionCreator';
 
 const EmployeeList = () => {
+  const dispatch = useDispatch();
   const { searchData, employees } = useSelector(state => {
     return {
       searchData: state.headerSearchData,
@@ -18,11 +21,20 @@ const EmployeeList = () => {
     };
   });
 
+
+
   const [state, setState] = useState({
     notData: searchData,
     selectedRowKeys: 0,
     selectedRows: 0,
   });
+
+  
+  useEffect(() => {
+
+      dispatch(getAllEmployees());
+    
+  },[]);
 
   const { notData } = state;
 
@@ -35,7 +47,7 @@ const EmployeeList = () => {
   };
 
   const employeesTableData = [];
-
+if (employees) {
   employees.map(employee => {
     const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = employee;
     return employeesTableData.push({
@@ -85,6 +97,7 @@ const EmployeeList = () => {
       ),
     });
   });
+}
 
   return (
     <>

@@ -16,7 +16,7 @@ const EmployeeListTable = () => {
   });
 
   const employeesTableData = [];
-
+if (employees) {
   employees.map(employee => {
     const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = employee;
     return employeesTableData.push({
@@ -66,6 +66,7 @@ const EmployeeListTable = () => {
       ),
     });
   });
+}
 
   const employeesTableColumns = [
     {

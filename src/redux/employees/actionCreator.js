@@ -1,5 +1,6 @@
 import actions from './actions';
 import initialState from '../../demoData/employees.json';
+import {fetchAllEmployees} from '../../config/dataService/employeeDataService';
 
 const {
   singleEmployeeBegin,
@@ -63,4 +64,17 @@ const sortingEmployeeByCountry = sortBy => {
   };
 };
 
-export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry };
+
+const getAllEmployees = () => {
+    return async dispatch => {
+        try {
+          const response = await fetchAllEmployees();
+          dispatch(filterEmployeeSuccess(response.data));
+        } catch (err) {
+          dispatch(filterEmployeeErr(err.toString()));
+        }  
+      };
+    };
+    
+
+export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry, getAllEmployees };

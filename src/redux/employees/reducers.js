@@ -1,5 +1,5 @@
 import actions from './actions';
-import staticData from '../../demoData/employees.json';
+//import staticData from '../../demoData/employees.json';
 
 const {
   SINGLE_EMPLOYEE_BEGIN,
@@ -16,7 +16,7 @@ const {
 } = actions;
 
 const initialStateFilter = {
-  data: staticData,
+  data: null,
   loading: false,
   error: null,
 };
@@ -64,7 +64,7 @@ const employeeReducer = (state = initialStateFilter, action) => {
 };
 
 const initialState = {
-  data: staticData,
+  data: null,
   loading: false,
   error: null,
 };
