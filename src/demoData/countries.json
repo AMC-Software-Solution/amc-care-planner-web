@@ -1,0 +1,18 @@
+[ {
+  "id" : 1,
+  "countryName" : "Somalia",
+  "countryIsoCode" : "SO",
+  "countryFlagUrl" : "",
+  "countryCallingCode" : "252",
+  "countryTelDigitLength" : 10,
+  "lastUpdatedDate" : "2020-12-23T00:00:00+03:00"
+}, {
+  "id" : 2,
+  "countryName" : "United Kingdom",
+  "countryIsoCode" : "UK",
+  "countryFlagUrl" : "",
+  "countryCallingCode" : "44",
+  "countryTelDigitLength" : 11,
+  "lastUpdatedDate" : "2020-12-23T00:00:00+03:00"
+} ]
+

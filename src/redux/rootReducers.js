@@ -23,6 +23,8 @@ import Profile from './profile/reducers';
 import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
 import { employeeReducer, SingleEmployeeReducer } from './employees/reducers';
+import { countryReducer, SingleCountryReducer } from './countries/reducers';
+
 
 const rootReducers = combineReducers({
   themeUsers: themeUsersReducer,
@@ -51,6 +53,8 @@ const rootReducers = combineReducers({
   cart: cartData,
   employees: employeeReducer,
   employee: SingleEmployeeReducer,
+  countries: countryReducer,
+  country: SingleCountryReducer,
   Todo,
   Note,
   Contact,
