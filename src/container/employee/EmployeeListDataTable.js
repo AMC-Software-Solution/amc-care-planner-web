@@ -83,8 +83,8 @@ if (employees) {
       action: (
         <div className="table-actions">
           <>
-            <Button className="btn-icon" type="primary" to="#" shape="circle">
-              <FeatherIcon icon="eye" size={16} />
+            <Button className="btn-icon" type="primary" shape="circle">
+               <Link to="/admin/employee/employeeProfile/1"><FeatherIcon icon="eye" size={16} /></Link>
             </Button>
             <Button className="btn-icon" type="info" to="#" shape="circle">
               <FeatherIcon icon="edit" size={16} />

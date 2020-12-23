@@ -16,7 +16,7 @@ const GridCard = ({ value }) => {
         <div className="employee-top">
           <div className="employee-title">
             <h1>
-              <Link to={`/admin/employee/employeeDetails/${id}`}>{title}</Link>
+              <Link to={`/admin/employee/employeeProfile/${id}`}>{title}</Link>
               <Tag className={status}>{status}</Tag>
             </h1>
             <Dropdown

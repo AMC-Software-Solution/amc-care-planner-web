@@ -44,7 +44,7 @@ const EmployeeLists = () => {
         employee: (
           <EmployeeListTitle>
             <Heading as="h4">
-              <Link to={`/admin/employee/employeeDetails/${id}`}>{title}</Link>
+              <Link to={`/admin/employee/employeeProfile/${id}`}>{title}</Link>
             </Heading>
 
             <p>{category}</p>

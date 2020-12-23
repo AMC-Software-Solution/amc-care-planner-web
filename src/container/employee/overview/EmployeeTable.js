@@ -7,6 +7,7 @@ import { TableWrapper } from '../../styled';
 import Heading from '../../../components/heading/heading';
 import { Button } from '../../../components/buttons/buttons';
 import { Cards } from '../../../components/cards/frame/cards-frame';
+import { Link } from 'react-router-dom';
 
 const EmployeeListTable = () => {
   const { employees } = useSelector(state => {
@@ -52,8 +53,9 @@ if (employees) {
       action: (
         <div className="table-actions">
           <>
-            <Button className="btn-icon" type="primary" to="#" shape="circle">
-              <FeatherIcon icon="eye" size={16} />
+            <Button className="btn-icon" type="primary"   shape="circle">
+            <Link to="/admin/employee/employeeProfile/1"><FeatherIcon icon="eye" size={16} /></Link>
+              
             </Button>
             <Button className="btn-icon" type="info" to="#" shape="circle">
               <FeatherIcon icon="edit" size={16} />
