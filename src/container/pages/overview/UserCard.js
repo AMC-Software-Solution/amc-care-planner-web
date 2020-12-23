@@ -31,10 +31,11 @@ const UserCards = ({ user }) => {
                 Message
               </Button>
               <Button size="default" type="white">
-                <FeatherIcon icon="user-plus" size={14} />
-                Following
+                <FeatherIcon icon="smile" size={14} />
+                Favourite
               </Button>
             </div>
+            {/*
             <div className="card__info">
               <Row gutter={15}>
                 <Col xs={8}>
@@ -63,6 +64,7 @@ const UserCards = ({ user }) => {
                 </Col>
               </Row>
             </div>
+            */}
           </figcaption>
         </Cards>
       </div>

@@ -25,17 +25,7 @@ const EmployeeProfile = () => {
       <PageHeader
         ghost
         title="Employee Profile"
-        buttons={[
-          <div key="1" className="page-header-actions">
-            <CalendarButtonPageHeader />
-            <ExportButtonPageHeader />
-            <ShareButtonPageHeader />
-            <Button size="small" type="primary">
-              <FeatherIcon icon="plus" size={14} />
-              Add New
-            </Button>
-          </div>,
-        ]}
+        height="20px"
       />
 
       <Main>
@@ -72,7 +62,6 @@ const EmployeeProfile = () => {
                 }
               >
                 <div className="coverWrapper">
-                  <CoverSection />
                   <nav className="profileTab-menu">
                     <ul>
                       <li>
