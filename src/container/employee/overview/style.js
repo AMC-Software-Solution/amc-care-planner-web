@@ -139,6 +139,7 @@ const SettingWrapper = Styled.div`
         position: relative;
         z-index: 1;
         margin-bottom: 25px;
+        margin-top: 15px;
         background-color: #fff;
         border-radius: 0 0 10px 10px;
         nav{

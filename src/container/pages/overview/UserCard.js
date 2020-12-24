@@ -12,31 +12,55 @@ const UserCards = ({ user }) => {
   const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = user;
   return (
     <UserCard>
-      <div className="card user-card">
-        <Cards headless>
-          <figure>
-            <img src={photoUrl} alt="" />
-          </figure>
-          <figcaption>
+      <div className="card user-card" >
+      <Row gutter="10" > 
+           <Col >
+                <Cards headless>
+                  <figure>
+                    <img src={photoUrl} alt="" />
+                  </figure>
+                  <figcaption>
+                    <div className="card__content">
+                      <Heading className="card__name"  as="h6">
+                        <Link to="#">{title} {firstName} {middleInitial} {lastName}</Link>
+                      </Heading>
+                    </div>
+                    </figcaption>
+                </Cards>
+           </Col>
+           <Col>
+            <Cards headless>
             <div className="card__content">
-              <Heading className="card__name"  as="h6">
-                <Link to="#">{title} {firstName} {middleInitial} {lastName}</Link>
-              </Heading>
-              <p className="card__designation">Preferred Name: <b>{preferredName}</b></p>
-              <p className="card__designation">Employee ID : <b>{id}</b></p>
-              <p className="card__designation">Gender : <b>{gender}</b></p>
-              <p className="card__designation">Date of Birth : <b>{dateOfBirth}</b></p>
-              <p className="card__designation">National Insurance #:<b>{nationalInsuranceNumber}</b></p>
-              <p className="card__designation">Contract Type :  <b>{employeeContractType}</b></p>
-              <p className="card__designation">PIN Code : <b>{pinCode}</b></p>
-              <p className="card__designation">Transport Mode : <b>{transportMode}</b></p>
-              <p className="card__designation">Acrued Holiday Hours : <b>{acruedHolidayHours}</b></p>
-              <p className="card__designation">Client ID : <b>{clientId}</b></p>
-              <p className="card__designation">User ID : <b>{userId}</b></p>
-              <p className="card__designation">Joining Date : <b>{lastUpdatedDate}</b></p>
+                <p className="card__designation">Preferred Name: <b>{preferredName}</b></p>
+                <p className="card__designation">Employee ID : <b>{id}</b></p>
+                <p className="card__designation">Gender : <b>{gender}</b></p>
+                <p className="card__designation">Date of Birth : <b>{dateOfBirth}</b></p>
+                <p className="card__designation">National Insurance #:<b>{nationalInsuranceNumber}</b></p>
+                <p className="card__designation">Contract Type :  <b>{employeeContractType}</b></p>
             </div>
-
-            <div className="card__actions">
+        </Cards>
+        </Col>
+        <Col>
+        <Cards headless>
+            <div className="card__content">
+                <p className="card__designation">PIN Code : <b>{pinCode}</b></p>
+                <p className="card__designation">Transport Mode : <b>{transportMode}</b></p>
+                <p className="card__designation">Acrued Holiday Hours : <b>{acruedHolidayHours}</b></p>
+                <p className="card__designation">Client ID : <b>{clientId}</b></p>
+                <p className="card__designation">User ID : <b>{userId}</b></p>
+                <p className="card__designation">Joining Date : <b>{lastUpdatedDate}</b></p>
+            </div>
+  
+        </Cards>
+        </Col>
+        <Col  >
+        <Cards headless>
+         <div className="card__content">
+            <p className="card__designation">Email : <b>{email}</b></p>
+            <p className="card__designation">Address : <b>{address}</b></p>
+            <p className="card__designation"> <b> {county} {postCode}</b></p>
+          </div>
+          <div className="card__actions">
               <Button size="default" type="white">
                 <FeatherIcon icon="mail" size={14} />
                 Message
@@ -46,6 +70,10 @@ const UserCards = ({ user }) => {
                 Favourite
               </Button>
             </div>
+  
+        </Cards>
+        </Col>
+        </Row>
             {/*
             <div className="card__info">
               <Row gutter={15}>
@@ -76,8 +104,7 @@ const UserCards = ({ user }) => {
               </Row>
             </div>
             */}
-          </figcaption>
-        </Cards>
+       
       </div>
     </UserCard>
   );

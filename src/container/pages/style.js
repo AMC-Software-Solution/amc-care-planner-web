@@ -240,6 +240,7 @@ const UserTableStyleWrapper = Styled.nav`
 
 const UserCard = Styled.div`
   text-align: center;
+  margin-top:15px;
   .user-card{
     &.theme-list{
       .ant-card-body{

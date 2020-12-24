@@ -39,15 +39,9 @@ const EmployeeProfile = () => {
 
   return (
     <>
-      <PageHeader
-        ghost
-        title="Employee Profile"
-        height="20px"
-      />
-
       <Main>
-        <Row gutter={25}>
-          <Col xxl={6} lg={8} md={10} xs={24}>
+      <Row >
+          <Col >
             <Suspense
               fallback={
                 <Cards headless>
@@ -59,25 +53,11 @@ const EmployeeProfile = () => {
               { employee ? 
                <UserCards user={employee} /> : <div></div>
               }
-            
-     
-     
-           
-            </Suspense>
-            <Suspense
-              fallback={
-                <Cards headless>
-                  <Skeleton active paragraph={{ rows: 10 }} />
-                </Cards>
-              }
-            >
-               { employee ? 
-               <UserBio  user={employee} /> : <div></div>
-              }
-             
             </Suspense>
           </Col>
-          <Col xxl={18} lg={16} md={14} xs={24}>
+        </Row>
+        <Row >
+        <Col >
             <SettingWrapper>
               <Suspense
                 fallback={
@@ -86,17 +66,39 @@ const EmployeeProfile = () => {
                   </Cards>
                 }
               >
+
                 <div className="coverWrapper">
                   <nav className="profileTab-menu">
                     <ul>
                       <li>
-                        <NavLink to={`${path}/overview`}>Overview</NavLink>
+                        <NavLink to={`${path}/general`}>General</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/timeline`}>Timeline</NavLink>
+                        <NavLink to={`${path}/tasks`}>Tasks</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/activity`}>Activity</NavLink>
+                        <NavLink to={`${path}/locations`}>Location</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/holidays`}>Holidays</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/documents`}>Documents</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/timesheet`}>Timesheet</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/communications`}>Communications</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/notifications`}>Notifications</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/accesslogs`}>Access Logs</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={`${path}/devices`}>Devices</NavLink>
                       </li>
                     </ul>
                   </nav>
@@ -110,9 +112,20 @@ const EmployeeProfile = () => {
                     </Cards>
                   }
                 >
-                  <Route exact path={`${path}/overview`} component={Overview} />
-                  <Route path={`${path}/timeline`} component={Timeline} />
-                  <Route path={`${path}/activity`} component={Activity} />
+                  <Route exact path={`${path}/general`} component={Overview} />
+                  <Route path={`${path}/tasks`} component={Timeline} />
+                  <Route path={`${path}/locations`} component={Activity} />
+
+                  <Route exact path={`${path}/holidays`} component={Overview} />
+                  <Route path={`${path}/documents`} component={Timeline} />
+                  <Route path={`${path}/timesheet`} component={Activity} />
+
+                  <Route exact path={`${path}/communications`} component={Overview} />
+                  <Route path={`${path}/notifications`} component={Timeline} />
+                  <Route path={`${path}/accesslogs`} component={Activity} />
+
+                  <Route path={`${path}/devices`} component={Activity} />
+
                 </Suspense>
               </Switch>
             </SettingWrapper>
