@@ -6,7 +6,9 @@ import { UserBioBox } from './style';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 import { Button } from '../../../components/buttons/buttons';
 
-const UserBio = () => {
+const UserBio = ({ user }) => {
+  const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = user;
+
   return (
     <UserBioBox>
       <Cards headless>
@@ -14,16 +16,14 @@ const UserBio = () => {
           <h5 className="user-info__title">Contact Info</h5>
           <ul className="user-info__contact">
             <li>
-              <FeatherIcon icon="mail" size={14} /> <span>Clayton@example.com</span>
+              <FeatherIcon icon="mail" size={14} /> <span>{email}</span>
             </li>
             <li>
-              <FeatherIcon icon="phone" size={14} /> <span>+44 (0161) 347 8854</span>
-            </li>
-            <li>
-              <FeatherIcon icon="globe" size={14} /> <span>www.example.com</span>
+              <FeatherIcon icon="map-pin" size={14} /> <span> {address} {county} {postCode}</span>
             </li>
           </ul>
         </address>
+        {/*
         <article className="user-info">
           <h5 className="user-info__title">User Bio</h5>
           <p>
@@ -31,6 +31,7 @@ const UserBio = () => {
             sed orci neque ac sed aliquet risus faucibus in pretium molestie nisl tempor quis odio habitant.
           </p>
         </article>
+        
         <div className="user-info">
           <h5 className="user-info__title">Skills</h5>
           <div className="user-info__skills">
@@ -51,6 +52,7 @@ const UserBio = () => {
             </Button>
           </div>
         </div>
+        */}
       </Cards>
     </UserBioBox>
   );

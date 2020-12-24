@@ -1,7 +1,7 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Row, Col, Skeleton } from 'antd';
 import FeatherIcon from 'feather-icons-react';
-import { NavLink, Switch, Route, useRouteMatch } from 'react-router-dom';
+import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 import { SettingWrapper } from './overview/style';
 import { PageHeader } from '../../components/page-headers/page-headers';
 import { Main } from '../styled';
@@ -11,15 +11,32 @@ import { ShareButtonPageHeader } from '../../components/buttons/share-button/sha
 import { ExportButtonPageHeader } from '../../components/buttons/export-button/export-button';
 import { CalendarButtonPageHeader } from '../../components/buttons/calendar-button/calendar-button';
 
+
+import { useSelector, useDispatch } from 'react-redux';
+
 const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const CoverSection = lazy(() => import('./overview/CoverSection'));
 const UserBio = lazy(() => import('./overview/UserBio'));
 const Overview = lazy(() => import('./overview/Overview'));
 const Timeline = lazy(() => import('./overview/Timeline'));
 const Activity = lazy(() => import('./overview/Activity'));
+import { getSingleEmployee } from '../../redux/employees/actionCreator';
 
 const EmployeeProfile = () => {
+  const { id } = useParams();
   const { path } = useRouteMatch();
+
+  const dispatch = useDispatch();
+  const { employee } = useSelector(state => {
+    return {
+      employee: state.employee.data,
+    };
+  });
+
+  useEffect(() => {
+    dispatch(getSingleEmployee(id));
+},[]);
+
   return (
     <>
       <PageHeader
@@ -37,10 +54,15 @@ const EmployeeProfile = () => {
                   <Skeleton avatar active paragraph={{ rows: 3 }} />
                 </Cards>
               }
-            >
-              <UserCards
-                user={{ name: 'Duran Clyton', designation: 'UI/UX Designer', img: 'static/img/users/1.png' }}
-              />
+            > 
+              
+              { employee ? 
+               <UserCards user={employee} /> : <div></div>
+              }
+            
+     
+     
+           
             </Suspense>
             <Suspense
               fallback={
@@ -49,7 +71,10 @@ const EmployeeProfile = () => {
                 </Cards>
               }
             >
-              <UserBio />
+               { employee ? 
+               <UserBio  user={employee} /> : <div></div>
+              }
+             
             </Suspense>
           </Col>
           <Col xxl={18} lg={16} md={14} xs={24}>

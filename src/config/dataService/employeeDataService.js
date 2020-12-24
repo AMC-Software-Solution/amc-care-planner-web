@@ -92,6 +92,11 @@ const fetchAllEmployees = () => {
   return axios.get(API_URL + "/v1/get_employees_by_client_id",header);
 }
 
+const fetchSingleEmployee = (id) => {
+  let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
+  return axios.get(API_URL + `/v1/get_employee_by_client_id/${id}`,header);
+}
+
 export  {
-  fetchAllEmployees
+  fetchAllEmployees, fetchSingleEmployee
 };

@@ -484,7 +484,8 @@ const UserCard = Styled.div`
     }
     .card__designation{
       font-size: 13px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
+      text-align: left;
       color: ${({ theme }) => theme['light-color']};
     }
     .card__social{

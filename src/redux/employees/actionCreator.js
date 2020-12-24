@@ -1,6 +1,6 @@
 import actions from './actions';
-import initialState from '../../demoData/employees.json';
-import {fetchAllEmployees} from '../../config/dataService/employeeDataService';
+//import initialState from '../../demoData/employees.json';
+import {fetchAllEmployees, fetchSingleEmployee} from '../../config/dataService/employeeDataService';
 
 const {
   singleEmployeeBegin,
@@ -75,6 +75,18 @@ const getAllEmployees = () => {
         }  
       };
     };
+
+    const getSingleEmployee = (id) => {
+      return async dispatch => {
+          try {
+            const response = await fetchSingleEmployee(id);
+            dispatch(singleEmployeeSuccess(response.data));
+            const vrkkk = response.data;
+          } catch (err) {
+            dispatch(singleEmployeeErr(err.toString()));
+          }  
+        };
+      };
     
 
-export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry, getAllEmployees };
+export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry, getAllEmployees,getSingleEmployee };
