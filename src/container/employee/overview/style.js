@@ -462,7 +462,7 @@ const ActivityContents = Styled.div`
                 
     }
 `;
-const ProductOverviewTable = Styled.div`
+const ProductGeneralTable = Styled.div`
     .ant-card-body{
         padding: 0 !important;
         .ant-table{
@@ -513,4 +513,4 @@ const ProductOverviewTable = Styled.div`
         }
     }
 `;
-export { UserBioBox, SettingWrapper, RightAsideWrapper, ActivityContents, ProductOverviewTable };
+export { UserBioBox, SettingWrapper, RightAsideWrapper, ActivityContents, ProductGeneralTable };

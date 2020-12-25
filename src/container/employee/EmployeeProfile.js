@@ -17,7 +17,7 @@ import { useSelector, useDispatch } from 'react-redux';
 const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const CoverSection = lazy(() => import('./overview/CoverSection'));
 const UserBio = lazy(() => import('./overview/UserBio'));
-const Overview = lazy(() => import('./overview/Overview'));
+const General = lazy(() => import('./overview/General'));
 const Timeline = lazy(() => import('./overview/Timeline'));
 const Activity = lazy(() => import('./overview/Activity'));
 import { getSingleEmployee } from '../../redux/employees/actionCreator';
@@ -112,15 +112,15 @@ const EmployeeProfile = () => {
                     </Cards>
                   }
                 >
-                  <Route exact path={`${path}/general`} component={Overview} />
+                  <Route exact path={`${path}/general`} component={General} />
                   <Route path={`${path}/tasks`} component={Timeline} />
                   <Route path={`${path}/locations`} component={Activity} />
 
-                  <Route exact path={`${path}/holidays`} component={Overview} />
+                  <Route exact path={`${path}/holidays`} component={General} />
                   <Route path={`${path}/documents`} component={Timeline} />
                   <Route path={`${path}/timesheet`} component={Activity} />
 
-                  <Route exact path={`${path}/communications`} component={Overview} />
+                  <Route exact path={`${path}/communications`} component={General} />
                   <Route path={`${path}/notifications`} component={Timeline} />
                   <Route path={`${path}/accesslogs`} component={Activity} />
 
