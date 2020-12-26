@@ -40,7 +40,7 @@ const EmployeeProfile = () => {
   return (
     <>
       <Main>
-      <Row >
+       <Row >
           <Col >
             <Suspense
               fallback={
@@ -57,7 +57,7 @@ const EmployeeProfile = () => {
           </Col>
         </Row>
         <Row >
-        <Col >
+         <Col span={24}>
             <SettingWrapper>
               <Suspense
                 fallback={
