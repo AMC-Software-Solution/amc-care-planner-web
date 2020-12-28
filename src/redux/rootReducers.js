@@ -25,6 +25,8 @@ import FileManager from './fileManager/reducers';
 import { employeeReducer, SingleEmployeeReducer } from './employees/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
 import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
+import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
+
 
 
 
@@ -59,6 +61,8 @@ const rootReducers = combineReducers({
   country: SingleCountryReducer,
   tasks: tasksReducer,
   tasks: SingleTasksReducer,
+  eligibilties: eligibilityReducer,
+  eligibility: SingleEligibilityReducer,
   Todo,
   Note,
   Contact,
