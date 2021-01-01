@@ -117,11 +117,11 @@ if (employees) {
               />
             </>
           }
-          buttons={[
-            <Button className="btn-add_new" size="default" type="primary" key="1">
-              <Link to="/admin/employees/add-employee/info">+ Add New Employee</Link>
-            </Button>,
-          ]}
+          // buttons={[
+          //   <Button className="btn-add_new" size="default" type="primary" key="1">
+          //     <Link to="/admin/employees/add-employee/info">+ Add New Employee</Link>
+          //   </Button>,
+          // ]}
         />
       </CardToolbox>
 

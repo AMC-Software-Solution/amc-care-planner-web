@@ -8,7 +8,7 @@ import CreateEmployee from './overview/CreateEmployee';
 import { EmployeeHeader, EmployeeSorting } from './style';
 import { AutoComplete } from '../../components/autoComplete/autoComplete';
 import { Button } from '../../components/buttons/buttons';
-import { filterEmployeeByStatus, sortingEmployeeByCountry } from '../../redux/employees/actionCreator';
+import { filterEmployeeByGender, sortingEmployeeByCountry } from '../../redux/employees/actionCreator';
 import { Main } from '../styled';
 import { PageHeader } from '../../components/page-headers/page-headers';
 

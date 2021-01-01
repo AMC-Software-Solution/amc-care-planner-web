@@ -33,6 +33,7 @@ const UserCards = ({ user }) => {
             <div className="card__content">
                 <p className="card__designation">Preferred Name: <b>{preferredName}</b></p>
                 <p className="card__designation">Employee ID : <b>{id}</b></p>
+                <p className="card__designation">Employee Code :  <b>{employeeCode}</b></p>
                 <p className="card__designation">Gender : <b>{gender}</b></p>
                 <p className="card__designation">Date of Birth : <b>{dateOfBirth}</b></p>
                 <p className="card__designation">National Insurance #:<b>{nationalInsuranceNumber}</b></p>

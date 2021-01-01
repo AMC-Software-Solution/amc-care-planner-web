@@ -89,12 +89,12 @@ const API_URL = "http://localhost:8080/api";
 
 const fetchAllBranches = () => {
   let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
-  return axios.get(API_URL + "/v1/get_branches_by_client_id",header);
+  return axios.get(API_URL + "/v1/get-branches-by-client-id",header);
 }
 
 const fetchSingleBranch = (id) => {
   let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
-  return axios.get(API_URL + `/v1/get_branch_by_client_id/${id}`,header);
+  return axios.get(API_URL + `/v1/get-branches-by-client-id/${id}`,header);
 }
 
 export  {

@@ -69,7 +69,7 @@ const initialState = {
   error: null,
 };
 
-const SingleEmployeeReducer = (state = initialState, action) => {
+const singleEmployeeReducer = (state = initialState, action) => {
   const { type, data, err } = action;
   switch (type) {
     case SINGLE_EMPLOYEE_BEGIN:
@@ -94,4 +94,4 @@ const SingleEmployeeReducer = (state = initialState, action) => {
   }
 };
 
-export { SingleEmployeeReducer, employeeReducer };
+export { singleEmployeeReducer, employeeReducer };

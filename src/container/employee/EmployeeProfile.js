@@ -51,7 +51,7 @@ const EmployeeProfile = () => {
             > 
               
               { employee ? 
-               <UserCards user={employee} /> : <div></div>
+               <UserCards user={{ user:employee }} /> : <div></div>
               }
             </Suspense>
           </Col>
