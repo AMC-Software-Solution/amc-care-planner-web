@@ -4,13 +4,13 @@ import FeatherIcon from 'feather-icons-react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ProductGeneralTable } from './style';
+import Branches from './Branches';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 import Heading from '../../../components/heading/heading';
 import { CardBarChart2, EChartCard, PerformanceChartWrapper } from '../../dashboard/style';
 import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../components/charts/chartjs';
 import { performanceGetData } from '../../../redux/chartContent/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../components/utilities/utilities';
-import Branches from './Branches';
 
 const chartOptions = {
   legend: {
@@ -172,7 +172,7 @@ const General = () => {
   return (
     <Row gutter={25}>
       <Col>
-        <Branches/>
+        <Branches />
       </Col>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>

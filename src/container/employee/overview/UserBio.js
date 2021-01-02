@@ -1,13 +1,11 @@
 import React from 'react';
 import FeatherIcon from 'feather-icons-react';
-import FontAwesome from 'react-fontawesome';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { UserBioBox } from './style';
 import { Cards } from '../../../components/cards/frame/cards-frame';
-import { Button } from '../../../components/buttons/buttons';
 
 const UserBio = ({ user }) => {
-  const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = user;
+  const { email, address, county, postCode } = user;
 
   return (
     <UserBioBox>
@@ -19,7 +17,11 @@ const UserBio = ({ user }) => {
               <FeatherIcon icon="mail" size={14} /> <span>{email}</span>
             </li>
             <li>
-              <FeatherIcon icon="map-pin" size={14} /> <span> {address} {county} {postCode}</span>
+              <FeatherIcon icon="map-pin" size={14} />{' '}
+              <span>
+                {' '}
+                {address} {county} {postCode}
+              </span>
             </li>
           </ul>
         </address>
@@ -57,5 +59,7 @@ const UserBio = ({ user }) => {
     </UserBioBox>
   );
 };
-
+UserBio.propTypes = {
+  user: PropTypes.object,
+};
 export default UserBio;

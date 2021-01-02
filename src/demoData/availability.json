@@ -1,0 +1,23 @@
+[ {
+  "id" : 1,
+  "isAvailableForWorkWeekDays" : true,
+  "minimumHoursPerWeekWeekDays" : 20,
+  "maximumHoursPerWeekWeekDays" : 40,
+  "isAvailableForWorkWeekEnds" : false,
+  "minimumHoursPerWeekWeekEnds" : null,
+  "maximumHoursPerWeekWeekEnds" : null,
+  "leastPreferredShift" : "MORNING_SHIFT",
+  "employeeId" : 1,
+  "employeeEmployeeCode" : "FAARAX_y_ali"
+}, {
+  "id" : 2,
+  "isAvailableForWorkWeekDays" : false,
+  "minimumHoursPerWeekWeekDays" : null,
+  "maximumHoursPerWeekWeekDays" : null,
+  "isAvailableForWorkWeekEnds" : true,
+  "minimumHoursPerWeekWeekEnds" : 10,
+  "maximumHoursPerWeekWeekEnds" : 20,
+  "leastPreferredShift" : "NIGHTS_SHIFT",
+  "employeeId" : 1,
+  "employeeEmployeeCode" : "FAARAX_y_ali"
+} ]

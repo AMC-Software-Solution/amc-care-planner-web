@@ -22,8 +22,15 @@ import Contact from './contact/reducers';
 import Profile from './profile/reducers';
 import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
-import { employeeReducer, SingleEmployeeReducer } from './employees/reducers';
+import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
+import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
+import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
+import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
+import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
+
+
+
 
 
 const rootReducers = combineReducers({
@@ -52,9 +59,19 @@ const rootReducers = combineReducers({
   chartContent: chartContentReducer,
   cart: cartData,
   employees: employeeReducer,
-  employee: SingleEmployeeReducer,
+  employee: singleEmployeeReducer,
   countries: countryReducer,
   country: SingleCountryReducer,
+  tasks: tasksReducer,
+  tasks: SingleTasksReducer,
+  eligibilties: eligibilityReducer,
+  eligibility: SingleEligibilityReducer,
+  availabilities: availabilityReducer,
+  availability: SingleAvailabilityReducer,
+  employeeLocations: employeeLocationReducer,
+  employeeLocation: SingleEmployeeLocationReducer,
+ 
+
   Todo,
   Note,
   Contact,

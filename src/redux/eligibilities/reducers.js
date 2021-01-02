@@ -1,58 +1,58 @@
 import actions from './actions';
-// import staticData from '../../demoData/employees.json';
+import staticData from '../../demoData/eligibility.json';
 
 const {
-  SINGLE_EMPLOYEE_BEGIN,
-  SINGLE_EMPLOYEE_SUCCESS,
-  SINGLE_EMPLOYEE_ERR,
+  SINGLE_ELIGIBILITY_BEGIN,
+  SINGLE_ELIGIBILITY_SUCCESS,
+  SINGLE_ELIGIBILITY_ERR,
 
-  FILTER_EMPLOYEE_BEGIN,
-  FILTER_EMPLOYEE_SUCCESS,
-  FILTER_EMPLOYEE_ERR,
+  FILTER_ELIGIBILITY_BEGIN,
+  FILTER_ELIGIBILITY_SUCCESS,
+  FILTER_ELIGIBILITY_ERR,
 
-  SORTING_EMPLOYEE_BEGIN,
-  SORTING_EMPLOYEE_SUCCESS,
-  SORTING_EMPLOYEE_ERR,
+  SORTING_ELIGIBILITY_BEGIN,
+  SORTING_ELIGIBILITY_SUCCESS,
+  SORTING_ELIGIBILITY_ERR,
 } = actions;
 
 const initialStateFilter = {
-  data: null,
+  data: staticData,
   loading: false,
   error: null,
 };
 
-const employeeReducer = (state = initialStateFilter, action) => {
+const eligibilityReducer = (state = initialStateFilter, action) => {
   const { type, data, err } = action;
   switch (type) {
-    case FILTER_EMPLOYEE_BEGIN:
+    case FILTER_ELIGIBILITY_BEGIN:
       return {
         ...initialStateFilter,
         loading: true,
       };
-    case FILTER_EMPLOYEE_SUCCESS:
+    case FILTER_ELIGIBILITY_SUCCESS:
       return {
         ...initialStateFilter,
         data,
         loading: false,
       };
-    case FILTER_EMPLOYEE_ERR:
+    case FILTER_ELIGIBILITY_ERR:
       return {
         ...initialStateFilter,
         error: err,
         loading: false,
       };
-    case SORTING_EMPLOYEE_BEGIN:
+    case SORTING_ELIGIBILITY_BEGIN:
       return {
         ...initialStateFilter,
         loading: true,
       };
-    case SORTING_EMPLOYEE_SUCCESS:
+    case SORTING_ELIGIBILITY_SUCCESS:
       return {
         ...initialStateFilter,
         data,
         loading: false,
       };
-    case SORTING_EMPLOYEE_ERR:
+    case SORTING_ELIGIBILITY_ERR:
       return {
         ...initialStateFilter,
         error: err,
@@ -64,26 +64,26 @@ const employeeReducer = (state = initialStateFilter, action) => {
 };
 
 const initialState = {
-  data: null,
+  data: staticData,
   loading: false,
   error: null,
 };
 
-const singleEmployeeReducer = (state = initialState, action) => {
+const SingleEligibilityReducer = (state = initialState, action) => {
   const { type, data, err } = action;
   switch (type) {
-    case SINGLE_EMPLOYEE_BEGIN:
+    case SINGLE_ELIGIBILITY_BEGIN:
       return {
         ...initialState,
         loading: true,
       };
-    case SINGLE_EMPLOYEE_SUCCESS:
+    case SINGLE_ELIGIBILITY_SUCCESS:
       return {
         ...initialState,
         data,
         loading: false,
       };
-    case SINGLE_EMPLOYEE_ERR:
+    case SINGLE_ELIGIBILITY_ERR:
       return {
         ...initialState,
         error: err,
@@ -94,4 +94,4 @@ const singleEmployeeReducer = (state = initialState, action) => {
   }
 };
 
-export { singleEmployeeReducer, employeeReducer };
+export { SingleEligibilityReducer, eligibilityReducer };

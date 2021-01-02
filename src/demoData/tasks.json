@@ -1,0 +1,22 @@
+[ {
+  "id" : 1,
+  "taskName" : "nur",
+  "description" : "hhaa",
+  "dateOfTask" : "1990-02-22",
+  "startTime" : "7:00am",
+  "endTime" : "4:00pm",
+  "status" : "ASSSIGNED",
+  "dateCreated" : "2020-12-26T00:00:00+03:00",
+  "lastUpdatedDate" : "2020-12-26T00:00:00+03:00",
+  "clientId" : 1,
+  "serviceUserId" : null,
+  "serviceUserServiceUserCode" : null,
+  "assignedToId" : 1,
+  "assignedToEmployeeCode" : "FAARAX_y_ali",
+  "serviceOrderId" : null,
+  "serviceOrderTitle" : null,
+  "createdById" : 1,
+  "createdByEmployeeCode" : "FAARAX_y_ali",
+  "allocatedById" : 1,
+  "allocatedByEmployeeCode" : "FAARAX_y_ali"
+} ]
