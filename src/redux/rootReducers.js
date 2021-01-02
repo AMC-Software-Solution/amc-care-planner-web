@@ -29,6 +29,8 @@ import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/re
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
 import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
+import { timesheetReducer, SingleTimesheetReducer } from './timesheet/reducers';
+import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 
 
 
@@ -73,6 +75,11 @@ const rootReducers = combineReducers({
   employeeLocation: SingleEmployeeLocationReducer,
   employeeHolidays: employeeHolidayReducer,
   employeeHoliday: SingleEmployeeHolidayReducer,
+  timesheets: timesheetReducer,
+  timesheet: SingleTimesheetReducer,
+  devices: deviceReducer,
+  device: SingleDeviceReducer,
+ 
  
 
   Todo,

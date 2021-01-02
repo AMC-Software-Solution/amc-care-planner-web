@@ -1,0 +1,18 @@
+[ {
+  "id" : 1,
+  "deviceName" : "lap",
+  "deviceModel" : "lap",
+  "registeredDate" : "2021-01-02T00:00:00+03:00",
+  "imei" : "6737288299387",
+  "simNumber" : "657821",
+  "userStartedUsingFrom" : "2021-01-02T00:00:00+03:00",
+  "deviceOnLocationFrom" : "2021-01-02T00:00:00+03:00",
+  "operatingSystem" : "",
+  "note" : "thats great",
+  "ownerEntityId" : 1,
+  "ownerEntityName" : "malkiile",
+  "lastUpdatedDate" : "2021-01-02T00:00:00+03:00",
+  "clientId" : 1,
+  "employeeId" : 1,
+  "employeeEmployeeCode" : "FAARAX_y_ali"
+} ]
