@@ -28,8 +28,9 @@ import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
-import { singleBranchReducer, branchReducer} from './branch/reducers';
-
+import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
+import { timesheetReducer, SingleTimesheetReducer } from './timesheet/reducers';
+import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 
 
 
@@ -72,8 +73,13 @@ const rootReducers = combineReducers({
   availability: SingleAvailabilityReducer,
   employeeLocations: employeeLocationReducer,
   employeeLocation: SingleEmployeeLocationReducer,
-  branch: singleBranchReducer, 
-  branches: branchReducer,
+  employeeHolidays: employeeHolidayReducer,
+  employeeHoliday: SingleEmployeeHolidayReducer,
+  timesheets: timesheetReducer,
+  timesheet: SingleTimesheetReducer,
+  devices: deviceReducer,
+  device: SingleDeviceReducer,
+ 
  
 
   Todo,
