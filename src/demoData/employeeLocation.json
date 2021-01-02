@@ -1,0 +1,17 @@
+[ {
+    "id" : 1,
+    "latitude" : 45.319016,
+    "longitude" : 2.053081,
+    "lastUpdatedDate" : "2020-12-28T00:00:00+03:00",
+    "clientId" : 1,
+    "employeeId" : null,
+    "employeeEmployeeCode" : null
+  }, {
+    "id" : 2,
+    "latitude" : 2.053081,
+    "longitude" : 45.319016,
+    "lastUpdatedDate" : "2020-12-28T00:00:00+03:00",
+    "clientId" : 1,
+    "employeeId" : 1,
+    "employeeEmployeeCode" : "FAARAX_y_ali"
+  } ]

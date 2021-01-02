@@ -24,6 +24,13 @@ import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
 import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
+import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
+import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
+import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
+import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
+
+
+
 
 
 const rootReducers = combineReducers({
@@ -55,6 +62,16 @@ const rootReducers = combineReducers({
   employee: singleEmployeeReducer,
   countries: countryReducer,
   country: SingleCountryReducer,
+  tasks: tasksReducer,
+  tasks: SingleTasksReducer,
+  eligibilties: eligibilityReducer,
+  eligibility: SingleEligibilityReducer,
+  availabilities: availabilityReducer,
+  availability: SingleAvailabilityReducer,
+  employeeLocations: employeeLocationReducer,
+  employeeLocation: SingleEmployeeLocationReducer,
+ 
+
   Todo,
   Note,
   Contact,
