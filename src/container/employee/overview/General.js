@@ -10,6 +10,7 @@ import Heading from '../../../components/heading/heading';
 import { CardBarChart2, EChartCard, PerformanceChartWrapper } from '../../dashboard/style';
 import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../components/charts/chartjs';
 import { performanceGetData } from '../../../redux/chartContent/actionCreator';
+import { getAllBranches } from '../../../redux/branch/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../components/utilities/utilities';
 
 const chartOptions = {
@@ -73,15 +74,17 @@ const moreContent = (
 
 const General = () => {
   const dispatch = useDispatch();
-  const { performanceState } = useSelector(state => {
+  const { performanceState, branches } = useSelector(state => {
     return {
       performanceState: state.chartContent.performanceData,
+      branches: state.branches.data,
     };
   });
 
   useEffect(() => {
     if (performanceGetData) {
       dispatch(performanceGetData());
+      dispatch(getAllBranches());
     }
   }, [dispatch]);
 
@@ -172,7 +175,7 @@ const General = () => {
   return (
     <Row gutter={25}>
       <Col>
-        <Branches />
+        <Branches branches={branches}/>
       </Col>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>

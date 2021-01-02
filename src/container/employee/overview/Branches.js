@@ -6,35 +6,33 @@ import { UserCard } from '../../pages/style';
 import Heading from '../../../components/heading/heading';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
-const Branches = () => {
-  const { employee } = useSelector(state => {
-    return {
-      employee: state.employee.data,
-    };
-  });
-  const { id, title, firstName, middleInitial, lastName, preferredName, photoUrl } = employee;
-
+const Branches = ({branches}) => {
+  if (branches) {
+  branches.map(branch => {
+    const {id,name,address,telephone,lastUpdatedDate,clientId,clientIdName} = branch;
   return (
     <UserCard>
       <div className="card user-card">
         <Row gutter="10">
           <Col>
             <Cards headless>
+              {/*
               <figure>
                 <img src={photoUrl} alt="" style={{ borderRadius: `${5}px` }} />
               </figure>
+              */}
               <figcaption>
                 <div className="card__content">
                   <Heading className="card__name" as="h6">
                     <Link to="#">
-                      {title} {firstName} {middleInitial} {lastName}
+                      {id} {name} {address} {telephone}
                     </Link>
                   </Heading>
                   <p className="card__designation">
-                    Preferred Name: <b>{preferredName}</b>
+                    Client Name: <b>{clientIdName}</b>
                   </p>
                   <p className="card__designation">
-                    Employee ID : <b>{id}</b>
+                    Branch ID : <b>{id}</b>
                   </p>
                 </div>
               </figcaption>
@@ -44,5 +42,10 @@ const Branches = () => {
       </div>
     </UserCard>
   );
+});
+  } else {
+    return (<div></div>);
+  }
 };
+
 export default Branches;

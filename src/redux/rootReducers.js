@@ -28,6 +28,8 @@ import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
+import { singleBranchReducer, branchReducer} from './branch/reducers';
+
 
 
 
@@ -63,13 +65,15 @@ const rootReducers = combineReducers({
   countries: countryReducer,
   country: SingleCountryReducer,
   tasks: tasksReducer,
-  tasks: SingleTasksReducer,
+  task: SingleTasksReducer,
   eligibilties: eligibilityReducer,
   eligibility: SingleEligibilityReducer,
   availabilities: availabilityReducer,
   availability: SingleAvailabilityReducer,
   employeeLocations: employeeLocationReducer,
   employeeLocation: SingleEmployeeLocationReducer,
+  branch: singleBranchReducer, 
+  branches: branchReducer,
  
 
   Todo,
