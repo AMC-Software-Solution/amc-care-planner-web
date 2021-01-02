@@ -1,4 +1,4 @@
-/*import axios from 'axios';
+/* import axios from 'axios';
 import { getItem } from '../../utility/localStorageControl';
 
 const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
@@ -85,18 +85,17 @@ export { DataService };
 import axios from 'axios';
 
 import { getItem } from '../../utility/localStorageControl';
-const API_URL = "http://localhost:8080/api";
+
+const API_URL = 'http://localhost:8080/api';
 
 const fetchAllBranches = () => {
-  let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
-  return axios.get(API_URL + "/v1/get-branches-by-client-id",header);
-}
-
-const fetchSingleBranch = (id) => {
-  let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
-  return axios.get(API_URL + `/v1/get-branches-by-client-id/${id}`,header);
-}
-
-export  {
-  fetchAllBranches, fetchSingleBranch
+  const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
+  return axios.get(`${API_URL}/v1/get-branches-by-client-id`, header);
 };
+
+const fetchSingleBranch = id => {
+  const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
+  return axios.get(`${API_URL}/v1/get-branches-by-client-id/${id}`, header);
+};
+
+export { fetchAllBranches, fetchSingleBranch };

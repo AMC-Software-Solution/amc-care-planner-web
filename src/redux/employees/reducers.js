@@ -1,5 +1,5 @@
 import actions from './actions';
-//import staticData from '../../demoData/employees.json';
+// import staticData from '../../demoData/employees.json';
 
 const {
   SINGLE_EMPLOYEE_BEGIN,
