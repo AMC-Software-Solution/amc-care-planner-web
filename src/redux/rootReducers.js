@@ -28,6 +28,7 @@ import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { employeeLocationReducer, SingleEmployeeLocationReducer } from './employeeLocation/reducers';
+import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
 
 
 
@@ -70,6 +71,8 @@ const rootReducers = combineReducers({
   availability: SingleAvailabilityReducer,
   employeeLocations: employeeLocationReducer,
   employeeLocation: SingleEmployeeLocationReducer,
+  employeeHolidays: employeeHolidayReducer,
+  employeeHoliday: SingleEmployeeHolidayReducer,
  
 
   Todo,
