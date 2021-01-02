@@ -4,7 +4,6 @@ import { Row, Col, Spin, Select } from 'antd';
 import { Switch, NavLink, Route, Link } from 'react-router-dom';
 import FeatherIcon from 'feather-icons-react';
 import propTypes from 'prop-types';
-import CreateEmployee from './overview/CreateEmployee';
 import { EmployeeHeader, EmployeeSorting } from './style';
 import { AutoComplete } from '../../components/autoComplete/autoComplete';
 import { Button } from '../../components/buttons/buttons';
@@ -25,7 +24,7 @@ const Employee = ({ match }) => {
     categoryActive: 'all',
   });
 
-  const { notData, visible } = state;
+  const { notData } = state;
   const handleSearch = searchText => {
     const data = searchData.filter(item => item.title.toUpperCase().startsWith(searchText.toUpperCase()));
     setState({
@@ -50,13 +49,6 @@ const Employee = ({ match }) => {
     setState({
       ...state,
       visible: true,
-    });
-  };
-
-  const onCancel = () => {
-    setState({
-      ...state,
-      visible: false,
     });
   };
 
@@ -152,7 +144,6 @@ const Employee = ({ match }) => {
             </div>
           </Col>
         </Row>
-        <CreateEmployee onCancel={onCancel} visible={visible} />
       </Main>
     </>
   );

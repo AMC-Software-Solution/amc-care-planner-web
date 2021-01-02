@@ -1,4 +1,4 @@
-/*import axios from 'axios';
+/* import axios from 'axios';
 import { getItem } from '../../utility/localStorageControl';
 
 const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
@@ -85,10 +85,11 @@ export { DataService };
 import axios from 'axios';
 
 import { setItem, getItem } from '../../utility/localStorageControl';
-const API_URL = "http://localhost:8080/api";
+
+const API_URL = 'http://localhost:8080/api';
 
 const register = (username, email, password) => {
-  return axios.post(API_URL + "signup", {
+  return axios.post(`${API_URL}signup`, {
     username,
     email,
     password,
@@ -97,17 +98,16 @@ const register = (username, email, password) => {
 
 const login = (username, password) => {
   return axios
-    .post(API_URL + "/authenticate", {
+    .post(`${API_URL}/authenticate`, {
       username,
       password,
     })
-    .then((response) => {
+    .then(response => {
       let jwt;
       const bearerToken = response.headers.authorization;
       if (bearerToken && bearerToken.slice(0, 7) === 'Bearer ') {
-         jwt = bearerToken.slice(7, bearerToken.length);
-         setItem("access_token", jwt);
-   
+        jwt = bearerToken.slice(7, bearerToken.length);
+        setItem('access_token', jwt);
       }
 
       return jwt;
@@ -115,17 +115,17 @@ const login = (username, password) => {
 };
 
 const logout = () => {
-  localStorage.removeItem("user");
+  localStorage.removeItem('user');
 };
 
 const getAccount = () => {
-  let header = {headers : { Authorization: 'Bearer ' + getItem("access_token") }};
-  return axios.get(API_URL + "/account",header);
-}
+  const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
+  return axios.get(`${API_URL}/account`, header);
+};
 
 export default {
   register,
   login,
   logout,
-  getAccount
+  getAccount,
 };

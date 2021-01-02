@@ -2,12 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
+import { Link } from 'react-router-dom';
 import { EmployeeTableStyleWrapper } from '../style';
 import { TableWrapper } from '../../styled';
 import Heading from '../../../components/heading/heading';
 import { Button } from '../../../components/buttons/buttons';
 import { Cards } from '../../../components/cards/frame/cards-frame';
-import { Link } from 'react-router-dom';
 
 const EmployeeListTable = () => {
   const { employees } = useSelector(state => {
@@ -17,58 +17,85 @@ const EmployeeListTable = () => {
   });
 
   const employeesTableData = [];
-if (employees) {
-  employees.map(employee => {
-    const { id , title , firstName , middleInitial , lastName , preferredName , gender , employeeCode , email , nationalInsuranceNumber , employeeContractType , pinCode , transportMode, address , county , postCode , dateOfBirth ,  photo, photoContentType, photoUrl , acruedHolidayHours , lastUpdatedDate , clientId , userId , userLogin , nationalityId ,nationalityCountryName } = employee;
-    return employeesTableData.push({
-      key: id,
-      id: id,
-      employee: (
-        <div className="user-info">
-          <figure>
-            <img style={{ width: '40px' }} src={photoUrl} alt="" />
-          </figure>
-          <figcaption>
-            <Heading className="user-name" as="h6">
-              {title} {firstName} {middleInitial} {lastName}
-            </Heading>
-            <span className="user-designation">{address} {county} {postCode}</span>
-          </figcaption>
-        </div>
-      ),
-      preferredName: preferredName,
-      gender:gender,
-      email: email,
-      nationalInsuranceNumber: nationalInsuranceNumber,
-      dateOfBirth:dateOfBirth,
-      employeeCode: employeeCode,
-      employeeContractType: employeeContractType,
-      pinCode:pinCode,
-      transportMode:transportMode,
-      acruedHolidayHours: acruedHolidayHours,
-      clientId:clientId,
-      userId:userId,
-      nationality:nationalityCountryName,
-      lastUpdatedDate:lastUpdatedDate,
-      action: (
-        <div className="table-actions">
-          <>
-            <Button className="btn-icon" type="primary"   shape="circle">
-            <Link to="/admin/employee/employeeProfile/1"><FeatherIcon icon="eye" size={16} /></Link>
-              
-            </Button>
-            <Button className="btn-icon" type="info" to="#" shape="circle">
-              <FeatherIcon icon="edit" size={16} />
-            </Button>
-            <Button className="btn-icon" type="danger" to="#" shape="circle">
-              <FeatherIcon icon="trash-2" size={16} />
-            </Button>
-          </>
-        </div>
-      ),
+  if (employees) {
+    employees.map(employee => {
+      const {
+        id,
+        title,
+        firstName,
+        middleInitial,
+        lastName,
+        preferredName,
+        gender,
+        employeeCode,
+        email,
+        nationalInsuranceNumber,
+        employeeContractType,
+        pinCode,
+        transportMode,
+        address,
+        county,
+        postCode,
+        dateOfBirth,
+        photoUrl,
+        acruedHolidayHours,
+        lastUpdatedDate,
+        clientId,
+        userId,
+        nationalityCountryName,
+      } = employee;
+      return employeesTableData.push({
+        key: id,
+        id,
+        employee: (
+          <div className="user-info">
+            <figure>
+              <img style={{ width: '40px' }} src={photoUrl} alt="" />
+            </figure>
+            <figcaption>
+              <Heading className="user-name" as="h6">
+                {title} {firstName} {middleInitial} {lastName}
+              </Heading>
+              <span className="user-designation">
+                {address} {county} {postCode}
+              </span>
+            </figcaption>
+          </div>
+        ),
+        preferredName,
+        gender,
+        email,
+        nationalInsuranceNumber,
+        dateOfBirth,
+        employeeCode,
+        employeeContractType,
+        pinCode,
+        transportMode,
+        acruedHolidayHours,
+        clientId,
+        userId,
+        nationality: nationalityCountryName,
+        lastUpdatedDate,
+        action: (
+          <div className="table-actions">
+            <>
+              <Button className="btn-icon" type="primary" shape="circle">
+                <Link to="/admin/employee/employeeProfile/1">
+                  <FeatherIcon icon="eye" size={16} />
+                </Link>
+              </Button>
+              <Button className="btn-icon" type="info" to="#" shape="circle">
+                <FeatherIcon icon="edit" size={16} />
+              </Button>
+              <Button className="btn-icon" type="danger" to="#" shape="circle">
+                <FeatherIcon icon="trash-2" size={16} />
+              </Button>
+            </>
+          </div>
+        ),
+      });
     });
-  });
-}
+  }
 
   const employeesTableColumns = [
     {
@@ -136,7 +163,6 @@ if (employees) {
       dataIndex: 'acruedHolidayHours',
       key: 'acruedHolidayHours',
     },
-
 
     {
       title: 'Client ID',
