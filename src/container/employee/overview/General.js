@@ -174,10 +174,10 @@ const General = () => {
 
   return (
     <Row gutter={25}>
-      <Col>
-        <Branches branches={branches}/>
+      <Col xs={24}>
+        <Branches branches={branches} />
       </Col>
-      <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
+      {/* <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
           <EChartCard>
             <div className="card-chunk">
@@ -208,7 +208,7 @@ const General = () => {
             </div>
           </EChartCard>
         </Cards>
-      </Col>
+      </Col> */}
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
           <EChartCard>

@@ -23,6 +23,7 @@ import Profile from './profile/reducers';
 import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
 import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
+import { branchReducer, singleBranchReducer } from './branch/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
 import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
@@ -63,6 +64,8 @@ const rootReducers = combineReducers({
   cart: cartData,
   employees: employeeReducer,
   employee: singleEmployeeReducer,
+  branches: branchReducer,
+  branch: singleBranchReducer,
   countries: countryReducer,
   country: SingleCountryReducer,
   tasks: tasksReducer,

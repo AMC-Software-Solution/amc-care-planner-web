@@ -49,7 +49,6 @@ const EmployeeListTable = () => {
         id,
         employee: (
           <div className="user-info">
-            
             <figure>
               <img style={{ width: '40px' }} src={photoUrl} alt="" />
             </figure>
@@ -61,7 +60,6 @@ const EmployeeListTable = () => {
                 {address} {county} {postCode}
               </span>
             </figcaption>
-            
           </div>
         ),
         preferredName,

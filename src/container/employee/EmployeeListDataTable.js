@@ -73,7 +73,6 @@ const EmployeeList = () => {
         id,
         employee: (
           <div className="user-info">
-            {/*
             <figure>
               <img style={{ width: '40px' }} src={photoUrl} alt="" />
             </figure>
@@ -85,7 +84,6 @@ const EmployeeList = () => {
                 {address} {county} {postCode}
               </span>
             </figcaption>
-            */}
           </div>
         ),
         preferredName,
@@ -106,7 +104,7 @@ const EmployeeList = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to="/admin/employee/employeeProfile/1">
+                <Link to={`/admin/employee/employeeProfile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>

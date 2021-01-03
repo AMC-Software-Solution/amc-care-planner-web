@@ -1,51 +1,54 @@
-import { useSelector } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Col, Row } from 'antd';
-import { UserCard } from '../../pages/style';
-import Heading from '../../../components/heading/heading';
+import { useSelector } from 'react-redux';
+import { Col } from 'antd';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
-const Branches = ({branches}) => {
-  if (branches) {
-  branches.map(branch => {
-    const {id,name,address,telephone,lastUpdatedDate,clientId,clientIdName} = branch;
-  return (
-    <UserCard>
-      <div className="card user-card">
-        <Row gutter="10">
-          <Col>
-            <Cards headless>
-              {/*
-              <figure>
-                <img src={photoUrl} alt="" style={{ borderRadius: `${5}px` }} />
-              </figure>
-              */}
-              <figcaption>
+const Branch = () => {
+  const { branches } = useSelector(state => {
+    return {
+      branches: state.branches.data,
+    };
+  });
+
+  const branchList = () => {
+    if (branches) {
+      branches.map(branch => {
+        const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = branch;
+        return (
+          <div className="card user-card">
+            <Col span={6} style={{ display: 'flex' }}>
+              <Cards headless>
                 <div className="card__content">
-                  <Heading className="card__name" as="h6">
-                    <Link to="#">
-                      {id} {name} {address} {telephone}
-                    </Link>
-                  </Heading>
                   <p className="card__designation">
-                    Client Name: <b>{clientIdName}</b>
+                    Name: <b>{name}</b>
                   </p>
                   <p className="card__designation">
                     Branch ID : <b>{id}</b>
                   </p>
+                  <p className="card__designation">
+                    Address : <b>{address}</b>
+                  </p>
+                  <p className="card__designation">
+                    Client ID : <b>{clientId}</b>
+                  </p>
+                  <p className="card__designation">
+                    Client Name : <b>{clientClientName}</b>
+                  </p>
+                  <p className="card__designation">
+                    Telephone Number : <b>{telephone}</b>
+                  </p>
+                  <p className="card__designation">
+                    Last Updated : <b>{lastUpdatedDate}</b>
+                  </p>
                 </div>
-              </figcaption>
-            </Cards>
-          </Col>
-        </Row>
-      </div>
-    </UserCard>
-  );
-});
-  } else {
-    return (<div></div>);
-  }
+              </Cards>
+            </Col>
+          </div>
+        );
+      });
+    }
+  };
+  return <Cards headless>{branchList}</Cards>;
 };
 
-export default Branches;
+export default Branch;

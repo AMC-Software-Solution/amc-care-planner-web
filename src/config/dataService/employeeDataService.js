@@ -90,7 +90,7 @@ const API_URL = 'http://localhost:8080/api';
 
 const fetchAllEmployees = () => {
   const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
-  return axios.get(`${API_URL}/v1/get-employees-by-client-id`, header);
+  return axios.get(`${API_URL}/v1/get-all-employees-by-client-id`, header);
 };
 
 const fetchSingleEmployee = id => {
