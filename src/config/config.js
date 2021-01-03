@@ -1,7 +1,7 @@
 import { theme, darkTheme } from './theme/themeVariables';
 
 const config = {
-  darkMode: false,
+  darkMode: true,
   topMenu: false,
   rtl: false,
   theme,

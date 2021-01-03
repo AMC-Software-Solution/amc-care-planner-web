@@ -1,48 +1,61 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 import PropTypes from 'prop-types';
-import { Row, Col, Pagination, Skeleton } from 'antd';
+import { Row, Col, Pagination, Skeleton, Table } from 'antd';
 import Heading from '../../../components/heading/heading';
-const Branch = ({branches}) => {
-  
- {/*
-  return (
-    <div className="card user-card">
-      <Cards headless>
-        <div className="card__content">
-          <p className="card__designation">
-            Name: <b>{name}</b>
-          </p>
-          <p className="card__designation">
-            Branch ID : <b>{id}</b>
-          </p>
-          <p className="card__designation">
-            Address : <b>{address}</b>
-          </p>
-          <p className="card__designation">
-            Client ID : <b>{clientId}</b>
-          </p>
-          <p className="card__designation">
-            Client Name : <b>{clientClientName}</b>
-          </p>
-          <p className="card__designation">
-            Telephone Number : <b>{telephone}</b>
-          </p>
-          <p className="card__designation">
-            Last Updated : <b>{lastUpdatedDate}</b>
-          </p>
-        </div>
-      </Cards>
-    </div>
-  );*/}
-
+const Branch = ({ branches }) => {
   return (
     <Row gutter={25}>
       {branches.length ? (
         branches.map(value => {
           const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
+          const dataSource = [
+            {
+              key: id,
+              name,
+              address,
+              clientID: clientId,
+              clientName: clientClientName,
+              telephoneNumber: telephone,
+              lastUpdated: lastUpdatedDate,
+            },
+          ];
+
+          const columns = [
+            {
+              title: 'Branch Name',
+              dataIndex: 'name',
+              key: 'name',
+            },
+            {
+              title: 'Address',
+              dataIndex: 'address',
+              key: 'address',
+            },
+            {
+              title: 'Client ID',
+              dataIndex: 'clientID',
+              key: 'clientID',
+            },
+            {
+              title: 'Client Name',
+              dataIndex: 'clientName',
+              key: 'clientName',
+            },
+            {
+              title: 'Telephone Number',
+              dataIndex: 'telephoneNumber',
+              key: 'telephoneNumber',
+            },
+            {
+              title: 'Last Updated',
+              dataIndex: 'lastUpdated',
+              key: 'lastUpdated',
+            },
+          ];
+
           return (
-            <Col key={value.id} xl={8} md={12} xs={24}>
+            <Col key={value.id} xs={24}>
               <Suspense
                 fallback={
                   <Cards headless>
@@ -50,34 +63,11 @@ const Branch = ({branches}) => {
                   </Cards>
                 }
               >
-               <div className="card user-card">
-      <Cards title="Branches">
-        <div className="card__content">
-          <p className="card__designation">
-            Name: <b>{name}</b>
-          </p>
-          <p className="card__designation">
-            Branch ID : <b>{id}</b>
-          </p>
-          <p className="card__designation">
-            Address : <b>{address}</b>
-          </p>
-          <p className="card__designation">
-            Client ID : <b>{clientId}</b>
-          </p>
-          <p className="card__designation">
-            Client Name : <b>{clientClientName}</b>
-          </p>
-          <p className="card__designation">
-            Telephone Number : <b>{telephone}</b>
-          </p>
-          <p className="card__designation">
-            Last Updated : <b>{lastUpdatedDate}</b>
-          </p>
-        </div>
-      </Cards>
-    </div>
-
+                <div className="card user-card">
+                  <Cards title="Branches">
+                    <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
+                  </Cards>
+                </div>
               </Suspense>
             </Col>
           );
@@ -91,12 +81,36 @@ const Branch = ({branches}) => {
       )}
     </Row>
   );
-
-
 };
 
- Branch.propTypes = {
-   branches: PropTypes.object,
- };
+Branch.propTypes = {
+  branches: PropTypes.object,
+};
 
 export default Branch;
+
+{
+  /* <div className="card__content">
+                      <p className="card__designation">
+                        Name: <b>{name}</b>
+                      </p>
+                      <p className="card__designation">
+                        Branch ID : <b>{id}</b>
+                      </p>
+                      <p className="card__designation">
+                        Address : <b>{address}</b>
+                      </p>
+                      <p className="card__designation">
+                        Client ID : <b>{clientId}</b>
+                      </p>
+                      <p className="card__designation">
+                        Client Name : <b>{clientClientName}</b>
+                      </p>
+                      <p className="card__designation">
+                        Telephone Number : <b>{telephone}</b>
+                      </p>
+                      <p className="card__designation">
+                        Last Updated : <b>{lastUpdatedDate}</b>
+                      </p>
+                    </div> */
+}
