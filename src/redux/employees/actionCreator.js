@@ -1,6 +1,6 @@
 import actions from './actions';
-// import initialState from '../../demoData/employees.json';
-import { fetchAllEmployees, fetchSingleEmployee } from '../../config/dataService/employeeDataService';
+//import initialState from '../../demoData/employees.json';
+import {fetchAllEmployees, fetchSingleEmployee} from '../../config/dataService/employeeDataService';
 
 const {
   singleEmployeeBegin,
@@ -16,7 +16,7 @@ const {
   sortingEmployeeErr,
 } = actions;
 
-const filterSinglePage = (paramsId, initialState) => {
+const filterSinglePage = paramsId => {
   return async dispatch => {
     try {
       dispatch(singleEmployeeBegin());
@@ -30,7 +30,7 @@ const filterSinglePage = (paramsId, initialState) => {
   };
 };
 
-const filterEmployeeByGender = (gender, initialState) => {
+const filterEmployeeByGender = gender => {
   return async dispatch => {
     try {
       dispatch(filterEmployeeBegin());
@@ -47,7 +47,7 @@ const filterEmployeeByGender = (gender, initialState) => {
   };
 };
 
-const sortingEmployeeByCountry = (sortBy, initialState) => {
+const sortingEmployeeByCountry = sortBy => {
   return async dispatch => {
     try {
       dispatch(sortingEmployeeBegin());
@@ -64,26 +64,29 @@ const sortingEmployeeByCountry = (sortBy, initialState) => {
   };
 };
 
+
 const getAllEmployees = () => {
-  return async dispatch => {
-    try {
-      const response = await fetchAllEmployees();
-      dispatch(filterEmployeeSuccess(response.data));
-    } catch (err) {
-      dispatch(filterEmployeeErr(err.toString()));
-    }
-  };
-};
+    return async dispatch => {
+        try {
+          const response = await fetchAllEmployees();
+          dispatch(filterEmployeeSuccess(response.data));
+        } catch (err) {
+          dispatch(filterEmployeeErr(err.toString()));
+        }  
+      };
+    };
 
-const getSingleEmployee = id => {
-  return async dispatch => {
-    try {
-      const response = await fetchSingleEmployee(id);
-      dispatch(singleEmployeeSuccess(response.data));
-    } catch (err) {
-      dispatch(singleEmployeeErr(err.toString()));
-    }
-  };
-};
+    const getSingleEmployee = (id) => {
+      return async dispatch => {
+          try {
+            const response = await fetchSingleEmployee(id);
+            dispatch(singleEmployeeSuccess(response.data));
+            const vrkkk = response.data;
+          } catch (err) {
+            dispatch(singleEmployeeErr(err.toString()));
+          }  
+        };
+      };
+    
 
-export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry, getAllEmployees, getSingleEmployee };
+export { filterSinglePage, filterEmployeeByGender, sortingEmployeeByCountry, getAllEmployees,getSingleEmployee };

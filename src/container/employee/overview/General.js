@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ProductGeneralTable } from './style';
 import Branches from './Branches';
@@ -12,6 +12,7 @@ import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../component
 import { performanceGetData } from '../../../redux/chartContent/actionCreator';
 import { getAllBranches } from '../../../redux/branch/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../components/utilities/utilities';
+import { getSingleEmployeeLocation } from '../../../redux/employeeLocation/actionCreator';
 
 const chartOptions = {
   legend: {
@@ -74,10 +75,12 @@ const moreContent = (
 
 const General = () => {
   const dispatch = useDispatch();
-  const { performanceState, branches } = useSelector(state => {
+  const { id } = useParams();
+  const { performanceState, branches, employeeLocation } = useSelector(state => {
     return {
       performanceState: state.chartContent.performanceData,
       branches: state.branches.data,
+      employeeLocation: state.employeeLocation.data,
     };
   });
 
@@ -85,6 +88,7 @@ const General = () => {
     if (performanceGetData) {
       dispatch(performanceGetData());
       dispatch(getAllBranches());
+      dispatch(getSingleEmployeeLocation(id));
     }
   }, [dispatch]);
 
@@ -175,7 +179,13 @@ const General = () => {
   return (
     <Row gutter={25}>
       <Col xs={24}>
-        <Branches branches={branches} />
+        
+         { (branches != null) ?
+            <Branches branches={branches} /> : <div></div>
+          
+         }
+        
+      
       </Col>
       {/* <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>

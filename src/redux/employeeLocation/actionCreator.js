@@ -1,83 +1,39 @@
 import actions from './actions';
-import initialState from '../../demoData/employeeLocation.json';
-// import {fetchAllEmployeeLocations} from '../../config/dataService/EmployeeLocationDataService';
+//import initialState from '../../demoData/branches.json';
+import {fetchSingleEmployeeLocation, fetchAllEmployeeLocations} from '../../config/dataService/employeeLocationDataService';
 
 const {
-  singleEmployeeLocationBegin,
   singleEmployeeLocationSuccess,
   singleEmployeeLocationErr,
 
-  filterEmployeeLocationBegin,
-  filterEmployeeLocationSuccess,
-  filterEmployeeLocationErr,
-
-  sortingEmployeeLocationBegin,
-  sortingEmployeeLocationSuccess,
-  sortingEmployeeLocationErr,
+  allEmployeeLocationsSuccess,
+  allEmployeeLocationsErr,
 } = actions;
 
-const filterSinglePage = paramsId => {
-  return async dispatch => {
-    try {
-      dispatch(singleEmployeeLocationBegin());
-      const data = initialState.filter(employeeLocation => {
-        return employeeLocation.id === parseInt(paramsId, 10);
-      });
-      dispatch(singleEmployeeLocationSuccess(data));
-    } catch (err) {
-      dispatch(singleEmployeeLocationErr(err));
-    }
-  };
-};
-
-const filterEmployeeLocationByGender = gender => {
-  return async dispatch => {
-    try {
-      dispatch(filterEmployeeLocationBegin());
-      const data = initialState.filter(employeeLocation => {
-        if (gender !== 'all') {
-          return employeeLocation.gender === gender;
-        }
-        return initialState;
-      });
-      dispatch(filterEmployeeLocationSuccess(data));
-    } catch (err) {
-      dispatch(filterEmployeeLocationErr(err.toString()));
-    }
-  };
-};
-
-const sortingEmployeeLocationByEmployeeLocation = sortBy => {
-  return async dispatch => {
-    try {
-      dispatch(sortingEmployeeLocationBegin());
-      const data = initialState.sort((a, b) => {
-        return b[sortBy] - a[sortBy];
-      });
-
-      setTimeout(() => {
-        dispatch(sortingEmployeeLocationSuccess(data));
-      }, 500);
-    } catch (err) {
-      dispatch(sortingEmployeeLocationErr(err));
-    }
-  };
-};
 
 
-// const getAllEmployeeLocations = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllEmployeeLocations();
-//           dispatch(filterEmployeeLocationSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterEmployeeLocationErr(err.toString()));
-//         }  
-//       };
-//     };
+const getAllEmployeeLocations = () => {
+    return async dispatch => {
+        try {
+          const response = await fetchAllEmployeeLocations();
+          dispatch(allEmployeeLocationsSuccess(response.data));
+        } catch (err) {
+          dispatch(allEmployeeLocationsErr(err.toString()));
+        }  
+      };
+    };
+
+    const getSingleEmployeeLocation = (id) => {
+      return async dispatch => {
+          try {
+            const response = await fetchSingleEmployeeLocation(id);
+            dispatch(singleEmployeeLocationSuccess(response.data));
+            const vrkkk = response.data;
+          } catch (err) {
+            dispatch(singleEmployeeLocationErr(err.toString()));
+          }  
+        };
+      };
     
 
-//export { filterSinglePage, filterEmployeeLocationByGender, sortingEmployeeLocationByEmployeeLocation, getAllEmployeeLocations };
-
-
-export { filterSinglePage, filterEmployeeLocationByGender, sortingEmployeeLocationByEmployeeLocation  };
+export {  getAllEmployeeLocations,getSingleEmployeeLocation };

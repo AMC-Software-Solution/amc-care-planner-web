@@ -58,7 +58,7 @@ const EmployeeProfile = () => {
                   <nav className="profileTab-menu">
                     <ul>
                       <li>
-                        <NavLink to={`${path}/general`}>General</NavLink>
+                        <NavLink to={`${path}/general/${id}`}>General</NavLink>
                       </li>
                       <li>
                         <NavLink to={`${path}/tasks`}>Tasks</NavLink>
@@ -99,7 +99,7 @@ const EmployeeProfile = () => {
                     </Cards>
                   }
                 >
-                  <Route exact path={`${path}/general`} component={General} />
+                  <Route exact path={`${path}/general/${id}`} component={General} />
                   <Route path={`${path}/tasks`} component={Timeline} />
                   <Route path={`${path}/locations`} component={Activity} />
 
