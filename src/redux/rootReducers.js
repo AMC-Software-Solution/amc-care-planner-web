@@ -32,6 +32,9 @@ import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employ
 import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
 import { timesheetReducer, SingleTimesheetReducer } from './timesheet/reducers';
 import { deviceReducer, SingleDeviceReducer } from './device/reducers';
+import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
+import { documentReducer, SingleDocumentReducer } from './document/reducers';
+
 
 
 
@@ -82,6 +85,10 @@ const rootReducers = combineReducers({
   timesheet: SingleTimesheetReducer,
   devices: deviceReducer,
   device: SingleDeviceReducer,
+  communications: communicationReducer,
+  communication: SingleCommunicationReducer,
+  documents: documentReducer,
+  document: SingleDocumentReducer,
  
  
 
