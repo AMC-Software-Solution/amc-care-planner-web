@@ -34,6 +34,7 @@ import { timesheetReducer, SingleTimesheetReducer } from './timesheet/reducers';
 import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
 import { documentReducer, SingleDocumentReducer } from './document/reducers';
+import { disabilityReducer, SingleDisabilityReducer } from './disabilities/reducers';
 
 
 
@@ -89,6 +90,10 @@ const rootReducers = combineReducers({
   communication: SingleCommunicationReducer,
   documents: documentReducer,
   document: SingleDocumentReducer,
+  disabilities: SingleDisabilityReducer,
+  disability: disabilityReducer,
+
+  
  
  
 

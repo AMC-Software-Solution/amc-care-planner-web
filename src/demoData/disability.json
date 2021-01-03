@@ -1,0 +1,19 @@
+[ {
+    "id" : 1,
+    "note" : "Work eligibility",
+    "lastUpdatedDate" : "2020-12-28T13:43:15.50536+03:00",
+    "clientId" : 1,
+    "eligibilityTypeId" : 1,
+    "eligibilityTypeEligibilityType" : "Right to work ",
+    "employeeId" : 1,
+    "employeeEmployeeCode" : "FAARAX_y_ali"
+  }, {
+    "id" : 2,
+    "note" : "Employee Grant",
+    "lastUpdatedDate" : "2020-12-28T13:50:07.961196+03:00",
+    "clientId" : 1,
+    "eligibilityTypeId" : 2,
+    "eligibilityTypeEligibilityType" : "Employee Grant",
+    "employeeId" : 1,
+    "employeeEmployeeCode" : "FAARAX_y_ali"
+  } ]
