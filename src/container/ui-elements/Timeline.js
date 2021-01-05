@@ -133,7 +133,7 @@ const Timelines = () => {
             <TimelineNormalWrap>
               <Cards title="Timeline 1" caption="The simplest use of Timelines">
                 <Timeline>
-                  <Timeline.Item className="active" dot={<SwEllipse size={10} color="#ADB4D2" />}>
+                  <Timeline.Item className="active" dot={<SwEllipse size={10} color="#FFFFFF" />}>
                     <div className="timeline-content-inner align-center-v justify-content-between">
                       <div className="timeline-content-text">
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
@@ -180,7 +180,7 @@ const Timelines = () => {
             <TimelineBoxWrap>
               <Cards title="Timeline 2" caption="The simplest use of Timelines">
                 <Timeline mode="alternate">
-                  <Timeline.Item dot={<SwEllipse size={10} color="#ADB4D2" />}>
+                  <Timeline.Item dot={<SwEllipse size={10} color="#FFFFFF" />}>
                     <h2>10:00 AM</h2>
                     <div className="content-box">
                       <p>

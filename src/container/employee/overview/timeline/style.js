@@ -214,7 +214,7 @@ const AllPosts = Styled.div`
                     }
                     svg,
                     i{
-                        color: #ADB4D2;
+                        color: #FFFFFF;
                         width: 18px;
                         @media only screen and (max-width: 991px){
                             width: 14px;

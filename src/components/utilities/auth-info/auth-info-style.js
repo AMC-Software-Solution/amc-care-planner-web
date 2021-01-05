@@ -10,7 +10,7 @@ const InfoWraper = Styled.div`
         color: ${({ theme }) => theme['text-color-secondary']};
         box-shadow: none;
         padding: 0px 8px;
-        ${({ darkMode }) => (darkMode ? `color: #A8AAB3;` : '')};
+        ${({ darkMode }) => (darkMode ? `color: #FFFFFF;` : '')};
     }
     .message .ant-badge-dot{
         background: green
@@ -309,7 +309,7 @@ const AtbdTopDropdwon = Styled.div`
 
     .notification-text p {
         font-size: 12px;
-        color: #ADB4D2;
+        color: #FFFFFF;
         margin-bottom: 0;
         text-align: ${({ theme }) => (!theme.rtl ? 'left' : 'right')}
     }

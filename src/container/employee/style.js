@@ -1031,7 +1031,7 @@ const EmployeeTableStyleWrapper = Styled.nav`
           }
           &.ant-btn-primary{
             &:hover{
-              color: #ADB4D2;
+              color: #FFFFFF;
             }
           }
         }

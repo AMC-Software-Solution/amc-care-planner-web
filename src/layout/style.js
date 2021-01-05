@@ -4,16 +4,16 @@ const Div = Styled.div`
     position: relative;
     header{
         box-shadow: 0 2px 30px ${({ theme }) => theme['gray-solid']}10;
-        ${({ darkMode }) => (darkMode ? `background: #272B41;` : '')};
+        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : '')};
         z-index: 999;
 
         .ant-btn-link{
             ${({ darkMode }) =>
-              darkMode ? `background: #272B41;border-color: #272B41;color: #7D808D !important` : ''};
+              darkMode ? `background: #5F63F2;border-color: #5F63F2;color: #7D808D !important` : ''};
         }
 
         .head-example{
-            ${({ darkMode }) => (darkMode ? `color: #A8AAB3;` : '')};
+            ${({ darkMode }) => (darkMode ? `color: #FFFFFF;` : '')};
         }
         .ant-menu-sub.ant-menu-vertical{
             .ant-menu-item{
@@ -67,7 +67,7 @@ const Div = Styled.div`
     }
     .header-more{
         .head-example{
-            ${({ darkMode }) => (darkMode ? `color: #A8AAB3;` : '')};
+            ${({ darkMode }) => (darkMode ? `color: #FFFFFF;` : '')};
         }
     }
     .customizer-trigger{
@@ -133,7 +133,7 @@ const Div = Styled.div`
             }
             .customizer__title{
                 font-weight: 600;
-                color: #272B41;
+                color: #5F63F2;
                 font-size: 16px;
                 margin-bottom: 2px;
             }
@@ -149,7 +149,7 @@ const Div = Styled.div`
                 font-weight: 600;
                 font-size: 16px;
                 margin-bottom: 10px;
-                color: #272B41;
+                color: #5F63F2;
             }
         }
     }
@@ -195,7 +195,7 @@ const Div = Styled.div`
             span{
                 display: inline-block;
                 margin-top: 15px;
-                color: #272B41;
+                color: #5F63F2;
             }
         }
     }
@@ -216,13 +216,21 @@ const Div = Styled.div`
     }
     .certain-category-search-wrapper{
         ${({ darkMode, theme }) =>
-          darkMode ? `${!theme.rtl ? 'border-right' : 'border-left'}: 1px solid #272B41;` : ''};
+          darkMode ? `${!theme.rtl ? 'border-right' : 'border-left'}: 1px solid #5F63F2;` : ''};
          @media only screen and (max-width: 767px){
             padding: 0 15px;
         }
         input{
-            max-width: 350px;
-            ${({ darkMode }) => (darkMode ? `background: #272B41;` : '')};
+            max-width: 200px;
+            background: #5F63F2;
+            border-radius: 60px;
+            color: #fff;
+            border-style: solid;
+            border-color: white !important;
+            border-width: 1px;
+            margin-left: 7px;
+            max-height: 30px !important;
+            ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : '')};
             ${({ darkMode }) => (darkMode ? `color: #fff;` : '#5A5F7D')};
             @media only screen and (max-width: 875px){
                 ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 5px;
@@ -347,7 +355,7 @@ const Div = Styled.div`
                             &:after,
                             &:before{
                                 width: 7px;
-                                background: #868EAE;
+                                background: #FFFFFF;
                                 height: 1.25px;
                             }
                             &:before{
@@ -542,7 +550,7 @@ const Div = Styled.div`
 `;
 
 const SmallScreenAuthInfo = Styled.div`
-        ${({ darkMode }) => (darkMode ? `background: #272B41;` : 'background: #fff')};
+        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : 'background: #fff')};
         width: 100%;
         position: fixed;
         margin-top: ${({ hide }) => (hide ? '0px' : '64px')};
@@ -556,7 +564,7 @@ const SmallScreenAuthInfo = Styled.div`
 `;
 
 const SmallScreenSearch = Styled.div`
-        ${({ darkMode }) => (darkMode ? `background: #272B41;` : 'background: #fff')};
+        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : 'background: #fff')};
         width: 100%;
         position: fixed;
         margin-top: ${({ hide }) => (hide ? '0px' : '64px')};
@@ -595,7 +603,7 @@ const TopMenuSearch = Styled.div`
         display: flex;
         align-items: center;
         ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 10px;
-        ${({ theme }) => (theme.darkMode ? `color: #A8AAB3;` : 'color :#5A5F7D')};
+        ${({ theme }) => (theme.darkMode ? `color: #FFFFFF;` : 'color :#5A5F7D')};
         .feather-x{
             display: none;
         }
@@ -642,7 +650,7 @@ const TopMenuSearch = Styled.div`
         i,
         svg{
             width: 18px;
-            color: ${({ theme }) => (theme.darkMode ? `color: #A8AAB3;` : 'color:# 9299b8')};
+            color: ${({ theme }) => (theme.darkMode ? `color: #FFFFFF;` : 'color:# 9299b8')};
         }
         form{
             height: auto;
@@ -756,7 +764,7 @@ const TopMenuStyle = Styled.div`
                             font-weight: 400;
                             padding: 0 30px;
                             line-height: 3;
-                            color: #868EAE;
+                            color: #FFFFFF;
                             transition: .3s;
                             &:hover,
                             &.active{
@@ -920,7 +928,7 @@ const TopMenuStyle = Styled.div`
                             }
                             >a{
                                 line-height: 3;
-                                color: #868EAE;
+                                color: #FFFFFF;
                                 font-weight: 400;
                                 transition: .3s;
                             }

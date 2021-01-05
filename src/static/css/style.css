@@ -53,7 +53,7 @@
   display: inline !important;
   font-size: 12px;
   font-weight: 500;
-  background-color: #868eae10;
+  background-color: #FFFFFF10;
   padding: 4.5px 11.85px;
   border-radius: 15px;
 }
@@ -125,7 +125,7 @@ ul {
   margin-left: 15px;
   font-size: 11px;
   font-weight: 500;
-  color: #868eae;
+  color: #FFFFFF;
 }
 
 html[dir='rtl'] .ant-card-head-title span {
@@ -138,7 +138,7 @@ html[dir='rtl'] .ant-card-head-title span {
 }
 
 .ant-card-head .ant-card-extra a {
-  color: #868eae;
+  color: #FFFFFF;
 }
 
 .ant-card-extra .ant-dropdown-trigger {
@@ -168,7 +168,7 @@ html[dir='rtl'] .ant-card-head-title span {
 
 .card-nav ul li a {
   font-weight: 500;
-  color: #868eae;
+  color: #FFFFFF;
   font-size: 12px;
 }
 
@@ -192,7 +192,7 @@ html[dir='rtl'] .ant-card-head-title span {
 .growth-downward p,
 .growth-upward p {
   font-size: 14px;
-  color: #868eae;
+  color: #FFFFFF;
   margin: 0;
 }
 
@@ -236,7 +236,7 @@ html[dir='rtl'] .ant-card-head-title span {
 
 .chart-label .chart-label__single p {
   margin: 0;
-  color: #868eae;
+  color: #FFFFFF;
 }
 
 /* revenue doughnut */
@@ -287,7 +287,7 @@ html[dir='rtl'] .ant-card-head-title span {
 .revenue-chat-percentage span {
   display: block;
   font-size: 13px;
-  color: #868eae;
+  color: #FFFFFF;
 }
 
 .revenue-chat-percentage span:not(:last-child) {
@@ -351,7 +351,7 @@ html[dir='rtl'] .ant-card-head-title span {
 }
 
 .color-dark {
-  color: #272b41;
+  color: #5F63F2;
 }
 
 .color-error {
@@ -493,7 +493,7 @@ html[dir='rtl'] .ant-card-head-title span {
 }
 
 .ant-picker-input > input::placeholder {
-  color: #adb4d2 !important;
+  color: #FFFFFF !important;
 }
 
 /* Calendar Styles */
@@ -1132,7 +1132,7 @@ html[dir='rtl'] .ant-card-head-title span {
 
 .atbd-top-dropdwon .notification-text p {
   font-size: 12px;
-  color: #adb4d2;
+  color: #FFFFFF;
   margin-bottom: 0;
 }
 
@@ -1251,7 +1251,7 @@ html[dir='rtl'] .ant-card-head-title span {
 }
 
 .ant-cascader-picker input::placeholder {
-  color: #adb4d2;
+  color: #FFFFFF;
 }
 
 /* Comment Styles */
@@ -1474,7 +1474,7 @@ html[dir='rtl'] .ant-card-head-title span {
 
 .full-width-table .top-seller-table th {
   text-align: right;
-  color: #272b41;
+  color: #5F63F2;
   font-weight: 500;
 }
 
@@ -1720,12 +1720,13 @@ html[dir='rtl'] .ant-card-head-title span {
 .ant-menu-dark .ant-menu-inline.ant-menu-sub,
 .ant-menu.ant-menu-dark,
 .ant-menu-dark .ant-menu-sub {
-  background: #272b41 !important;
+  background: #5F63F2 !important;
 }
 
 .ant-menu-dark .ant-menu-item a {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.65) !important;
+  /*color: rgba(255, 255, 255, 0.65) !important; */
+  color: rgba(255, 255, 255) !important;
 }
 
 .ant-menu-dark .ant-menu-item a:hover {
@@ -1733,7 +1734,8 @@ html[dir='rtl'] .ant-card-head-title span {
 }
 
 .ant-menu-dark .ant-menu-submenu span {
-  color: rgba(255, 255, 255, 0.65) !important;
+    /*color: rgba(255, 255, 255, 0.65) !important; */
+    color: rgba(255, 255, 255) !important;
 }
 
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
@@ -2018,7 +2020,7 @@ html[dir='rtl'] .ant-card-head-title span {
 .addEvent-modal .ant-modal-header .ant-modal-title {
   font-size: 15px;
   font-weight: 500;
-  color: #272b41;
+  color: #5F63F2;
 }
 
 .addEvent-modal .ant-modal-body {
@@ -2199,7 +2201,7 @@ html[dir='rtl'] .ant-card-head-title span {
   padding: 7px 12px;
   border: 0 none;
   font-size: 12px;
-  background: #272b41;
+  background: #5F63F2;
 }
 
 .btn-rtl {

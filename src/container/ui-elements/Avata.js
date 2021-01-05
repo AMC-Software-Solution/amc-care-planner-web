@@ -70,7 +70,7 @@ const Avatars = () => {
                     className="btn-outlined"
                     type="light"
                     outlined
-                    style={{ margin: '0 10px', verticalAlign: 'middle', color: '#ADB4D2' }}
+                    style={{ margin: '0 10px', verticalAlign: 'middle', color: '#FFFFFF' }}
                     onClick={changeUser}
                   >
                     Change

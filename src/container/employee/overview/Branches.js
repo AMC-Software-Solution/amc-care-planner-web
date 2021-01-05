@@ -4,83 +4,83 @@ import PropTypes from 'prop-types';
 import { Row, Col, Pagination, Skeleton, Table } from 'antd';
 import Heading from '../../../components/heading/heading';
 const Branch = ({ branches }) => {
+  const columns = [
+    {
+      title: 'Branch ID',
+      dataIndex: 'id',
+      key: 'id',
+    },
+    {
+      title: 'Branch Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Address',
+      dataIndex: 'address',
+      key: 'address',
+    },
+    {
+      title: 'Client ID',
+      dataIndex: 'clientID',
+      key: 'clientID',
+    },
+    {
+      title: 'Client Name',
+      dataIndex: 'clientName',
+      key: 'clientName',
+    },
+    {
+      title: 'Telephone Number',
+      dataIndex: 'telephoneNumber',
+      key: 'telephoneNumber',
+    },
+    {
+      title: 'Last Updated',
+      dataIndex: 'lastUpdated',
+      key: 'lastUpdated',
+    },
+  ];
+
+  const dataSource = branches.map(value => {
+      const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
+      const dataSourceRow = 
+        {
+          key: id,
+          id,
+          name,
+          address,
+          clientID: clientId,
+          clientName: clientClientName,
+          telephoneNumber: telephone,
+          lastUpdated: lastUpdatedDate,
+        }
+      ;
+      return dataSourceRow;
+     
+    });
+
+
   return (
     <Row gutter={25}>
-      {branches.length ? (
-        branches.map(value => {
-          const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
-          const dataSource = [
-            {
-              key: id,
-              name,
-              address,
-              clientID: clientId,
-              clientName: clientClientName,
-              telephoneNumber: telephone,
-              lastUpdated: lastUpdatedDate,
-            },
-          ];
-
-          const columns = [
-            {
-              title: 'Branch Name',
-              dataIndex: 'name',
-              key: 'name',
-            },
-            {
-              title: 'Address',
-              dataIndex: 'address',
-              key: 'address',
-            },
-            {
-              title: 'Client ID',
-              dataIndex: 'clientID',
-              key: 'clientID',
-            },
-            {
-              title: 'Client Name',
-              dataIndex: 'clientName',
-              key: 'clientName',
-            },
-            {
-              title: 'Telephone Number',
-              dataIndex: 'telephoneNumber',
-              key: 'telephoneNumber',
-            },
-            {
-              title: 'Last Updated',
-              dataIndex: 'lastUpdated',
-              key: 'lastUpdated',
-            },
-          ];
-
-          return (
-            <Col key={value.id} xs={24}>
-              <Suspense
-                fallback={
-                  <Cards headless>
-                    <Skeleton active />
-                  </Cards>
-                }
-              >
-                <div className="card user-card">
-                  <Cards title="Branches">
-                    <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
-                  </Cards>
-                </div>
-              </Suspense>
-            </Col>
-          );
-        })
-      ) : (
-        <Col md={24}>
+    <Col xs={24}>
+      <Suspense
+        fallback={
           <Cards headless>
-            <Heading>Data Not Found!</Heading>
+            <Skeleton active />
           </Cards>
-        </Col>
-      )}
+        }
+      >
+        <div className="card user-card">
+          <Cards title="Branches">
+            <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
+          </Cards>
+        </div>
+      </Suspense>
+    </Col>
     </Row>
   );
+
 };
 
 Branch.propTypes = {

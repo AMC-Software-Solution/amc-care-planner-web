@@ -200,7 +200,7 @@ const Main = Styled.div`
         border-color: #E3E6EF;
     }
     .ant-collapse > .ant-collapse-item.ant-collapse-item-disabled .ant-collapse-header{
-        color: #ADB4D2 !important;
+        color: #FFFFFF !important;
     }
 
     .ant-collapse > .ant-collapse-item .ant-collapse-header .ant-collapse-arrow{
@@ -385,7 +385,7 @@ const Main = Styled.div`
         margin-top: 22px;
     }
     .ant-comment-actions li span{
-        color: #ADB4D2;
+        color: #FFFFFF;
     }
     .ant-comment-content-detail textarea{
         resize: none;

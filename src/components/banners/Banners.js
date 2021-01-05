@@ -69,7 +69,7 @@ const Banner3 = () => {
 const Banner4 = () => {
   return (
     <BannerWrapper>
-      <Cards bodyStyle={{ background: '#272B41', borderRadius: '10px', minHeight: '270px' }} headless>
+      <Cards bodyStyle={{ background: '#5F63F2', borderRadius: '10px', minHeight: '270px' }} headless>
         <Figure3 className="theme-3">
           <img src={require('../../static/img/banner/3.png')} alt="" />
           <figcaption>

@@ -34,7 +34,7 @@ const HalfProgressBar = ({ percent }) => {
         <text
           id="Progress"
           transform="translate(619 931)"
-          fill="#868eae"
+          fill="#FFFFFF"
           fontSize="15"
           fontFamily="Inter-Regular, Inter"
         >

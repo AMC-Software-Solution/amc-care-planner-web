@@ -530,7 +530,7 @@ const SwEllipse = ({ size, color, stroke, strokeWidth }) => {
 
 const defaults = {
   size: 16,
-  color: '#ADB4D2',
+  color: '#FFFFFF',
   stroke: 'none',
   strokeWidth: 'none',
 };

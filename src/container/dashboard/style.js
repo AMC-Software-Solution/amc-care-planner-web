@@ -120,7 +120,7 @@ const Focard = Styled.div`
         }
         .subtitle{
             font-size: 14px;
-            color: #868EAE;
+            color: #FFFFFF;
             margin-bottom: 10px;
         }
         .focard-status{
@@ -137,7 +137,7 @@ const Focard = Styled.div`
                 }
             }
             span + span{
-                color: #868EAE;
+                color: #FFFFFF;
                 font-size: 13px;
             }
         }

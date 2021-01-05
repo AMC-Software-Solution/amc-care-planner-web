@@ -103,7 +103,7 @@ const CardFrame = Styled(Card)`
   }
   .custom-label {
     font-size: 13px;
-    color: #868eae;
+    color: #FFFFFF;
     display: inline-flex;
     align-items: center;
   }

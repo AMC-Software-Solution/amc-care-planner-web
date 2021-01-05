@@ -44,7 +44,7 @@ const PricingCard = Styled.div`
     &.ant-btn-white{
       border: 1px solid #E3E6EF;
       span{
-        color: #272b41;
+        color: #5F63F2;
       }
     }
   }
@@ -220,15 +220,6 @@ const UserTableStyleWrapper = Styled.nav`
           width: auto;
           height: auto;
           padding: 0;
-          background-color: transparent;
-          &:hover{
-            background-color: transparent;
-          }
-          &.ant-btn-primary{
-            &:hover{
-              color: #ADB4D2;
-            }
-          }
         }
       }
       tbody >tr.ant-table-row-selected >td{
@@ -381,7 +372,7 @@ const UserCard = Styled.div`
             right: 0;
             ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 0;
             top: 0;
-            color: #ADB4D2;
+            color: #FFFFFF;
           }
           .card__designation{
             margin-bottom: 0;

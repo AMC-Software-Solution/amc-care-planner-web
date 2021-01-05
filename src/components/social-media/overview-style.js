@@ -15,7 +15,7 @@ const MainWraper = Styled.div`
   }
   p{
     margin: 0;
-    color: #868EAE;
+    color: #FFFFFF;
   }
   .social-icon{
     span{

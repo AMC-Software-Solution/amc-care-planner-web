@@ -71,7 +71,7 @@ const Card = Styled.div`
             }
             .ant-dropdown-trigger{
                 svg{
-                    color: #868EAE;
+                    color: #FFFFFF;
                 }
             }
         }        
