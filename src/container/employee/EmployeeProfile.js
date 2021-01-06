@@ -15,7 +15,7 @@ const Activity = lazy(() => import('./overview/Activity'));
 
 const EmployeeProfile = () => {
   const { id } = useParams();
-  const { path } = useRouteMatch();
+  const { path, url } = useRouteMatch();
 
   const dispatch = useDispatch();
   const { employee } = useSelector(state => {
@@ -58,34 +58,34 @@ const EmployeeProfile = () => {
                   <nav className="profileTab-menu">
                     <ul>
                       <li>
-                        <NavLink to={`${path}/general/${id}`}>General</NavLink>
+                        <NavLink to={`${url}/general/${id}`}>General</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/tasks`}>Tasks</NavLink>
+                        <NavLink to={`${url}/tasks/${id}`}>Tasks</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/locations`}>Location</NavLink>
+                        <NavLink to={`${url}/locations/${id}`}>Location</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/holidays`}>Holidays</NavLink>
+                        <NavLink to={`${url}/holidays/${id}`}>Holidays</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/documents`}>Documents</NavLink>
+                        <NavLink to={`${url}/documents/${id}`}>Documents</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/timesheet`}>Timesheet</NavLink>
+                        <NavLink to={`${url}/timesheet/${id}`}>Timesheet</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/communications`}>Communications</NavLink>
+                        <NavLink to={`${url}/communications/${id}`}>Communications</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/notifications`}>Notifications</NavLink>
+                        <NavLink to={`${url}/notifications/${id}`}>Notifications</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/accesslogs`}>Access Logs</NavLink>
+                        <NavLink to={`${url}/accesslogs/${id}`}>Access Logs</NavLink>
                       </li>
                       <li>
-                        <NavLink to={`${path}/devices`}>Devices</NavLink>
+                        <NavLink to={`${url}/devices/${id}`}>Devices</NavLink>
                       </li>
                     </ul>
                   </nav>
@@ -99,19 +99,19 @@ const EmployeeProfile = () => {
                     </Cards>
                   }
                 >
-                  <Route exact path={`${path}/general/${id}`} component={General} />
-                  <Route path={`${path}/tasks`} component={Timeline} />
-                  <Route path={`${path}/locations`} component={Activity} />
+                  <Route exact path={`${path}/general/:id`} component={General} />
+                  <Route path={`${path}/tasks/:id`} component={Timeline} />
+                  <Route path={`${path}/locations/:id`} component={Activity} />
 
-                  <Route exact path={`${path}/holidays`} component={General} />
-                  <Route path={`${path}/documents`} component={Timeline} />
-                  <Route path={`${path}/timesheet`} component={Activity} />
+                  <Route exact path={`${path}/holidays/:id`} component={General} />
+                  <Route path={`${path}/documents/:id`} component={Timeline} />
+                  <Route path={`${path}/timesheet/:id`} component={Activity} />
 
-                  <Route exact path={`${path}/communications`} component={General} />
-                  <Route path={`${path}/notifications`} component={Timeline} />
-                  <Route path={`${path}/accesslogs`} component={Activity} />
+                  <Route exact path={`${path}/communications/:id`} component={General} />
+                  <Route path={`${path}/notifications/:id`} component={Timeline} />
+                  <Route path={`${path}/accesslogs/:id`} component={Activity} />
 
-                  <Route path={`${path}/devices`} component={Activity} />
+                  <Route path={`${path}/devices/:id`} component={Activity} />
                 </Suspense>
               </Switch>
             </SettingWrapper>

@@ -80,7 +80,7 @@ const EmployeeListTable = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to="/admin/employee/employeeProfile/1">
+                <Link to={`/admin/employee/employeeProfile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>
