@@ -79,7 +79,7 @@ const EmployeeListTable = () => {
         action: (
           <div className="table-actions">
             <>
-              <Button className="btn-icon" type="primary" shape="circle">
+              <Button className="btn-icon"  style={{display: 'inline-block !important'}} type="primary" shape="circle">
                 <Link to={`/admin/employee/employeeProfile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>

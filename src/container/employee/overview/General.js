@@ -175,8 +175,9 @@ const General = () => {
       hoverBorderWidth: 5,
     },
   ];
-
+ 
   return (
+  
     <Row gutter={25}>
       <Col xs={24}>
         
@@ -220,36 +221,29 @@ const General = () => {
         </Cards>
       </Col> */}
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
-        <Cards headless>
-          <EChartCard>
-            <div className="card-chunk">
-              <CardBarChart2>
-                <Heading as="h1">$28,947</Heading>
-                <span>Revenue</span>
-                <p>
-                  <span className="growth-downward">
-                    <FeatherIcon icon="arrow-down" /> 25%
-                  </span>
-                  <span>Since last week</span>
-                </p>
-              </CardBarChart2>
-            </div>
-            <div className="card-chunk">
-              <ChartjsBarChartTransparent
-                labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
-                datasets={[
-                  {
-                    data: [20, 60, 50, 45, 50, 60, 70],
-                    backgroundColor: '#FFF0F6',
-                    hoverBackgroundColor: '#FF69A5',
-                    label: 'Revenue',
-                  },
-                ]}
-                options={chartOptions}
-              />
-            </div>
-          </EChartCard>
-        </Cards>
+        
+      { (employeeLocation != null) ?
+            
+            <Cards headless>
+            <div className="card__content">
+                          <p className="card__designation">
+                            Latitude: <b>{employeeLocation.latitude}</b>
+                          </p>
+                          <p className="card__designation">
+                            Longitude : <b>{employeeLocation.longitude}</b>
+                          </p>
+                          <p className="card__designation">
+                            Updated Date : <b>{employeeLocation.lastUpdatedDate}</b>
+                          </p>
+                        </div>
+                      
+            </Cards>
+            : <div></div>
+          
+      }
+        
+        
+      
       </Col>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
