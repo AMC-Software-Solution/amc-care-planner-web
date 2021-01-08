@@ -64,12 +64,12 @@ const TotalRevenue = ({ title }) => {
   const performanceDatasets = performanceState !== null && [
     {
       data: performanceState.users[1],
-      borderColor: '#5F63F2',
+      borderColor: '#593196',
       borderWidth: 4,
       fill: true,
       backgroundColor: () =>
         chartLinearGradient(document.getElementById('performance'), 300, {
-          start: '#5F63F230',
+          start: '#59319630',
           end: '#ffffff05',
         }),
       label: 'Current period',
@@ -77,7 +77,7 @@ const TotalRevenue = ({ title }) => {
       pointRadius: '0',
       hoverRadius: '9',
       pointBorderColor: '#fff',
-      pointBackgroundColor: '#5F63F2',
+      pointBackgroundColor: '#593196',
       hoverBorderWidth: 5,
       amount: '$7,596',
       amountClass: 'current-amount',

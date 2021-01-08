@@ -32,7 +32,7 @@ const Banner1 = () => {
 const Banner2 = () => {
   return (
     <BannerWrapper>
-      <Cards className="mb-70" bodyStyle={{ background: '#5F63F2', borderRadius: '10px', minHeight: '270px' }} headless>
+      <Cards className="mb-70" bodyStyle={{ background: '#593196', borderRadius: '10px', minHeight: '270px' }} headless>
         <Figure2>
           <img src={require('../../static/img/banner/1.png')} alt="" />
           <figcaption>
@@ -51,7 +51,7 @@ const Banner2 = () => {
 const Banner3 = () => {
   return (
     <BannerWrapper>
-      <Cards  bodyStyle={{ borderRadius: '10px', minHeight: '270px', background: '#5F63F2' }} headless>
+      <Cards  bodyStyle={{ borderRadius: '10px', minHeight: '270px', background: '#593196' }} headless>
         <Figure3>
           <img src={require('../../static/img/banner/2.png')} alt="" />
           <figcaption>
@@ -69,7 +69,7 @@ const Banner3 = () => {
 const Banner4 = () => {
   return (
     <BannerWrapper>
-      <Cards bodyStyle={{ background: '#5F63F2', borderRadius: '10px', minHeight: '270px' }} headless>
+      <Cards bodyStyle={{ background: '#593196', borderRadius: '10px', minHeight: '270px' }} headless>
         <Figure3 className="theme-3">
           <img src={require('../../static/img/banner/3.png')} alt="" />
           <figcaption>
@@ -90,7 +90,7 @@ const Banner5 = () => {
     <BannerWrapper>
       <Cards
         bodyStyle={{ 
-          background: '#5F63F2',
+          background: '#593196',
           borderRadius: '10px',
           minHeight: '265px',
           display: 'flex',

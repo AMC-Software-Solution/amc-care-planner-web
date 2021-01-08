@@ -27,7 +27,7 @@ const TabColor = colors => `
   }
   .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
     color : ${
-      colors !== 'default' && colors !== '#ffffff' && colors !== '#fff' && colors !== 'white' ? '#ffffff' : '#5F63F2'
+      colors !== 'default' && colors !== '#ffffff' && colors !== '#fff' && colors !== 'white' ? '#ffffff' : '#593196'
     };
   }
   .ant-tabs-ink-bar {

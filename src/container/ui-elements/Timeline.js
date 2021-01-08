@@ -45,7 +45,7 @@ const Timelines = () => {
             <Cards title="Basic" caption="The simplest use of Timelines">
               <TimeLinePointerIconWrap>
                 <Timeline>
-                  <Timeline.Item className="primary" dot={<SwRocket size={20} color="#5F63F2" />}>
+                  <Timeline.Item className="primary" dot={<SwRocket size={20} color="#593196" />}>
                     <h3>02:30 PM</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <span className="tags">HTML,CSS,VueJS</span>
@@ -75,7 +75,7 @@ const Timelines = () => {
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <span className="tags">HTML,CSS,VueJS</span>
                   </Timeline.Item>
-                  <Timeline.Item className="primary" dot={<SwPicture size={21} color="#5f63f2" />}>
+                  <Timeline.Item className="primary" dot={<SwPicture size={21} color="#593196" />}>
                     <h3>02:30 PM</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <span className="tags">HTML,CSS,VueJS</span>
@@ -141,7 +141,7 @@ const Timelines = () => {
                       <span className="timeline-content-time">6:00 am</span>
                     </div>
                   </Timeline.Item>
-                  <Timeline.Item dot={<SwEllipse size={10} color="#5F63F2" />}>
+                  <Timeline.Item dot={<SwEllipse size={10} color="#593196" />}>
                     <div className="timeline-content-inner align-center-v justify-content-between">
                       <div className="timeline-content-text">
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
@@ -189,7 +189,7 @@ const Timelines = () => {
                       </p>
                     </div>
                   </Timeline.Item>
-                  <Timeline.Item dot={<SwEllipse size={10} color="#5F63F2" />}>
+                  <Timeline.Item dot={<SwEllipse size={10} color="#593196" />}>
                     <h2>10:00 AM</h2>
                     <div className="content-box">
                       <p>

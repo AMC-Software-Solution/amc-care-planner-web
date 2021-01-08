@@ -928,8 +928,9 @@ const ActivitiesWrapper = Styled.div`
             height: 24px;
             width: 24px;
             border-radius: 50%;
+            color: #9299b8;
             margin: ${({ theme }) => (theme.rtl ? '4px 0 0 10px' : '4px 10px 0 0')};
-            &.bg-primary{
+            /* &.bg-primary{
                 background: ${({ theme }) => theme['primary-color']}15;
                 color: ${({ theme }) => theme['primary-color']};
             }
@@ -940,7 +941,7 @@ const ActivitiesWrapper = Styled.div`
             &.bg-success{
                 background: ${({ theme }) => theme['success-color']}15;
                 color: ${({ theme }) => theme['success-color']};
-            }
+            } */
         }
         img{
             ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 12px;
@@ -971,6 +972,7 @@ const EmployeeTableStyleWrapper = Styled.nav`
         .user-info{
           .user-name{
             font-size: 14px;
+            color: #9299b8;
           }
         }
         span.status-text{
@@ -1000,6 +1002,7 @@ const EmployeeTableStyleWrapper = Styled.nav`
   }
   .ant-table-pagination.ant-pagination{
     width: 100%;
+    color: #9299b8;
     text-align: ${({ theme }) => (!theme.rtl ? 'right' : 'left')};
     border-top: 1px solid ${({ theme }) => theme['border-color-light']};
     margin-top: 0 !important;
@@ -1025,10 +1028,10 @@ const EmployeeTableStyleWrapper = Styled.nav`
           width: auto;
           height: auto;
           padding: 0;
-          background-color: transparent;
+          background-color: #593196;
           &:hover{
             background-color: transparent;
-          }
+          } 
           &.ant-btn-primary{
             &:hover{
               color: #FFFFFF;
@@ -1037,7 +1040,8 @@ const EmployeeTableStyleWrapper = Styled.nav`
         }
       }
       tbody >tr.ant-table-row-selected >td{
-        background-color: ${({ theme }) => theme['primary-color']}10;
+        /* background-color: ${({ theme }) => theme['primary-color']}10; */
+        
       }
     }
   }

@@ -112,7 +112,7 @@ const ButtonStyled = Styled(Button)`
     box-shadow: 0 0;
     &:hover, &:focus {
         background: ${({ type, theme }) => type !== 'default' && theme[`${type}-hover`]};
-        color: ${({ type }) => (type !== 'default' ? '#ffffff' : '#5A5F7D')};
+        color: ${({ type }) => (type !== 'default' ? '#ffffff' : '#9299b8')};
     }
     i,
     svg,

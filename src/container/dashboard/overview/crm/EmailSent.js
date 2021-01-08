@@ -39,7 +39,7 @@ const EmailSent = () => {
   const datasets = [
     {
       data: deviceState,
-      backgroundColor: ['#20C997', '#5F63F2', '#FA8B0C'],
+      backgroundColor: ['#20C997', '#593196', '#FA8B0C'],
     },
   ];
 

@@ -44,7 +44,7 @@ const PricingCard = Styled.div`
     &.ant-btn-white{
       border: 1px solid #E3E6EF;
       span{
-        color: #5F63F2;
+        color: #593196;
       }
     }
   }

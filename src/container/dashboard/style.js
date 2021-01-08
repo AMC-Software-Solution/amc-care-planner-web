@@ -1408,7 +1408,7 @@ const RevenueChartWrapper = Styled.div`
                     background: #20C997;
                 }
                 &.dot-Mobile{
-                    background: #5F63F2;
+                    background: #593196;
                 }
                 &.dot-Tablets{
                     background: #FA8B0C;

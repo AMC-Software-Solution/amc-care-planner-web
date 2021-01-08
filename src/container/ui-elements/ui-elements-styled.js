@@ -174,7 +174,7 @@ const BreadcrumbWrapperStyle = Styled.div`
   .ant-breadcrumb >span:first-child .ant-breadcrumb-link,
   .ant-breadcrumb >span:first-child .ant-breadcrumb-link svg,
   .ant-breadcrumb >span:first-child .ant-breadcrumb-link a{
-    color: #5F63F2;
+    color: #593196;
   }
   .ant-breadcrumb >span:last-child .ant-breadcrumb-link{
     color: #9299B8;
@@ -196,7 +196,7 @@ const BreadcrumbWrapperStyle = Styled.div`
   }
   .demo-nav a{
     padding: 0 12px;
-    color: #5F63F2;
+    color: #593196;
   }
   .ant-alert{
     &.ant-alert-info{
@@ -268,7 +268,7 @@ const CardStyleWrapper = Styled.div`
   background: #fff;
 }
 .ant-card-head-wrapper .ant-card-extra a{
-  color: #5F63F2;
+  color: #593196;
 }
 .ant-card-body{
   padding: 22px 25px 15px 25px !important

@@ -30,16 +30,16 @@ const CardGroup = () => {
                 datasets={[
                   {
                     data: [30, 10, 20, 25, 20, 30, 15, 25, 15, 10],
-                    borderColor: '#5F63F2',
+                    borderColor: '#593196',
                     borderWidth: 3,
                     fill: true,
-                    pointHoverBackgroundColor: '#5F63F2',
+                    pointHoverBackgroundColor: '#593196',
                     pointHoverBorderWidth: 0,
                     pointHoverBorderColor: 'transparent',
                     backgroundColor: () =>
                       chartLinearGradient(document.getElementById('netProfit'), 80, {
-                        start: '#5F63F212',
-                        end: '#5F63F202',
+                        start: '#59319612',
+                        end: '#59319602',
                       }),
                   },
                 ]}

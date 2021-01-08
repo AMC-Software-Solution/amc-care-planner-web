@@ -152,14 +152,14 @@ const FacebookOverview = () => {
                             datasets={[
                               {
                                 data: forcastOverviewState.LiData,
-                                borderColor: '#5F63F2',
+                                borderColor: '#593196',
                                 borderWidth: 3,
                                 fill: true,
 
                                 backgroundColor: () =>
                                   chartLinearGradient(document.getElementById('likes'), 165, {
-                                    start: '#5F63F210',
-                                    end: '#5F63F201',
+                                    start: '#59319610',
+                                    end: '#59319601',
                                   }),
                                 pointHoverRadius: 0,
                                 pointHoverBorderColor: 'transparent',

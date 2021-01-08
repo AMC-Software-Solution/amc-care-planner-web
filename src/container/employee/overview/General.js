@@ -158,12 +158,12 @@ const General = () => {
   const performanceDatasets = performanceState !== null && [
     {
       data: performanceState.users[1],
-      borderColor: '#5F63F2',
+      borderColor: '#593196',
       borderWidth: 4,
       fill: true,
       backgroundColor: () =>
         chartLinearGradient(document.getElementById('performance'), 300, {
-          start: '#5F63F230',
+          start: '#59319630',
           end: '#ffffff05',
         }),
       label: 'Revenue',
@@ -171,7 +171,7 @@ const General = () => {
       pointRadius: '0',
       hoverRadius: '9',
       pointBorderColor: '#fff',
-      pointBackgroundColor: '#5F63F2',
+      pointBackgroundColor: '#593196',
       hoverBorderWidth: 5,
     },
   ];
@@ -210,7 +210,7 @@ const General = () => {
                   {
                     data: [20, 60, 50, 45, 50, 60, 70],
                     backgroundColor: '#EFEFFE',
-                    hoverBackgroundColor: '#5F63F2',
+                    hoverBackgroundColor: '#593196',
                     label: 'Orders',
                   },
                 ]}
