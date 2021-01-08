@@ -1,4 +1,4 @@
-const primaryColor = '#5F63F2';
+const primaryColor = '#593196';
 const primaryHover = '#4347D9';
 const secondaryColor = '#FF69A5';
 const secondaryHover = '#E34A87';
@@ -14,7 +14,7 @@ const errorHover = '#E30D0F';
 const infoColor = '#2C99FF';
 const infoHover = '#0D79DF';
 //const darkColor = '#272B41';
-const darkColor = '#5F63F2';
+const darkColor = '#593196';
 const darkHover = '#131623';
 const grayColor = '#5A5F7D';
 const grayHover = '#363A51';

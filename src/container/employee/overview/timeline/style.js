@@ -170,7 +170,7 @@ const AllPosts = Styled.div`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 10px 15px #5F63F220;
+                box-shadow: 0 10px 15px #59319620;
                 @media only screen and (max-width: 991px){
                     width: 35px;
                     height: 35px;

@@ -5,6 +5,7 @@ const AutoCompleteStyled = Styled(AutoComplete)`
     display: block !important;
     .ant-select-selection-placeholder{
         padding: 0 20px !important;
+        color: #9299b8;
         text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')};
         ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 2px !important;
     }

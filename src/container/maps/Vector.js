@@ -74,11 +74,11 @@ const VectorMaps = () => {
                                   outline: 'none',
                                 },
                                 hover: {
-                                  fill: '#5F63F2',
+                                  fill: '#593196',
                                   outline: 'none',
                                 },
                                 pressed: {
-                                  fill: '#5F63F2',
+                                  fill: '#593196',
                                   outline: 'none',
                                 },
                               }}

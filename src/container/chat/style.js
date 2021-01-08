@@ -443,7 +443,7 @@ const Footer = Styled.div`
         }
       }
       .btn-send{
-        box-shadow: 0 8px 13px #5F63F220;
+        box-shadow: 0 8px 13px #59319620;
       }
       .ant-upload-select,
       button{

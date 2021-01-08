@@ -4,12 +4,12 @@ const Div = Styled.div`
     position: relative;
     header{
         box-shadow: 0 2px 30px ${({ theme }) => theme['gray-solid']}10;
-        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : '')};
+        ${({ darkMode }) => (darkMode ? `background: #593196;` : '')};
         z-index: 999;
 
         .ant-btn-link{
             ${({ darkMode }) =>
-              darkMode ? `background: #5F63F2;border-color: #5F63F2;color: #7D808D !important` : ''};
+              darkMode ? `background: #593196;border-color: #593196;color: #7D808D !important` : ''};
         }
 
         .head-example{
@@ -77,14 +77,14 @@ const Div = Styled.div`
         width: 50px;
         height: 50px;
         border-radius: ${({ theme }) => (theme.rtl ? '0 10px 10px 0' : '10px 0 0 10px')};
-        background-color: #5F63F2;
+        background-color: #593196;
         position: fixed;
         ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 0;
         top: 50%;
         transform: translateY(-50%);
         transition: all .3s ease;
         z-index: 999;
-        box-shadow: 0 10px 15px rgba(#5F63F2,.20);
+        box-shadow: 0 10px 15px rgba(#593196,.20);
         &.show{
             ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 295px;
         }
@@ -133,7 +133,7 @@ const Div = Styled.div`
             }
             .customizer__title{
                 font-weight: 600;
-                color: #5F63F2;
+                color: #593196;
                 font-size: 16px;
                 margin-bottom: 2px;
             }
@@ -149,7 +149,7 @@ const Div = Styled.div`
                 font-weight: 600;
                 font-size: 16px;
                 margin-bottom: 10px;
-                color: #5F63F2;
+                color: #593196;
             }
         }
     }
@@ -168,7 +168,7 @@ const Div = Styled.div`
             }
             &:hover{
                 span{
-                    color: #5F63F2;
+                    color: #593196;
                 }
             }
             a{
@@ -195,7 +195,7 @@ const Div = Styled.div`
             span{
                 display: inline-block;
                 margin-top: 15px;
-                color: #5F63F2;
+                color: #593196;
             }
         }
     }
@@ -216,13 +216,13 @@ const Div = Styled.div`
     }
     .certain-category-search-wrapper{
         ${({ darkMode, theme }) =>
-          darkMode ? `${!theme.rtl ? 'border-right' : 'border-left'}: 1px solid #5F63F2;` : ''};
+          darkMode ? `${!theme.rtl ? 'border-right' : 'border-left'}: 1px solid #593196;` : ''};
          @media only screen and (max-width: 767px){
             padding: 0 15px;
         }
         input{
             max-width: 200px;
-            background: #5F63F2;
+            background: #593196;
             border-radius: 60px;
             color: #fff;
             border-style: solid;
@@ -230,7 +230,7 @@ const Div = Styled.div`
             border-width: 1px;
             margin-left: 7px;
             max-height: 30px !important;
-            ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : '')};
+            ${({ darkMode }) => (darkMode ? `background: #593196;` : '')};
             ${({ darkMode }) => (darkMode ? `color: #fff;` : '#5A5F7D')};
             @media only screen and (max-width: 875px){
                 ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 5px;
@@ -550,7 +550,7 @@ const Div = Styled.div`
 `;
 
 const SmallScreenAuthInfo = Styled.div`
-        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : 'background: #fff')};
+        ${({ darkMode }) => (darkMode ? `background: #593196;` : 'background: #fff')};
         width: 100%;
         position: fixed;
         margin-top: ${({ hide }) => (hide ? '0px' : '64px')};
@@ -564,7 +564,7 @@ const SmallScreenAuthInfo = Styled.div`
 `;
 
 const SmallScreenSearch = Styled.div`
-        ${({ darkMode }) => (darkMode ? `background: #5F63F2;` : 'background: #fff')};
+        ${({ darkMode }) => (darkMode ? `background: #593196;` : 'background: #fff')};
         width: 100%;
         position: fixed;
         margin-top: ${({ hide }) => (hide ? '0px' : '64px')};
@@ -712,7 +712,7 @@ const TopMenuStyle = Styled.div`
                         }
                         &.active{
                             &:before{
-                                ${({ theme }) => (theme.darkMode ? `color: #fff;` : 'color: #5F63F2')};
+                                ${({ theme }) => (theme.darkMode ? `color: #fff;` : 'color: #593196')};
                             }
                         }
                     }
@@ -745,7 +745,7 @@ const TopMenuStyle = Styled.div`
                     font-weight: 500;
                     ${({ theme }) => (theme.darkMode ? `color: #ffffff60;` : 'color: #5A5F7D')};
                     &.active{
-                        ${({ theme }) => (theme.darkMode ? `color: #fff;` : 'color: #5F63F2')};
+                        ${({ theme }) => (theme.darkMode ? `color: #fff;` : 'color: #593196')};
                     }
                     svg,
                     img,

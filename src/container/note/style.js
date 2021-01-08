@@ -472,7 +472,7 @@ const Bullet = Styled.span`
     border-radius: 50%;
     ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 10px;
     &.personal{
-        background: #5F63F2;
+        background: #593196;
     }
     &.work{
         background: #20C997;

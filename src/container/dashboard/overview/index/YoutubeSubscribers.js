@@ -32,8 +32,8 @@ const YoutubeSubscribers = () => {
   const youtubeSubscribeDatasets = youtubeSubscribeState !== null && [
     {
       data: youtubeSubscribeState.gained,
-      backgroundColor: '#5F63F280',
-      hoverBackgroundColor: '#5F63F2',
+      backgroundColor: '#59319680',
+      hoverBackgroundColor: '#593196',
       label: 'Gained',
       maxBarThickness: 10,
       barThickness: 12,

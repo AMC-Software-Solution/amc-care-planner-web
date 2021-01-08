@@ -79,7 +79,7 @@ const Home = withRouter(props => {
         <Route path="/apps" component={Apps} />
         <Route render={() => <span>Home Page</span>} />
       </Switch>
-      <Alert style={{ margin: '16px 0', background: '#5F63F215' }} message="Click the navigation above to switch:" />
+      <Alert style={{ margin: '16px 0', background: '#59319615' }} message="Click the navigation above to switch:" />
       <Breadcrumb>{breadcrumbItems}</Breadcrumb>
     </div>
   );

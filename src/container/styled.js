@@ -574,7 +574,7 @@ const Main = Styled.div`
     }
 
     .chart-label .label-dot.dot-info {
-        background: #5f63f2;
+        background: #593196;
     }
 
     .chart-label .label-dot.dot-warning {
@@ -1292,6 +1292,7 @@ const TableWrapper = Styled.div`
                         }
                     }
                     .table-actions{
+                        back
                         a{
                             svg, i{
                                 width: 16px;
@@ -1365,7 +1366,8 @@ const TableWrapper = Styled.div`
                 td{
                     border: 0 none;
                     font-weight: 500;
-                    color: ${({ theme }) => theme['dark-color']};
+                    color: #9299b8; 
+                    /* ${({ theme }) => theme['dark-color']}; */
                     &:first-child{
                         border-radius: ${({ theme }) => (!theme.rtl ? '10px 0 0 10px' : '0 10px 10px 0')} !important;
                     }
@@ -1399,6 +1401,7 @@ const TableWrapper = Styled.div`
         .table-actions{
             text-align: ${({ theme }) => (theme.rtl ? 'left' : 'right')};
             min-width: 150px !important;
+            background: #593196;
             button{
                 height: 40px;
                 padding: 0 11px;

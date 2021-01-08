@@ -791,7 +791,7 @@
         "revenue": "$536",
         "trend": {
           "data": [0, 10, 8, 14, 7, 10],
-          "borderColor": "#5F63F2"
+          "borderColor": "#593196"
         }
       },
       {
@@ -848,7 +848,7 @@
         "revenue": "$5,536",
         "trend": {
           "data": [0, 10, 8, 14, 7, 10],
-          "borderColor": "#5F63F2"
+          "borderColor": "#593196"
         }
       },
       {
@@ -905,7 +905,7 @@
         "revenue": "$9,536",
         "trend": {
           "data": [0, 10, 8, 14, 7, 10],
-          "borderColor": "#5F63F2"
+          "borderColor": "#593196"
         }
       },
       {

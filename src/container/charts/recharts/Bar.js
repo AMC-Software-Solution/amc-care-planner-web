@@ -51,7 +51,7 @@ const ReChartBar = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="uv" fill="#5F63F2" />
+                <Bar dataKey="uv" fill="#593196" />
                 <Bar dataKey="pv" fill="#82ca9d" />
                 <Bar dataKey="amt" fill="#2F63F250" />
               </BarChart>

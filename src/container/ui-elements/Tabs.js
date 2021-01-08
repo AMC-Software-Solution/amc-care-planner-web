@@ -38,10 +38,10 @@ const Tabs = () => {
         </Row>
         <Row gutter={15}>
           <Col md={12} xs={24}>
-            <Tab data={dataIcon} color="#5F63F2" />
+            <Tab data={dataIcon} color="#593196" />
           </Col>
           <Col md={12} xs={24}>
-            <Tab data={icon} color="#5F63F2" />
+            <Tab data={icon} color="#593196" />
           </Col>
         </Row>
         <Row gutter={15}>
