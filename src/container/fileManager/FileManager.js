@@ -4,7 +4,8 @@ import FeatherIcon from 'feather-icons-react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SideNav from './overview/SideNav';
-import { Header } from './Style';
+import RecentFileTable from './overview/RecentFileTable';
+import { FileManagerContentWrap } from './Style';
 import MainContent from './overview/MainContent';
 import { PageHeader } from '../../components/page-headers/page-headers';
 import { Main } from '../styled';
@@ -39,49 +40,58 @@ const FileManager = () => {
       />
       <Main>
         <Row gutter={25}>
-          <Col sm={6} xs={24}>
+          <Col sm={5} xs={24}>
             <SideNav />
           </Col>
-          <Col md={18}>
-            <Cards bodyStyle={{ height: '600px' }} headless>
-              <Header>
-                <Input
-                  style={{ width: '350px' }}
-                  size="large"
-                  placeholder="large size"
-                  prefix={<FeatherIcon icon="search" />}
-                />
-                <div className="list">
-                  <NavLink to="#">
-                    <FeatherIcon icon="grid" />
-                  </NavLink>
-                  <NavLink to="#">
-                    <FeatherIcon icon="list" />
-                  </NavLink>
+          <Col md={19}>
+            <FileManagerContentWrap>
+              <Cards headless>
+                <div className="file-manager-header">
+                  <Input
+                    style={{ width: '350px' }}
+                    size="large"
+                    placeholder="large size"
+                    prefix={<FeatherIcon icon="search" />}
+                  />
+                  <div className="view-mode">
+                    <NavLink to="#">
+                      <FeatherIcon icon="grid" />
+                    </NavLink>
+                    <NavLink to="#">
+                      <FeatherIcon icon="list" />
+                    </NavLink>
+                  </div>
                 </div>
-              </Header>
-              {/* <h2>Quick Access</h2> */}
-              <Row gutter={15}>
-                {FileManagerData.length
-                  ? FileManagerData[0].folder.map(folder => {
-                      return (
-                        <Col key={folder.id} md={6}>
-                          <MainContent folder={folder} />
-                        </Col>
-                      );
-                    })
-                  : null}
-                {FileManagerData.length
-                  ? FileManagerData[0].file.map(file => {
-                      return (
-                        <Col key={file.id} md={6}>
-                          <MainContent folder={file} />
-                        </Col>
-                      );
-                    })
-                  : null}
-              </Row>
-            </Cards>
+                <div className="file-manager-content">
+                  <h2 className="file-manager-content__title">Quick Access</h2>
+                  <Row gutter={15}>
+                    {FileManagerData.length
+                      ? FileManagerData[0].folder.map(folder => {
+                          return (
+                            <Col key={folder.id} md={6}>
+                              <MainContent folder={folder} />
+                            </Col>
+                          );
+                        })
+                      : null}
+                    {FileManagerData.length
+                      ? FileManagerData[0].file.map(file => {
+                          return (
+                            <Col key={file.id} md={6}>
+                              <MainContent folder={file} />
+                            </Col>
+                          );
+                        })
+                      : null}
+                  </Row>
+                  <Row>
+                    <Col xs={24}>
+                      <RecentFileTable />
+                    </Col>
+                  </Row>
+                </div>
+              </Cards>
+            </FileManagerContentWrap>
           </Col>
         </Row>
       </Main>

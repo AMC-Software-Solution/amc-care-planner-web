@@ -13,27 +13,41 @@ const MainContent = ({ folder }) => {
     return dispatch(deleteAddActiveClass(paths));
   };
   return (
-    <Cards headless bodyStyle={{ background: '#F4F5F7', borderRadius: '10px' }}>
-      <Dropdown
-        content={
-          <>
-            <Link to="#">Open</Link>
-            <Link onClick={() => deleteFileNdFolder(folder.path)} to="#">
-              Delete
-            </Link>
-            <Link to="#">Rename</Link>
-          </>
-        }
-        action={['click']}
-      >
-        <Link to="#">
-          <FeatherIcon icon="more-vertical" />
-        </Link>
-      </Dropdown>
-      {folder.type ? <FeatherIcon icon="file" /> : <FeatherIcon icon="folder" />} <br />
-      {folder.name}
-      {folder.type ? `.${folder.type}` : ''}
-    </Cards>
+    <div className="sDash-file-card">
+      <Cards headless bodyStyle={{ background: '#F4F5F7', borderRadius: '10px' }}>
+        <Dropdown
+          className="folder-dropdown"
+          content={
+            <>
+              <Link to="#">
+                <FeatherIcon icon="eye" size={14} />
+                Download
+              </Link>
+              <Link onClick={() => deleteFileNdFolder(folder.path)} to="#">
+                <FeatherIcon icon="link" size={14} />
+                Copy
+              </Link>
+              <Link to="#">
+                <FeatherIcon icon="trash-2" size={14} />
+                Delete
+              </Link>
+            </>
+          }
+          action={['click']}
+        >
+          <Link to="#">
+            <FeatherIcon icon="more-vertical" />
+          </Link>
+        </Dropdown>
+        <div className="file-logo">
+          <img src={require(`../../../static/img/files/pdf.png`)} alt="" />
+        </div>
+        <span className="file-name">
+          {folder.name}
+          {folder.type ? `.${folder.type}` : ''}
+        </span>
+      </Cards>
+    </div>
   );
 };
 

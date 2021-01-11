@@ -35,11 +35,7 @@ import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
 import { documentReducer, SingleDocumentReducer } from './document/reducers';
 import { disabilityReducer, SingleDisabilityReducer } from './disabilities/reducers';
-
-
-
-
-
+import kanbanBoardReducer from './kanban/reducers';
 
 const rootReducers = combineReducers({
   themeUsers: themeUsersReducer,
@@ -92,10 +88,7 @@ const rootReducers = combineReducers({
   document: SingleDocumentReducer,
   disabilities: SingleDisabilityReducer,
   disability: disabilityReducer,
-
-  
- 
- 
+  KanbanBoard: kanbanBoardReducer,
 
   Todo,
   Note,

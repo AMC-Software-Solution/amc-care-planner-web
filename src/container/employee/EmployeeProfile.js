@@ -14,6 +14,7 @@ const Timeline = lazy(() => import('./overview/Timeline'));
 const Activity = lazy(() => import('./overview/Activity'));
 const EmployeeLocationMap = lazy(() => import('../maps/EmployeeLocationMap'));
 const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
+const Kanban = lazy(() => import('../../container/kanban/Index'));
 
 
 const EmployeeProfile = () => {
@@ -103,7 +104,7 @@ const EmployeeProfile = () => {
                   }
                 >
                   <Route exact path={`${path}/general/:id`} component={General} />
-                  <Route path={`${path}/tasks/:id`} component={Timeline} />
+                  <Route path={`${path}/tasks/:id`} component={Kanban} />
                   <Route path={`${path}/locations/:id`} component={EmployeeLocationMap} />
 
                   <Route exact path={`${path}/holidays/:id`} component={General} />
