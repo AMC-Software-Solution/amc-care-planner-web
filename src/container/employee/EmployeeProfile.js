@@ -12,7 +12,7 @@ const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const General = lazy(() => import('./overview/General'));
 const Timeline = lazy(() => import('./overview/Timeline'));
 const Activity = lazy(() => import('./overview/Activity'));
-const GoogleMapsSingleMap = lazy(() => import('../../container/maps/GoogleMapsSingleMap'));
+const EmployeeLocationMap = lazy(() => import('../maps/EmployeeLocationMap'));
 const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
 
 
@@ -104,7 +104,7 @@ const EmployeeProfile = () => {
                 >
                   <Route exact path={`${path}/general/:id`} component={General} />
                   <Route path={`${path}/tasks/:id`} component={Timeline} />
-                  <Route path={`${path}/locations/:id`} component={GoogleMapsSingleMap} />
+                  <Route path={`${path}/locations/:id`} component={EmployeeLocationMap} />
 
                   <Route exact path={`${path}/holidays/:id`} component={General} />
                   <Route path={`${path}/documents/:id`} component={DocumentManager} />

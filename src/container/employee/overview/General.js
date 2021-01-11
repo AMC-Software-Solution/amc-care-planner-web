@@ -219,7 +219,7 @@ const General = () => {
             </div>
           </EChartCard>
         </Cards>
-      </Col> */}
+      </Col> 
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         
       { (employeeLocation != null) ?
@@ -245,6 +245,7 @@ const General = () => {
         
       
       </Col>
+      */}
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
           <EChartCard>
