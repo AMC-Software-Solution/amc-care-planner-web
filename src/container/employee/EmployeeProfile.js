@@ -13,6 +13,8 @@ const General = lazy(() => import('./overview/General'));
 const Timeline = lazy(() => import('./overview/Timeline'));
 const Activity = lazy(() => import('./overview/Activity'));
 const GoogleMapsSingleMap = lazy(() => import('../../container/maps/GoogleMapsSingleMap'));
+const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
+
 
 const EmployeeProfile = () => {
   const { id } = useParams();
@@ -105,7 +107,7 @@ const EmployeeProfile = () => {
                   <Route path={`${path}/locations/:id`} component={GoogleMapsSingleMap} />
 
                   <Route exact path={`${path}/holidays/:id`} component={General} />
-                  <Route path={`${path}/documents/:id`} component={Timeline} />
+                  <Route path={`${path}/documents/:id`} component={DocumentManager} />
                   <Route path={`${path}/timesheet/:id`} component={Activity} />
 
                   <Route exact path={`${path}/communications/:id`} component={General} />
