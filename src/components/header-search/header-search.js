@@ -51,7 +51,7 @@ const HeaderSearch = ({ darkMode }) => {
               title="Search List"
               action="focus"
             >
-              <Input placeholder="Search..." onInput={search} />
+              <Input placeholder="Seah..." onInput={search} />
             </Popover>
           </Col>
         </Row>

@@ -199,11 +199,6 @@ const ThemeLayout = WrappedComponent => {
             >
               <Row>
                 <Col lg={!topMenu ? 4 : 3} sm={6} xs={12} className="align-center-v navbar-brand">
-                  {!topMenu || window.innerWidth <= 991 ? (
-                    <Button type="link" onClick={toggleCollapsed}>
-                      <img src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" />
-                    </Button>
-                  ) : null}
                   <Link
                     className={topMenu && window.innerWidth > 991 ? 'striking-logo top-menu' : 'striking-logo'}
                     to="/admin"
@@ -213,12 +208,15 @@ const ThemeLayout = WrappedComponent => {
                       alt=""
                     />
                   </Link>
+                  {!topMenu || window.innerWidth <= 991 ? (
+                    <Button type="link" onClick={toggleCollapsed}>
+                      <img src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" />
+                    </Button>
+                  ) : null}
                 </Col>
-
                 <Col lg={!topMenu ? 14 : 15} md={8} sm={0} xs={0}>
                   {topMenu && window.innerWidth > 991 ? <TopMenu /> : <HeaderSearch rtl={rtl} darkMode={darkMode} />}
                 </Col>
-
                 <Col lg={6} md={10} sm={0} xs={0}>
                   {topMenu && window.innerWidth > 991 ? (
                     <TopMenuSearch>
