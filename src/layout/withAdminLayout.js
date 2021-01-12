@@ -6,6 +6,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
+import { MenuOutlined } from '@ant-design/icons';
 import propTypes from 'prop-types';
 import MenueItems from './MenueItems';
 import TopMenu from './TopMenu';
@@ -27,7 +28,7 @@ const ThemeLayout = WrappedComponent => {
         collapsed: false,
         hide: true,
         searchHide: true,
-        customizerAction: false,
+        // customizerAction: false,
         activeSearch: false,
       };
       this.updateDimensions = this.updateDimensions.bind(this);
@@ -199,6 +200,13 @@ const ThemeLayout = WrappedComponent => {
             >
               <Row>
                 <Col lg={!topMenu ? 4 : 3} sm={6} xs={12} className="align-center-v navbar-brand">
+                  {!topMenu || window.innerWidth <= 991 ? (
+                    <Button type="link" onClick={toggleCollapsed}>
+                      <MenuOutlined style={{ fontSize: '20px', color: '#fff' }} />
+                      {/* <img src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" /> */}
+                    </Button>
+                  ) : null}
+                  <div />
                   <Link
                     className={topMenu && window.innerWidth > 991 ? 'striking-logo top-menu' : 'striking-logo'}
                     to="/admin"
@@ -208,11 +216,6 @@ const ThemeLayout = WrappedComponent => {
                       alt=""
                     />
                   </Link>
-                  {!topMenu || window.innerWidth <= 991 ? (
-                    <Button type="link" onClick={toggleCollapsed}>
-                      <img src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" />
-                    </Button>
-                  ) : null}
                 </Col>
                 <Col lg={!topMenu ? 14 : 15} md={8} sm={0} xs={0}>
                   {topMenu && window.innerWidth > 991 ? <TopMenu /> : <HeaderSearch rtl={rtl} darkMode={darkMode} />}
