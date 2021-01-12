@@ -10,7 +10,7 @@ const KanvanBoardWrap = Styled.div`
   .sDash_kanban-board-list{
     display: flex;
     margin: -10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     .sDash_kanban-board-item{
       flex: 0 0 20%;
       padding: 10px;

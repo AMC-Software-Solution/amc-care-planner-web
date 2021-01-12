@@ -17,7 +17,7 @@ const UpdateTask = ({ data, modalVisible, handleCancel }) => {
   const dispatch = useDispatch();
   const { tasks } = useSelector(state => {
     return {
-      tasks: state.KanbanBoard.taskData,
+      tasks: state.KanbanBoard.taskData, 
     };
   });
 

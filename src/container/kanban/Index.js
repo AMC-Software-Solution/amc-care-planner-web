@@ -67,7 +67,7 @@ const Kanban = () => {
       marginRight: 'auto',
       [rtl ? 'marginLeft' : 'marginRight']: '-17px',
     };
-    return <div {...props} style={{ ...style, ...customStyle }} />;
+    return <div {...props} style={{ ...style, ...customStyle }} />; 
   };
 
   renderView.propTypes = {

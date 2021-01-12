@@ -27,7 +27,7 @@ const KanbanBoardItem = ({ data, showModal, onBackShadow, taskId, onTaskTitleUpd
         <div className="sDash_kanvan-task__edit--left">
           <Input onPressEnter={() => onTaskTitleUpdate(value, id)} onChange={onTaskTitleChange} value={value} />
           <Button
-            onClick={() => onTaskTitleUpdate(value, id)}
+            onClick={() => onTaskTitleUpdate(value, id)} 
             className="edit-kanban-task"
             htmlType="submit"
             size="small"
