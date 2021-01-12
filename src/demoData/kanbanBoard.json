@@ -1,0 +1,18 @@
+[
+    {
+        "boardId": "1",
+        "title": "To do"
+    },
+    {
+        "boardId": "2",
+        "title": "In Progress"
+    },
+    {
+        "boardId": "3",
+        "title": "Review"
+    },
+    {
+        "boardId": "4",
+        "title": "Done"
+    }
+]
