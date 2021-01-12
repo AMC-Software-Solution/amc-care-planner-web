@@ -15,6 +15,7 @@ const Activity = lazy(() => import('./overview/Activity'));
 const EmployeeLocationMap = lazy(() => import('../maps/EmployeeLocationMap'));
 const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
 const Kanban = lazy(() => import('../../container/kanban/Index'));
+const Calendars = lazy(() => import('../../container/calendar/Calendar'));
 
 
 const EmployeeProfile = () => {
@@ -109,7 +110,7 @@ const EmployeeProfile = () => {
 
                   <Route exact path={`${path}/holidays/:id`} component={General} />
                   <Route path={`${path}/documents/:id`} component={DocumentManager} />
-                  <Route path={`${path}/timesheet/:id`} component={Activity} />
+                  <Route path={`${path}/timesheet/:id`} component={Calendars} />
 
                   <Route exact path={`${path}/communications/:id`} component={General} />
                   <Route path={`${path}/notifications/:id`} component={Timeline} />

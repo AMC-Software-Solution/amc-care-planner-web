@@ -47,7 +47,7 @@ const Calendars = () => {
     <>
       <PageHeader
         ghost
-        title="Calendar"
+        title="Timesheets"
         buttons={[
           <div key="1" className="page-header-actions">
             <CalendarButtonPageHeader />
