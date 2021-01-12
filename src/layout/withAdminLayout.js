@@ -202,7 +202,7 @@ const ThemeLayout = WrappedComponent => {
                 <Col lg={!topMenu ? 4 : 3} sm={6} xs={12} className="align-center-v navbar-brand">
                   {!topMenu || window.innerWidth <= 991 ? (
                     <Button type="link" onClick={toggleCollapsed}>
-                      <MenuOutlined style={{ fontSize: '20px', color: '#fff' }} />
+                      <MenuOutlined style={{ fontSize: '21px', color: '#fff' }} />
                       {/* <img src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" /> */}
                     </Button>
                   ) : null}
