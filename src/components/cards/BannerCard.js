@@ -125,7 +125,7 @@ const BannerCard = ({ item }) => {
       <ImageUrl className={`banner-card banner-card-${type}`} bgUrl={bgImage}>
         <div className="banner-card__top align-center-v justify-content-between">
           <h4 className="banner-card__title">
-            <img src={require(`../../static/img/icon/${icon}`)} alt="StrikingDash Banner" />
+            <img src={require(`../../static/img/icon/${icon}`)} alt="AMC Planner Banner" />
             <span>{title}</span>
           </h4>
           <div className="banner-card__action">

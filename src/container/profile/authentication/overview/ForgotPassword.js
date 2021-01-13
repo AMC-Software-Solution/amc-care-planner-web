@@ -14,7 +14,7 @@ const ForgotPassword = () => {
 
   return (
     <AuthWrapper>
-      <div className="auth-contents">
+      <div className="auth-contents" style={{marginTop:"170px"}}>
         <Form name="forgotPass" onFinish={handleSubmit} layout="vertical">
           <Heading as="h3">Forgot Password?</Heading>
           <p className="forgot-text">

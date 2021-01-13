@@ -1,5 +1,5 @@
 {
-  "name": "strikingDash",
+  "name": "amc-planner",
   "version": "2.2.0",
   "private": true,
   "dependencies": {
@@ -62,7 +62,7 @@
     "swiper": "^6.3.5",
     "xlsx": "^0.16.9"
   },
-  "homepage": "/strikingdash",
+  "homepage": "/amc-planner",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-app-rewired build",

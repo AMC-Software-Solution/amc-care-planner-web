@@ -27,7 +27,9 @@ const Aside = Styled.aside`
     @media only screen and (max-width: 991px){
       h1{
         font-size: 20px;
+    
       }
+     
     }
     @media only screen and (max-width: 767px){
       h1{

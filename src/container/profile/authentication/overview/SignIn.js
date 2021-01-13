@@ -39,13 +39,15 @@ const SignIn = (props) => {
 
   return (
     <AuthWrapper>
+      {/** 
       <p className="auth-notice">
         Don&rsquo;t have an account? <NavLink to="/register">Sign up now</NavLink>
       </p>
-      <div className="auth-contents">
+      */}
+      <div className="auth-contents" style={{marginTop:"170px"}}>
         <Form name="login" form={form} onFinish={handleSubmit} layout="vertical">
           <Heading as="h3">
-            Sign in to <span className="color-secondary">Admin</span>
+            Sign in to <span className="color-secondary">AMC Care Planner</span>
           </Heading>
           <Form.Item
             name="username"
@@ -70,6 +72,7 @@ const SignIn = (props) => {
               {isLoading ? 'Loading...' : 'Sign In'}
             </Button>
           </Form.Item>
+            {/** 
           <p className="form-divider">
             <span>Or</span>
           </p>
@@ -91,6 +94,7 @@ const SignIn = (props) => {
               </Link>
             </li>
           </ul>
+            */}
         </Form>
       </div>
     </AuthWrapper>
