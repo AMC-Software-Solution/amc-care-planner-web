@@ -193,6 +193,7 @@ const EmployeeListTable = () => {
       dataIndex: 'action',
       key: 'action',
       width: '90px',
+      fixed: 'right',
     },
   ];
 
