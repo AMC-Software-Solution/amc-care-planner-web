@@ -42,12 +42,12 @@ const UserCards = ({ user }) => {
               <figure>
                 <img src={photoUrl} alt="employee" />
               </figure>
-              <figcaption>
+              <figcaption style={{ justifyContent: 'end' }}>
                 <div className="card__content">
                   <Heading className="card__name" as="h6">
-                    <Link to={`/admin/employee/employeeProfile/${id}`}>
+                    {/* <Link to={`/admin/employee/employeeProfile/${id}`}> */}
                       {title} {firstName} {middleInitial} {lastName}
-                    </Link>
+                    {/* </Link> */}
                   </Heading>
                 </div>
               </figcaption>

@@ -50,7 +50,7 @@ const EmployeeListTable = () => {
         employee: (
           <div className="user-info">
             <figure>
-              <img style={{ width: '40px' }} src={photoUrl} alt="" />
+              <img style={{ width: '50px' }} src={photoUrl} alt="" />
             </figure>
             <figcaption>
               <Heading className="user-name" as="h6">

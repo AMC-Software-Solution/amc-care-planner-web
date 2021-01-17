@@ -3,10 +3,9 @@ import { Row, Col, Input } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import SideNav from './overview/SideNav';
-import MainContent from './overview/MainContent';
+import { Image } from 'antd';
+// import MainContent from './overview/MainContent';
 import { FileManagerContentWrap } from './Style';
-import RecentFileTable from './overview/RecentFileTable';
 import { PageHeader } from '../../components/page-headers/page-headers';
 import { Main } from '../styled';
 import { Cards } from '../../components/cards/frame/cards-frame';
@@ -65,7 +64,31 @@ const DocumentManager = () => {
                 <div className="file-manager-content">
                   <h2 className="file-manager-content__title">Employee Documents</h2>
                   <Row gutter={15}>
-                    {FileManagerData.length
+                    <Col style={{ display: 'flex' }}>
+                      <Image
+                        width={200}
+                        src="https://templatelab.com/wp-content/uploads/2019/06/letter-of-application-43.jpg"
+                      />
+                    </Col>
+                    <Col style={{ display: 'flex' }}>
+                      <Image
+                        width={200}
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSza2NJSbQYRrcsONdBtQvsrTpw8-pn5psfiQ&usqp=CAU"
+                      />
+                    </Col>
+                    <Col style={{ display: 'flex' }}>
+                      <Image
+                        width={200}
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQSSC4CAWu8OEg6sOnhNdJBa8Q0di-YY4yXQ&usqp=CAU"
+                      />
+                    </Col>
+                    <Col style={{ display: 'flex' }}>
+                      <Image
+                        width={200}
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvg-q4793ZykDo-mxYJX-K6EoZ6wU7mWMo1w&usqp=CAU"
+                      />
+                    </Col>
+                    {/* {FileManagerData.length
                       ? FileManagerData[0].folder.map(folder => {
                           return (
                             <Col key={folder.id} md={6}>
@@ -82,7 +105,7 @@ const DocumentManager = () => {
                             </Col>
                           );
                         })
-                      : null}
+                      : null} */}
                   </Row>
                   {/* <Row>
                     <Col xs={24}>
