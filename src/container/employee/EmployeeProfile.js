@@ -5,8 +5,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { SettingWrapper } from './overview/style';
 import { Main } from '../styled';
 import { Cards } from '../../components/cards/frame/cards-frame';
+import { GoogleMaps } from '../../components/maps/google-maps';
 
 import { getSingleEmployee } from '../../redux/employees/actionCreator';
+import { getSingleEmployeeLocation } from '../../redux/employeeLocation/actionCreator';
 
 const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const General = lazy(() => import('./overview/General'));
@@ -17,38 +19,53 @@ const DocumentManager = lazy(() => import('../../container/fileManager/DocumentM
 const Kanban = lazy(() => import('../../container/kanban/Index'));
 const Calendars = lazy(() => import('../../container/calendar/Calendar'));
 
-
 const EmployeeProfile = () => {
   const { id } = useParams();
   const { path, url } = useRouteMatch();
 
   const dispatch = useDispatch();
-  const { employee } = useSelector(state => {
+  const { employee, employeeLocation } = useSelector(state => {
     return {
       employee: state.employee.data,
+      employeeLocation: state.employeeLocation.data,
     };
   });
 
   useEffect(() => {
     dispatch(getSingleEmployee(id));
+    dispatch(getSingleEmployeeLocation(id));
   }, []);
 
   return (
     <>
       <Main>
         <Row>
-          <Col>
-            <Suspense
-              fallback={
-                <Cards headless>
-                  <Skeleton avatar active paragraph={{ rows: 3 }} />
-                </Cards>
-              }
-            >
-              {employee ? <UserCards user={employee} /> : <div />}
-            </Suspense>
+          <Col span={6} style={{ display: 'flex' }}>
+            {employee ? <UserCards user={employee} /> : <div />}
+          </Col>
+          <Col span={18} style={{ display: 'flex' }}>
+            <Cards headless>
+              {employeeLocation != null ? (
+                <GoogleMaps latitude={employeeLocation.latitude} longitude={employeeLocation.longitude} />
+              ) : (
+                <div>Employee Location not set yet</div>
+              )}
+            </Cards>
           </Col>
         </Row>
+        {/* <Row>
+            <Col>
+            <Suspense
+                fallback={
+                  <Cards headless>
+                    <Skeleton avatar active paragraph={{ rows: 3 }} />
+                  </Cards>
+                }
+              >
+
+              </Suspense>
+            </Col>
+          </Row> */}
         <Row>
           <Col span={24}>
             <SettingWrapper>

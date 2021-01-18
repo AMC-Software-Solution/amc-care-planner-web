@@ -175,19 +175,10 @@ const General = () => {
       hoverBorderWidth: 5,
     },
   ];
- 
+
   return (
-  
     <Row gutter={25}>
-      <Col xs={24}>
-        
-         { (branches != null) ?
-            <Branches branches={branches} /> : <div></div>
-          
-         }
-        
-      
-      </Col>
+      <Col xs={24}>{branches != null ? <Branches branches={branches} /> : <div />}</Col>
       {/* <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
           <EChartCard>

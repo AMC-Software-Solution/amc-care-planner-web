@@ -1,6 +1,6 @@
 import React from 'react';
 import FeatherIcon from 'feather-icons-react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'antd';
 import { UserCard } from '../style';
@@ -36,25 +36,22 @@ const UserCards = ({ user }) => {
   return (
     <UserCard>
       <div className="card user-card">
-        <Row gutter={8}>
-          <Col span={6} style={{ display: 'flex' }}>
+        <Row>
+          <Col style={{ display: 'flex' }}>
             <Cards headless>
               <figure>
                 <img src={photoUrl} alt="employee" />
               </figure>
-              <figcaption style={{ justifyContent: 'end' }}>
+              <figcaption>
                 <div className="card__content">
                   <Heading className="card__name" as="h6">
                     {/* <Link to={`/admin/employee/employeeProfile/${id}`}> */}
-                      {title} {firstName} {middleInitial} {lastName}
+                    {title} {firstName} {middleInitial} {lastName}
                     {/* </Link> */}
                   </Heading>
                 </div>
               </figcaption>
-            </Cards>
-          </Col>
-          <Col span={6} style={{ display: 'flex' }}>
-            <Cards headless>
+
               <div className="card__content">
                 <p className="card__designation">
                   Preferred Name: <b>{preferredName}</b>
@@ -78,10 +75,7 @@ const UserCards = ({ user }) => {
                   Contract Type : <b>{employeeContractType}</b>
                 </p>
               </div>
-            </Cards>
-          </Col>
-          <Col span={6} style={{ display: 'flex' }}>
-            <Cards headless>
+
               <div className="card__content">
                 <p className="card__designation">
                   PIN Code : <b>{pinCode}</b>
@@ -102,10 +96,7 @@ const UserCards = ({ user }) => {
                   Joining Date : <b>{lastUpdatedDate}</b>
                 </p>
               </div>
-            </Cards>
-          </Col>
-          <Col span={6} style={{ display: 'flex' }}>
-            <Cards headless>
+
               <div className="card__content">
                 <p className="card__designation">
                   Email : <b>{email}</b>
