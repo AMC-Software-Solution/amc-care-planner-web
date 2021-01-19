@@ -39,7 +39,7 @@ const EmployeeProfile = () => {
   return (
     <>
       <Main>
-        <Row>
+        <Row gutter={8}>
           <Col span={6} style={{ display: 'flex' }}>
             {employee ? <UserCards user={employee} /> : <div />}
           </Col>
