@@ -84,9 +84,10 @@ export { DataService };
 
 import axios from 'axios';
 
+import API from './apiUrl';
 import { getItem } from '../../utility/localStorageControl';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = API;
 
 const fetchAllBranches = () => {
   const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };

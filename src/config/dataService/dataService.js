@@ -85,8 +85,9 @@ export { DataService };
 import axios from 'axios';
 
 import { setItem, getItem } from '../../utility/localStorageControl';
+import API from './apiUrl';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = API;
 
 const register = (username, email, password) => {
   return axios.post(`${API_URL}signup`, {
