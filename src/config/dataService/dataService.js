@@ -84,8 +84,8 @@ export { DataService };
 
 import axios from 'axios';
 
-import { setItem, getItem } from '../../utility/localStorageControl';
 import API from './apiUrl';
+import { setItem, getItem } from '../../utility/localStorageControl';
 
 const API_URL = API;
 
