@@ -36,4 +36,4 @@ const getAllBranches = () => {
       };
     
 
-export {  getAllBranches,getSingleBranch };
+export {  getAllBranches, getSingleBranch };

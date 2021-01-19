@@ -10,9 +10,8 @@ import Heading from '../../../components/heading/heading';
 import { CardBarChart2, EChartCard, PerformanceChartWrapper } from '../../dashboard/style';
 import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../components/charts/chartjs';
 import { performanceGetData } from '../../../redux/chartContent/actionCreator';
-import { getAllBranches } from '../../../redux/branch/actionCreator';
+import { getSingleBranch } from '../../../redux/branch/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../components/utilities/utilities';
-import { getSingleEmployeeLocation } from '../../../redux/employeeLocation/actionCreator';
 
 const chartOptions = {
   legend: {
@@ -76,19 +75,18 @@ const moreContent = (
 const General = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const { performanceState, branches, employeeLocation } = useSelector(state => {
+  const { performanceState, branch, employee } = useSelector(state => {
     return {
       performanceState: state.chartContent.performanceData,
-      branches: state.branches.data,
-      employeeLocation: state.employeeLocation.data,
+      branch: state.branch.data,
+      employee: state.employee.data,
     };
   });
 
   useEffect(() => {
     if (performanceGetData) {
       dispatch(performanceGetData());
-      dispatch(getAllBranches());
-      dispatch(getSingleEmployeeLocation(id));
+      dispatch(getSingleBranch(employee.branchId));
     }
   }, [dispatch]);
 

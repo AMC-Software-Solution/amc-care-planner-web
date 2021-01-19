@@ -96,7 +96,7 @@ const fetchAllBranches = () => {
 
 const fetchSingleBranch = id => {
   const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
-  return axios.get(`${API_URL}/v1/get-branches-by-client-id/${id}`, header);
+  return axios.get(`${API_URL}/v1/get-branch-by-client-id/${id}`, header);
 };
 
 export { fetchAllBranches, fetchSingleBranch };
