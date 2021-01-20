@@ -64,20 +64,4 @@ const sortingDocumentByDocument = sortBy => {
   };
 };
 
-
-// const getAllDocuments = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllDocuments();
-//           dispatch(filterDocumentSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterDocumentErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterDocumentByGender, sortingDocumentByDocument, getAllDocuments };
-
-
 export { filterSinglePage, filterDocumentByGender, sortingDocumentByDocument  };

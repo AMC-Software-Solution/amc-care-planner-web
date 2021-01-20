@@ -64,20 +64,4 @@ const sortingDisabilityByDisability = sortBy => {
   };
 };
 
-
-// const getAllDisabilitys = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllDisabilitys();
-//           dispatch(filterDisabilitySuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterDisabilityErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterDisabilityByGender, sortingDisabilityByDisability, getAllDisabilitys };
-
-
-export { filterSinglePage, filterDisabilityByGender, sortingDisabilityByDisability  };
+export { filterSinglePage, filterDisabilityByGender, sortingDisabilityByDisability };

@@ -64,20 +64,4 @@ const sortingAvailabilityByAvailability = sortBy => {
   };
 };
 
-
-// const getAllAvailabilitys = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllAvailabilitys();
-//           dispatch(filterAvailabilitySuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterAvailabilityErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterAvailabilityByGender, sortingAvailabilityByAvailability, getAllAvailabilitys };
-
-
-export { filterSinglePage, filterAvailabilityByGender, sortingAvailabilityByAvailability  };
+export { filterSinglePage, filterAvailabilityByGender, sortingAvailabilityByAvailability };

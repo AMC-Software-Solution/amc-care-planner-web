@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ProductGeneralTable } from './style';
-import Branches from './Branches';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 import Heading from '../../../components/heading/heading';
 import { CardBarChart2, EChartCard, PerformanceChartWrapper } from '../../dashboard/style';
 import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../components/charts/chartjs';
 import { performanceGetData } from '../../../redux/chartContent/actionCreator';
-import { getSingleBranch } from '../../../redux/branch/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../components/utilities/utilities';
 
 const chartOptions = {
@@ -74,19 +72,15 @@ const moreContent = (
 
 const General = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
-  const { performanceState, branch, employee } = useSelector(state => {
+  const { performanceState } = useSelector(state => {
     return {
       performanceState: state.chartContent.performanceData,
-      branch: state.branch.data,
-      employee: state.employee.data,
     };
   });
 
   useEffect(() => {
     if (performanceGetData) {
       dispatch(performanceGetData());
-      dispatch(getSingleBranch(employee.branchId));
     }
   }, [dispatch]);
 
@@ -176,7 +170,6 @@ const General = () => {
 
   return (
     <Row gutter={25}>
-      <Col xs={24}>{branches != null ? <Branches branches={branches} /> : <div />}</Col>
       {/* <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
           <EChartCard>

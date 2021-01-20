@@ -64,20 +64,4 @@ const sortingCountryByCountry = sortBy => {
   };
 };
 
-
-// const getAllCountrys = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllCountrys();
-//           dispatch(filterCountrySuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterCountryErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterCountryByGender, sortingCountryByCountry, getAllCountrys };
-
-
-export { filterSinglePage, filterCountryByGender, sortingCountryByCountry  };
+export { filterSinglePage, filterCountryByGender, sortingCountryByCountry };

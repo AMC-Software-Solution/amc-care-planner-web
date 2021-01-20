@@ -31,7 +31,6 @@ const cartUpdateQuantity = (id, quantity, cartData) => {
     try {
       dispatch(cartUpdateBegin());
       const data = cartData.map(item => {
-        if (item.id === id) item.quantity = quantity;
         return item;
       });
       dispatch(cartUpdateSuccess(data));

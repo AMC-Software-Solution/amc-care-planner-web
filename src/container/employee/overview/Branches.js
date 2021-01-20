@@ -1,8 +1,8 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { Cards } from '../../../components/cards/frame/cards-frame';
+import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col, Pagination, Skeleton, Table } from 'antd';
-import Heading from '../../../components/heading/heading';
+import { Row, Col, Skeleton, Table } from 'antd';
+import { Cards } from '../../../components/cards/frame/cards-frame';
+
 const Branch = ({ branches }) => {
   const columns = [
     {
@@ -43,44 +43,39 @@ const Branch = ({ branches }) => {
   ];
 
   const dataSource = branches.map(value => {
-      const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
-      const dataSourceRow = 
-        {
-          key: id,
-          id,
-          name,
-          address,
-          clientID: clientId,
-          clientName: clientClientName,
-          telephoneNumber: telephone,
-          lastUpdated: lastUpdatedDate,
-        }
-      ;
-      return dataSourceRow;
-     
-    });
-
+    const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
+    const dataSourceRow = {
+      key: id,
+      id,
+      name,
+      address,
+      clientID: clientId,
+      clientName: clientClientName,
+      telephoneNumber: telephone,
+      lastUpdated: lastUpdatedDate,
+    };
+    return dataSourceRow;
+  });
 
   return (
     <Row gutter={25}>
-    <Col xs={24}>
-      <Suspense
-        fallback={
-          <Cards headless>
-            <Skeleton active />
-          </Cards>
-        }
-      >
-        <div className="card user-card">
-          <Cards title="Branches">
-            <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
-          </Cards>
-        </div>
-      </Suspense>
-    </Col>
+      <Col xs={24}>
+        <Suspense
+          fallback={
+            <Cards headless>
+              <Skeleton active />
+            </Cards>
+          }
+        >
+          <div className="card user-card">
+            <Cards title="Branches">
+              <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
+            </Cards>
+          </div>
+        </Suspense>
+      </Col>
     </Row>
   );
-
 };
 
 Branch.propTypes = {
@@ -88,29 +83,3 @@ Branch.propTypes = {
 };
 
 export default Branch;
-
-{
-  /* <div className="card__content">
-                      <p className="card__designation">
-                        Name: <b>{name}</b>
-                      </p>
-                      <p className="card__designation">
-                        Branch ID : <b>{id}</b>
-                      </p>
-                      <p className="card__designation">
-                        Address : <b>{address}</b>
-                      </p>
-                      <p className="card__designation">
-                        Client ID : <b>{clientId}</b>
-                      </p>
-                      <p className="card__designation">
-                        Client Name : <b>{clientClientName}</b>
-                      </p>
-                      <p className="card__designation">
-                        Telephone Number : <b>{telephone}</b>
-                      </p>
-                      <p className="card__designation">
-                        Last Updated : <b>{lastUpdatedDate}</b>
-                      </p>
-                    </div> */
-}

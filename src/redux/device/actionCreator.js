@@ -64,20 +64,4 @@ const sortingDeviceByDevice = sortBy => {
   };
 };
 
-
-// const getAllDevices = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllDevices();
-//           dispatch(filterDeviceSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterDeviceErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterDeviceByGender, sortingDeviceByDevice, getAllDevices };
-
-
-export { filterSinglePage, filterDeviceByGender, sortingDeviceByDevice  };
+export { filterSinglePage, filterDeviceByGender, sortingDeviceByDevice };

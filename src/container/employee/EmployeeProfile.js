@@ -3,6 +3,7 @@ import { Row, Col, Skeleton } from 'antd';
 import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { SettingWrapper } from './overview/style';
+import Branch from './overview/Branches';
 import { Main } from '../styled';
 import { UserCard } from '../pages/style';
 import { Cards } from '../../components/cards/frame/cards-frame';
@@ -10,6 +11,7 @@ import { GoogleMaps } from '../../components/maps/google-maps';
 
 import { getSingleEmployee } from '../../redux/employees/actionCreator';
 import { getSingleEmployeeLocation } from '../../redux/employeeLocation/actionCreator';
+import { getSingleBranch } from '../../redux/branch/actionCreator';
 
 const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const General = lazy(() => import('./overview/General'));
@@ -25,9 +27,10 @@ const EmployeeProfile = () => {
   const { path, url } = useRouteMatch();
 
   const dispatch = useDispatch();
-  const { employee, employeeLocation } = useSelector(state => {
+  const { employee, employeeLocation, branch } = useSelector(state => {
     return {
       employee: state.employee.data,
+      branch: state.branch.data,
       employeeLocation: state.employeeLocation.data,
     };
   });
@@ -35,6 +38,7 @@ const EmployeeProfile = () => {
   useEffect(() => {
     dispatch(getSingleEmployee(id));
     dispatch(getSingleEmployeeLocation(id));
+    dispatch(getSingleBranch(employee.clientId));
   }, []);
 
   return (
@@ -51,22 +55,11 @@ const EmployeeProfile = () => {
               ) : (
                 <div>Employee Location not set yet</div>
               )}
+
+              {branch != null ? <Branch branch={branch} /> : <div />}
             </UserCard>
           </Col>
         </Row>
-        {/* <Row>
-            <Col>
-            <Suspense
-                fallback={
-                  <Cards headless>
-                    <Skeleton avatar active paragraph={{ rows: 3 }} />
-                  </Cards>
-                }
-              >
-
-              </Suspense>
-            </Col>
-          </Row> */}
         <Row>
           <Col span={24}>
             <SettingWrapper>
@@ -144,9 +137,5 @@ const EmployeeProfile = () => {
     </>
   );
 };
-
-// EmployeeProfile.propTypes = {
-//   match: propTypes.object,
-// };
 
 export default EmployeeProfile;

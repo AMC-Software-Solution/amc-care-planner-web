@@ -64,20 +64,4 @@ const sortingCommunicationByCommunication = sortBy => {
   };
 };
 
-
-// const getAllCommunications = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllCommunications();
-//           dispatch(filterCommunicationSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterCommunicationErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterCommunicationByGender, sortingCommunicationByCommunication, getAllCommunications };
-
-
-export { filterSinglePage, filterCommunicationByGender, sortingCommunicationByCommunication  };
+export { filterSinglePage, filterCommunicationByGender, sortingCommunicationByCommunication };
