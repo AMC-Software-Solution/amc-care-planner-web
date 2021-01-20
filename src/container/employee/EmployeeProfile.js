@@ -4,6 +4,7 @@ import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-d
 import { useSelector, useDispatch } from 'react-redux';
 import { SettingWrapper } from './overview/style';
 import { Main } from '../styled';
+import { UserCard } from '../pages/style';
 import { Cards } from '../../components/cards/frame/cards-frame';
 import { GoogleMaps } from '../../components/maps/google-maps';
 
@@ -43,14 +44,14 @@ const EmployeeProfile = () => {
           <Col span={6} style={{ display: 'flex' }}>
             {employee ? <UserCards user={employee} /> : <div />}
           </Col>
-          <Col span={18} style={{ display: 'flex' }}>
-            <Cards headless>
+          <Col span={18}>
+            <UserCard headless>
               {employeeLocation != null ? (
                 <GoogleMaps latitude={employeeLocation.latitude} longitude={employeeLocation.longitude} />
               ) : (
                 <div>Employee Location not set yet</div>
               )}
-            </Cards>
+            </UserCard>
           </Col>
         </Row>
         {/* <Row>
