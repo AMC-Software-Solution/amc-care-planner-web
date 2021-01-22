@@ -38,7 +38,7 @@ const EmployeeProfile = () => {
   useEffect(() => {
     dispatch(getSingleEmployee(id));
     dispatch(getSingleEmployeeLocation(id));
-    dispatch(getSingleBranch(employee.clientId));
+    dispatch(getSingleBranch(id));
   }, []);
 
   return (
@@ -56,7 +56,7 @@ const EmployeeProfile = () => {
                 <div>Employee Location not set yet</div>
               )}
 
-              {branch != null ? <Branch branch={branch} /> : <div />}
+              {branch != null ? <Branch branch={branch} style={{ display: 'flex' }} /> : <div />}
             </UserCard>
           </Col>
         </Row>

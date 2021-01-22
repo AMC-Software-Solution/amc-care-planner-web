@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Row, Col, Skeleton, Table } from 'antd';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
-const Branch = ({ branches }) => {
+const Branch = branch => {
   const columns = [
     {
       title: 'Branch ID',
@@ -42,7 +42,7 @@ const Branch = ({ branches }) => {
     },
   ];
 
-  const dataSource = branches.map(value => {
+  const dataSource = [branch].map(value => {
     const { id, name, address, telephone, lastUpdatedDate, clientId, clientClientName } = value;
     const dataSourceRow = {
       key: id,
@@ -58,8 +58,8 @@ const Branch = ({ branches }) => {
   });
 
   return (
-    <Row gutter={25}>
-      <Col xs={24}>
+    <Row>
+      <Col>
         <Suspense
           fallback={
             <Cards headless>
@@ -78,8 +78,8 @@ const Branch = ({ branches }) => {
   );
 };
 
-Branch.propTypes = {
-  branches: PropTypes.object,
-};
+// Branch.propTypes = {
+//   branch: PropTypes.object,
+// };
 
 export default Branch;
