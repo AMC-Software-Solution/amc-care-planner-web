@@ -58,23 +58,19 @@ const Branch = branch => {
   });
 
   return (
-    <Row>
-      <Col>
-        <Suspense
-          fallback={
-            <Cards headless>
-              <Skeleton active />
-            </Cards>
-          }
-        >
-          <div className="card user-card">
-            <Cards title="Branches">
-              <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
-            </Cards>
-          </div>
-        </Suspense>
-      </Col>
-    </Row>
+    <Suspense
+      fallback={
+        <Cards headless>
+          <Skeleton active />
+        </Cards>
+      }
+    >
+      <div className="card user-card">
+        <Cards title="Branches">
+          <Table className="table-responsive" pagination={false} dataSource={dataSource} columns={columns} />
+        </Cards>
+      </div>
+    </Suspense>
   );
 };
 

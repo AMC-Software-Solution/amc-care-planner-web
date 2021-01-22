@@ -56,7 +56,7 @@ const EmployeeProfile = () => {
                 <div>Employee Location not set yet</div>
               )}
 
-              {branch != null ? <Branch branch={branch} style={{ display: 'flex' }} /> : <div />}
+              {branch != null ? <Branch branch={branch} /> : <div />}
             </UserCard>
           </Col>
         </Row>
