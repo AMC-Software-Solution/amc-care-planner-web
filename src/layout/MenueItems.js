@@ -3,7 +3,6 @@ import { Menu } from 'antd';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 import FeatherIcon from 'feather-icons-react';
 import propTypes from 'prop-types';
-import versions from '../demoData/changelog.json';
 
 const { SubMenu } = Menu;
 
@@ -15,7 +14,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
   const mainPath = pathArray[1];
   const mainPathSplit = mainPath.split('/');
 
-  const { onRtlChange, onLtrChange, modeChangeDark, modeChangeLight, modeChangeTopNav, modeChangeSideNav } = events;
+  const { modeChangeDark, modeChangeLight, modeChangeTopNav } = events;
   const [openKeys, setOpenKeys] = React.useState(
     !topMenu ? [`${mainPathSplit.length > 2 ? mainPathSplit[1] : 'dashboard'}`] : [],
   );
@@ -336,7 +335,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
             Quality Assurance
           </NavLink>
         </Menu.Item>
-       { /*
+        {/*
         <Menu.Item key="grid-group">
           <NavLink onClick={toggleCollapsed} to={`${path}/users/grid-group`}>
             Users Group
@@ -376,21 +375,21 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
       <SubMenu key="events" icon={!topMenu && <FeatherIcon icon="user-plus" />} title="Events">
         <Menu.Item key="accidents">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/grid`}>
-          Accidents
+            Accidents
           </NavLink>
         </Menu.Item>
         <Menu.Item key="safeguarding">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
-          Safeguarding
+            Safeguarding
           </NavLink>
         </Menu.Item>
 
         <Menu.Item key="missedvisits">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
-          Missed Visits
+            Missed Visits
           </NavLink>
         </Menu.Item>
-      
+
         <Menu.Item key="medicationerror">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
             Medication Errors
@@ -398,33 +397,29 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         </Menu.Item>
         <Menu.Item key="Compliance">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
-          Compliance
+            Compliance
           </NavLink>
         </Menu.Item>
         <Menu.Item key="Compliance">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
-             Compliments
+            Compliments
           </NavLink>
         </Menu.Item>
-        
       </SubMenu>
 
       <SubMenu key="finance" icon={!topMenu && <FeatherIcon icon="user-plus" />} title="Finance">
         <Menu.Item key="funders">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/grid`}>
-          Funders
+            Funders
           </NavLink>
         </Menu.Item>
         <Menu.Item key="invoice">
           <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
-          Invoice
+            Invoice
           </NavLink>
         </Menu.Item>
-
-        
-        
       </SubMenu>
-{/*
+      {/*
       <Menu.Item icon={!topMenu && <FeatherIcon icon="file-text" />} key="note">
         <NavLink onClick={toggleCollapsed} to={`${path}/app/note/all`}>
           Note
@@ -441,8 +436,8 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         <NavLink onClick={toggleCollapsed} to={`${path}/app/fileManager`}>
           Documents
         </NavLink>
-      </Menu.Item> 
-{/*
+      </Menu.Item>
+      {/*
       {!topMenu && <p className="sidebar-nav-title">Features</p>}
     
 
@@ -919,7 +914,6 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
       </Menu.Item>
       */}
     </Menu>
-
   );
 };
 
@@ -928,6 +922,6 @@ MenuItems.propTypes = {
   topMenu: propTypes.bool,
   toggleCollapsed: propTypes.func,
   events: propTypes.object,
-}; 
+};
 
 export default MenuItems;

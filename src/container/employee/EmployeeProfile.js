@@ -3,7 +3,6 @@ import { Row, Col, Skeleton } from 'antd';
 import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { SettingWrapper } from './overview/style';
-import Branch from './overview/Branches';
 import { Main } from '../styled';
 import { UserCard } from '../pages/style';
 import { Cards } from '../../components/cards/frame/cards-frame';
@@ -21,6 +20,7 @@ const EmployeeLocationMap = lazy(() => import('../maps/EmployeeLocationMap'));
 const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
 const Kanban = lazy(() => import('../../container/kanban/Index'));
 const Calendars = lazy(() => import('../../container/calendar/Calendar'));
+const Branch = lazy(() => import('../../container/employee/overview/Branches'));
 
 const EmployeeProfile = () => {
   const { id } = useParams();
@@ -39,7 +39,7 @@ const EmployeeProfile = () => {
     dispatch(getSingleEmployee(id));
     dispatch(getSingleEmployeeLocation(id));
     dispatch(getSingleBranch(id));
-  }, []);
+  }, [dispatch, id]);
 
   return (
     <>
@@ -56,7 +56,7 @@ const EmployeeProfile = () => {
                 <div>Employee Location not set yet</div>
               )}
 
-              {branch != null ? <Branch branch={branch} /> : <div />}
+              {branch != null ? <Branch branch={branch} /> : <div>Employee branch is empty.</div>}
             </UserCard>
           </Col>
         </Row>

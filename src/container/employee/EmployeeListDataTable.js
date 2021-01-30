@@ -28,7 +28,7 @@ const EmployeeList = () => {
 
   useEffect(() => {
     dispatch(getAllEmployees());
-  }, []);
+  }, [dispatch]);
 
   const { notData } = state;
 

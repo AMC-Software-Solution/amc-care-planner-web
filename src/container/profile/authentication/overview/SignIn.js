@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useHistory } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { FacebookOutlined, TwitterOutlined } from '@ant-design/icons';
 import { AuthWrapper } from './style';
 import { login } from '../../../../redux/authentication/actionCreator';
 import { Checkbox } from '../../../../components/checkbox/checkbox';
 import Heading from '../../../../components/heading/heading';
 
-const SignIn = (props) => {
-  const history = useHistory();
+const SignIn = () => {
+  // const history = useHistory();
   const dispatch = useDispatch();
   const isLoading = useSelector(state => state.auth.loading);
   const [form] = Form.useForm();
@@ -20,17 +19,17 @@ const SignIn = (props) => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  const handleUsernameChange = (e) => {
+  const handleUsernameChange = e => {
     setUsername(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
+  const handlePasswordChange = e => {
     setPassword(e.target.value);
   };
 
   const handleSubmit = () => {
-    dispatch(login(username,password));
-    //history.push('/admin');
+    dispatch(login(username, password));
+    // history.push('/admin');
   };
 
   const onChange = checked => {
@@ -44,7 +43,7 @@ const SignIn = (props) => {
         Don&rsquo;t have an account? <NavLink to="/register">Sign up now</NavLink>
       </p>
       */}
-      <div className="auth-contents" style={{marginTop:"170px"}}>
+      <div className="auth-contents" style={{ marginTop: '170px' }}>
         <Form name="login" form={form} onFinish={handleSubmit} layout="vertical">
           <Heading as="h3">
             Sign in to <span className="color-secondary">AMC Care Planner</span>
@@ -62,17 +61,19 @@ const SignIn = (props) => {
             <Input.Password placeholder="Password" />
           </Form.Item>
           <div className="auth-form-action">
-            <Checkbox name="rememberMe" onChange={onChange}>Keep me logged in</Checkbox>
+            <Checkbox name="rememberMe" onChange={onChange}>
+              Keep me logged in
+            </Checkbox>
             <NavLink className="forgot-pass-link" to="/forgotPassword">
               Forgot password?
             </NavLink>
           </div>
           <Form.Item>
-            <Button name="subButton" htmlType="submit" className="btn-signin"  type="primary" size="large">
+            <Button name="subButton" htmlType="submit" className="btn-signin" type="primary" size="large">
               {isLoading ? 'Loading...' : 'Sign In'}
             </Button>
           </Form.Item>
-            {/** 
+          {/** 
           <p className="form-divider">
             <span>Or</span>
           </p>

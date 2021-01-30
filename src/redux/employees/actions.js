@@ -1,21 +1,9 @@
 const actions = {
-  SINGLE_EMPLOYEE_BEGIN: 'SINGLE_EMPLOYEE_BEGIN',
   SINGLE_EMPLOYEE_SUCCESS: 'SINGLE_EMPLOYEE_SUCCESS',
   SINGLE_EMPLOYEE_ERR: 'SINGLE_EMPLOYEE_ERR',
 
-  FILTER_EMPLOYEE_BEGIN: 'FILTER_EMPLOYEE_BEGIN',
-  FILTER_EMPLOYEE_SUCCESS: 'FILTER_EMPLOYEE_SUCCESS',
-  FILTER_EMPLOYEE_ERR: 'FILTER_EMPLOYEE_ERR',
-
-  SORTING_EMPLOYEE_BEGIN: 'SORTING_EMPLOYEE_BEGIN',
-  SORTING_EMPLOYEE_SUCCESS: 'SORTING_EMPLOYEE_SUCCESS',
-  SORTING_EMPLOYEE_ERR: 'SORTING_EMPLOYEE_ERR',
-
-  singleEmployeeBegin: () => {
-    return {
-      type: actions.SINGLE_EMPLOYEE_BEGIN,
-    };
-  },
+  EMPLOYEES_SUCCESS: 'EMPLOYEES_SUCCESS',
+  EMPLOYEES_ERR: 'EMPLOYEES_ERR',
 
   singleEmployeeSuccess: data => {
     return {
@@ -31,42 +19,16 @@ const actions = {
     };
   },
 
-  filterEmployeeBegin: () => {
+  EmployeesSuccess: data => {
     return {
-      type: actions.FILTER_EMPLOYEE_BEGIN,
-    };
-  },
-
-  filterEmployeeSuccess: data => {
-    return {
-      type: actions.FILTER_EMPLOYEE_SUCCESS,
+      type: actions.EMPLOYEES_SUCCESS,
       data,
     };
   },
 
-  filterEmployeeErr: err => {
+  EmployeesErr: err => {
     return {
-      type: actions.FILTER_EMPLOYEE_ERR,
-      err,
-    };
-  },
-
-  sortingEmployeeBegin: () => {
-    return {
-      type: actions.SORTING_EMPLOYEE_BEGIN,
-    };
-  },
-
-  sortingEmployeeSuccess: data => {
-    return {
-      type: actions.SORTING_EMPLOYEE_SUCCESS,
-      data,
-    };
-  },
-
-  sortingEmployeeErr: err => {
-    return {
-      type: actions.SORTING_EMPLOYEE_ERR,
+      type: actions.EMPLOYEES_ERR,
       err,
     };
   },

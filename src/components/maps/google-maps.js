@@ -94,8 +94,8 @@ GoogleMaps.defaultProps = {
 };
 
 GoogleMaps.propTypes = {
-  latitude: PropTypes.string,
-  longitude: PropTypes.string,
+  latitude: PropTypes.number,
+  longitude: PropTypes.number,
   google: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,

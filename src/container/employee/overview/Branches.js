@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
-// import PropTypes from 'prop-types';
-import { Row, Col, Skeleton, Table } from 'antd';
+import { Skeleton, Table } from 'antd';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
 const Branch = branch => {
@@ -73,9 +72,5 @@ const Branch = branch => {
     </Suspense>
   );
 };
-
-// Branch.propTypes = {
-//   branch: PropTypes.object,
-// };
 
 export default Branch;
