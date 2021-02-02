@@ -10,7 +10,7 @@ import { GoogleMaps } from '../../components/maps/google-maps';
 
 import { getSingleEmployee } from '../../redux/employees/actionCreator';
 import { getSingleEmployeeLocation } from '../../redux/employeeLocation/actionCreator';
-import { getSingleBranch } from '../../redux/branch/actionCreator';
+
 
 const UserCards = lazy(() => import('../pages/overview/UserCard'));
 const General = lazy(() => import('./overview/General'));
@@ -20,7 +20,7 @@ const EmployeeLocationMap = lazy(() => import('../maps/EmployeeLocationMap'));
 const DocumentManager = lazy(() => import('../../container/fileManager/DocumentManager'));
 const Kanban = lazy(() => import('../../container/kanban/Index'));
 const Calendars = lazy(() => import('../../container/calendar/Calendar'));
-const Branch = lazy(() => import('../../container/employee/overview/Branches'));
+
 
 const EmployeeProfile = () => {
   const { id } = useParams();
@@ -30,7 +30,6 @@ const EmployeeProfile = () => {
   const { employee, employeeLocation, branch } = useSelector(state => {
     return {
       employee: state.employee.data,
-      branch: state.branch.data,
       employeeLocation: state.employeeLocation.data,
     };
   });
@@ -38,7 +37,6 @@ const EmployeeProfile = () => {
   useEffect(() => {
     dispatch(getSingleEmployee(id));
     dispatch(getSingleEmployeeLocation(id));
-    dispatch(getSingleBranch(id));
   }, [dispatch, id]);
 
   return (
@@ -56,7 +54,7 @@ const EmployeeProfile = () => {
                 <div>Employee Location not set yet</div>
               )}
 
-              {branch != null ? <Branch branch={branch} /> : <div>Employee branch is empty.</div>}
+          
             </UserCard>
           </Col>
         </Row>
