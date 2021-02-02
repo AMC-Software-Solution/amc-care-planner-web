@@ -6,8 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ProductOverviewTable } from './style';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 import Heading from '../../../../components/heading/heading';
-import { CardBarChart2, EChartCard, PerformanceChartWrapper } from '../../../dashboard/style';
-import { ChartjsBarChartTransparent, ChartjsAreaChart } from '../../../../components/charts/chartjs';
 import { performanceGetData } from '../../../../redux/chartContent/actionCreator';
 import { chartLinearGradient, customTooltips } from '../../../../components/utilities/utilities';
 
@@ -172,183 +170,164 @@ const Overview = () => {
     <Row gutter={25}>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
-          <EChartCard>
-            <div className="card-chunk">
-              <CardBarChart2>
-                <Heading as="h1">7,461</Heading>
-                <span>Orders</span>
-                <p>
-                  <span className="growth-upward">
-                    <FeatherIcon icon="arrow-up" /> 25%
-                  </span>
-                  <span>Since last week</span>
-                </p>
-              </CardBarChart2>
-            </div>
-            <div className="card-chunk">
-              <ChartjsBarChartTransparent
-                labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
-                datasets={[
-                  {
-                    data: [20, 60, 50, 45, 50, 60, 70],
-                    backgroundColor: '#EFEFFE',
-                    hoverBackgroundColor: '#593196',
-                    label: 'Orders',
-                  },
-                ]}
-                options={chartOptions}
-              />
-            </div>
-          </EChartCard>
+          <div className="card-chunk">
+            <Heading as="h1">7,461</Heading>
+            <span>Orders</span>
+            <p>
+              <span className="growth-upward">
+                <FeatherIcon icon="arrow-up" /> 25%
+              </span>
+              <span>Since last week</span>
+            </p>
+          </div>
+          <div className="card-chunk">
+            labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
+            datasets=
+            {[
+              {
+                data: [20, 60, 50, 45, 50, 60, 70],
+                backgroundColor: '#EFEFFE',
+                hoverBackgroundColor: '#593196',
+                label: 'Orders',
+              },
+            ]}
+            options={chartOptions}/{'>'}
+          </div>
         </Cards>
       </Col>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
-          <EChartCard>
-            <div className="card-chunk">
-              <CardBarChart2>
-                <Heading as="h1">$28,947</Heading>
-                <span>Revenue</span>
-                <p>
-                  <span className="growth-downward">
-                    <FeatherIcon icon="arrow-down" /> 25%
-                  </span>
-                  <span>Since last week</span>
-                </p>
-              </CardBarChart2>
-            </div>
-            <div className="card-chunk">
-              <ChartjsBarChartTransparent
-                labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
-                datasets={[
-                  {
-                    data: [20, 60, 50, 45, 50, 60, 70],
-                    backgroundColor: '#FFF0F6',
-                    hoverBackgroundColor: '#FF69A5',
-                    label: 'Revenue',
-                  },
-                ]}
-                options={chartOptions}
-              />
-            </div>
-          </EChartCard>
+          <div className="card-chunk">
+            <Heading as="h1">$28,947</Heading>
+            <span>Revenue</span>
+            <p>
+              <span className="growth-downward">
+                <FeatherIcon icon="arrow-down" /> 25%
+              </span>
+              <span>Since last week</span>
+            </p>
+          </div>
+          <div className="card-chunk">
+            labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
+            datasets=
+            {[
+              {
+                data: [20, 60, 50, 45, 50, 60, 70],
+                backgroundColor: '#FFF0F6',
+                hoverBackgroundColor: '#FF69A5',
+                label: 'Revenue',
+              },
+            ]}
+            options={chartOptions}/{'>'}
+          </div>
         </Cards>
       </Col>
       <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
         <Cards headless>
-          <EChartCard>
-            <div className="card-chunk">
-              <CardBarChart2>
-                <Heading as="h1">$3,241</Heading>
-                <span>Avg. order value</span>
-                <p>
-                  <span className="growth-upward">
-                    <FeatherIcon icon="arrow-up" /> 25%
-                  </span>
-                  <span>Since last week</span>
-                </p>
-              </CardBarChart2>
-            </div>
-            <div className="card-chunk">
-              <ChartjsBarChartTransparent
-                labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
-                datasets={[
-                  {
-                    data: [20, 60, 50, 45, 50, 60, 70],
-                    backgroundColor: '#E8FAF4',
-                    hoverBackgroundColor: '#20C997',
-                    label: 'Avg Orders',
-                  },
-                ]}
-                options={chartOptions}
-              />
-            </div>
-          </EChartCard>
+          <div className="card-chunk">
+            <Heading as="h1">$3,241</Heading>
+            <span>Avg. order value</span>
+            <p>
+              <span className="growth-upward">
+                <FeatherIcon icon="arrow-up" /> 25%
+              </span>
+              <span>Since last week</span>
+            </p>
+          </div>
+          <div className="card-chunk">
+            labels={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']}
+            datasets=
+            {[
+              {
+                data: [20, 60, 50, 45, 50, 60, 70],
+                backgroundColor: '#E8FAF4',
+                hoverBackgroundColor: '#20C997',
+                label: 'Avg Orders',
+              },
+            ]}
+            options={chartOptions}/{'>'}
+          </div>
         </Cards>
       </Col>
       <Col xs={24}>
-        <PerformanceChartWrapper>
-          {performanceState !== null && (
-            <Cards more={moreContent} title="General Statistics" size="default">
-              <div className="performance-lineChart">
-                <ChartjsAreaChart
-                  id="performance"
-                  labels={performanceState.labels}
-                  datasets={performanceDatasets}
-                  options={{
-                    maintainAspectRatio: true,
-                    elements: {
-                      z: 9999,
+        {performanceState !== null && (
+          <Cards more={moreContent} title="General Statistics" size="default">
+            <div className="performance-lineChart">
+              id={performance} labels={performanceState.labels}
+              datasets={performanceDatasets}
+              options=
+              {{
+                maintainAspectRatio: true,
+                elements: {
+                  z: 9999,
+                },
+                legend: {
+                  display: false,
+                },
+                hover: {
+                  mode: 'index',
+                  intersect: false,
+                },
+                tooltips: {
+                  mode: 'label',
+                  intersect: false,
+                  backgroundColor: '#ffffff',
+                  position: 'average',
+                  enabled: false,
+                  custom: customTooltips,
+                  callbacks: {
+                    title() {
+                      return 'General Statistics';
                     },
-                    legend: {
-                      display: false,
+                    label(t, d) {
+                      const { yLabel, datasetIndex } = t;
+                      return `<span class="chart-data">${yLabel}k</span> <span class="data-label">${d.datasets[datasetIndex].label}</span>`;
                     },
-                    hover: {
-                      mode: 'index',
-                      intersect: false,
-                    },
-                    tooltips: {
-                      mode: 'label',
-                      intersect: false,
-                      backgroundColor: '#ffffff',
-                      position: 'average',
-                      enabled: false,
-                      custom: customTooltips,
-                      callbacks: {
-                        title() {
-                          return 'General Statistics';
-                        },
-                        label(t, d) {
-                          const { yLabel, datasetIndex } = t;
-                          return `<span class="chart-data">${yLabel}k</span> <span class="data-label">${d.datasets[datasetIndex].label}</span>`;
+                  },
+                },
+                scales: {
+                  yAxes: [
+                    {
+                      gridLines: {
+                        color: '#e5e9f2',
+                        borderDash: [3, 3],
+                        zeroLineColor: '#e5e9f2',
+                        zeroLineWidth: 1,
+                        zeroLineBorderDash: [3, 3],
+                      },
+                      ticks: {
+                        beginAtZero: true,
+                        fontSize: 13,
+                        fontColor: '#182b49',
+                        max: 80,
+                        stepSize: 20,
+                        callback(label) {
+                          return `${label}k`;
                         },
                       },
                     },
-                    scales: {
-                      yAxes: [
-                        {
-                          gridLines: {
-                            color: '#e5e9f2',
-                            borderDash: [3, 3],
-                            zeroLineColor: '#e5e9f2',
-                            zeroLineWidth: 1,
-                            zeroLineBorderDash: [3, 3],
-                          },
-                          ticks: {
-                            beginAtZero: true,
-                            fontSize: 13,
-                            fontColor: '#182b49',
-                            max: 80,
-                            stepSize: 20,
-                            callback(label) {
-                              return `${label}k`;
-                            },
-                          },
-                        },
-                      ],
-                      xAxes: [
-                        {
-                          gridLines: {
-                            display: true,
-                            zeroLineWidth: 2,
-                            zeroLineColor: 'transparent',
-                            color: 'transparent',
-                            z: 1,
-                            tickMarkLength: 0,
-                          },
-                          ticks: {
-                            padding: 10,
-                          },
-                        },
-                      ],
+                  ],
+                  xAxes: [
+                    {
+                      gridLines: {
+                        display: true,
+                        zeroLineWidth: 2,
+                        zeroLineColor: 'transparent',
+                        color: 'transparent',
+                        z: 1,
+                        tickMarkLength: 0,
+                      },
+                      ticks: {
+                        padding: 10,
+                      },
                     },
-                  }}
-                  height={window.innerWidth <= 575 ? 200 : 86}
-                />
-              </div>
-            </Cards>
-          )}
-        </PerformanceChartWrapper>
+                  ],
+                },
+              }}
+              height={window.innerWidth <= 575 ? 200 : 86}/{'>'}
+            </div>
+          </Cards>
+        )}
       </Col>
       <Col xs={24}>
         <ProductOverviewTable>

@@ -60,11 +60,7 @@ const TopMenu = () => {
                   Site Performance
                 </NavLink>
               </li>
-              <li>
-                <NavLink to={`${path}/eco`} onClick={addParentActive}>
-                  Ecommerce
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink to={`${path}/crm`} onClick={addParentActive}>
                   CRM

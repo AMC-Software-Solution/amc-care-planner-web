@@ -1,12 +1,9 @@
-
-import React, { lazy, Suspense, useEffect } from 'react';
-import { Row, Col, Table } from 'antd';
+import React, { useEffect } from 'react';
+import { Row, Col } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-const Branch = lazy(() => import('../../../container/employee/overview/Branches'));
+import { useParams } from 'react-router-dom';
+import Branch from './Branches';
 import { getSingleBranch } from '../../../redux/branch/actionCreator';
-import {  useParams } from 'react-router-dom';
-
-
 
 const General = () => {
   const { id } = useParams();
@@ -18,26 +15,12 @@ const General = () => {
   });
 
   useEffect(() => {
-    if (branch) {
-      dispatch(getSingleBranch(id));
-    }
-  }, [dispatch,branch]);
-
-
-
+    dispatch(getSingleBranch(id));
+  }, [dispatch, id]);
 
   return (
     <Row gutter={25}>
-  
-      <Col xxl={8} lg={12} md={24} sm={12} xs={24}>
-         {branch != null ? <Branch branch={branch} /> : <div>Employee branch is empty.</div>}
-      </Col>
-      <Col xs={24}>
-        
-      </Col>
-      <Col xs={24}>
-
-      </Col>
+      <Col md={24}>{branch != null ? <Branch branch={branch} /> : <div>Loading...</div>}</Col>
     </Row>
   );
 };

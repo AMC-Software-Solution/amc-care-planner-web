@@ -17,7 +17,7 @@ const EmployeeLocationMap = () => {
 
   useEffect(() => {
     dispatch(getSingleEmployeeLocation(id));
-  });
+  }, [dispatch, id]);
   return (
     <Cards headless>
       {employeeLocation != null ? (

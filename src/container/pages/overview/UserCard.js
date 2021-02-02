@@ -36,8 +36,8 @@ const UserCards = ({ user }) => {
   return (
     <UserCard>
       <div className="card user-card">
-        <Row>
-          <Col style={{ display: 'flex' }}>
+        <Row gutter={6}>
+          <Col span={6} style={{ display: 'flex' }}>
             <Cards headless>
               <figure>
                 <img src={photoUrl} alt="employee" />
@@ -51,7 +51,10 @@ const UserCards = ({ user }) => {
                   </Heading>
                 </div>
               </figcaption>
-
+            </Cards>
+          </Col>
+          <Col span={6} style={{ display: 'flex' }}>
+            <Cards headless>
               <div className="card__content">
                 <p className="card__designation">
                   Preferred Name: <b>{preferredName}</b>
@@ -75,7 +78,10 @@ const UserCards = ({ user }) => {
                   Contract Type : <b>{employeeContractType}</b>
                 </p>
               </div>
-
+            </Cards>
+          </Col>
+          <Col span={6} style={{ display: 'flex' }}>
+            <Cards headless>
               <div className="card__content">
                 <p className="card__designation">
                   PIN Code : <b>{pinCode}</b>
@@ -96,7 +102,10 @@ const UserCards = ({ user }) => {
                   Joining Date : <b>{lastUpdatedDate}</b>
                 </p>
               </div>
-
+            </Cards>
+          </Col>
+          <Col span={6} style={{ display: 'flex' }}>
+            <Cards headless>
               <div className="card__content">
                 <p className="card__designation">
                   Email : <b>{email}</b>

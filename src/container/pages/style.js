@@ -231,6 +231,7 @@ const UserTableStyleWrapper = Styled.nav`
 
 const UserCard = Styled.div`
   text-align: center;
+  flex-flow: row;
   margin-top:15px;
   .user-card{
     &.theme-list{

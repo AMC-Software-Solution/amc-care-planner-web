@@ -8,7 +8,7 @@ const Mixed = lazy(() => import('../../container/widgets/Mix'));
 const WidgetsRoute = () => {
   const { path } = useRouteMatch();
   return (
-    <Switch>      
+    <Switch>
       <Route path={`${path}/chart`} component={Charts} />
       <Route path={`${path}/card`} component={Carts} />
       <Route path={`${path}/mixed`} component={Mixed} />

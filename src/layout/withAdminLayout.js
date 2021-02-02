@@ -207,16 +207,11 @@ const ThemeLayout = WrappedComponent => {
                     </Button>
                   ) : null}
                   <div />
-                  <Link style={{color:"white", fontWeight:"bolder"}}
+                  <Link
+                    style={{ color: 'white', fontWeight: 'bolder' }}
                     className={topMenu && window.innerWidth > 991 ? 'striking-logo top-menu' : 'striking-logo'}
                     to="/admin"
                   >
-                    {/** 
-                    <img
-                      src={!darkMode ? require(`../static/img/Logo_Dark.svg`) : require(`../static/img/Logo_white.png`)}
-                      alt=""
-                    />
-                    */}
                     AMC Planner
                   </Link>
                 </Col>

@@ -3,7 +3,7 @@ import { Bar, HorizontalBar, Line, Pie, Doughnut } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 import useChartData from '../../hooks/useChartData';
 import { customTooltips } from '../utilities/utilities';
-import { ChartContainer } from '../../container/dashboard/style';
+// import { ChartContainer } from '../../container/dashboard/style';
 
 const ChartjsBarChart = props => {
   const { labels, datasets, options, height } = props;

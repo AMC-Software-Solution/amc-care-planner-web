@@ -12,8 +12,6 @@ import { ShareButtonPageHeader } from '../../components/buttons/share-button/sha
 import { ExportButtonPageHeader } from '../../components/buttons/export-button/export-button';
 import { CalendarButtonPageHeader } from '../../components/buttons/calendar-button/calendar-button';
 import GridCard from '../project/overview/GridCard';
-import ProductCards from '../ecommerce/product/overview/ProductCards';
-import ProductCardsList from '../ecommerce/product/overview/ProductCardList';
 import GalleryCards from '../pages/overview/GalleryCard';
 import ContactCard from '../contact/overview/ContactCard';
 import { Cards } from '../../components/cards/frame/cards-frame';
@@ -98,7 +96,7 @@ const WidgetsCard = () => {
             return (
               index <= 3 && (
                 <Col key={product.id} xxl={6} sm={12} xs={24}>
-                  <ProductCards product={product} />
+                  <div />
                 </Col>
               )
             );
@@ -303,22 +301,7 @@ const WidgetsCard = () => {
             </Row>
           </Col>
           <Col xxl={18} xs={24}>
-            <ProductCardsList
-              product={{
-                id: 1,
-                name: 'Montes Scelerisque',
-                rate: 5,
-                time: 1586372610052,
-                price: 250,
-                oldPrice: 650,
-                popular: 105,
-                brand: 'chair',
-                category: 'furniture',
-                img: 'static/img/products/1.png',
-                description:
-                  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.',
-              }}
-            />
+            <div />
           </Col>
         </Row>
       </Main>

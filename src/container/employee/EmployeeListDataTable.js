@@ -11,7 +11,7 @@ import { AutoComplete } from '../../components/autoComplete/autoComplete';
 import { Button } from '../../components/buttons/buttons';
 import { getAllEmployees } from '../../redux/employees/actionCreator';
 
-const EmployeeList = () => {
+const EmployeeListDataTable = () => {
   const dispatch = useDispatch();
   const { searchData, employees } = useSelector(state => {
     return {
@@ -158,4 +158,4 @@ const EmployeeList = () => {
   );
 };
 
-export default EmployeeList;
+export default EmployeeListDataTable;
