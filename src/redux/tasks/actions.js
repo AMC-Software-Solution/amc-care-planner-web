@@ -1,72 +1,34 @@
 const actions = {
-  SINGLE_TASKS_BEGIN: 'SINGLE_TASKS_BEGIN',
-  SINGLE_TASKS_SUCCESS: 'SINGLE_TASKS_SUCCESS',
-  SINGLE_TASKS_ERR: 'SINGLE_TASKS_ERR',
+  SINGLE_TASK_SUCCESS: 'SINGLE_TASK_SUCCESS',
+  SINGLE_TASK_ERR: 'SINGLE_TASK_ERR',
 
-  FILTER_TASKS_BEGIN: 'FILTER_TASKS_BEGIN',
-  FILTER_TASKS_SUCCESS: 'FILTER_TASKS_SUCCESS',
-  FILTER_TASKS_ERR: 'FILTER_TASKS_ERR',
+  TASKS_SUCCESS: 'TASKS_SUCCESS',
+  TASKS_ERR: 'TASKS_ERR',
 
-  SORTING_TASKS_BEGIN: 'SORTING_TASKS_BEGIN',
-  SORTING_TASKS_SUCCESS: 'SORTING_TASKS_SUCCESS',
-  SORTING_TASKS_ERR: 'SORTING_TASKS_ERR',
-
-  singleTasksBegin: () => {
+  singleTaskSuccess: data => {
     return {
-      type: actions.SINGLE_TASKS_BEGIN,
-    };
-  },
-
-  singleTasksSuccess: data => {
-    return {
-      type: actions.SINGLE_TASKS_SUCCESS,
+      type: actions.SINGLE_TASK_SUCCESS,
       data,
     };
   },
 
-  singleTasksErr: err => {
+  singleTaskErr: err => {
     return {
-      type: actions.SINGLE_TASKS_ERR,
+      type: actions.SINGLE_TASK_ERR,
       err,
     };
   },
 
-  filterTasksBegin: () => {
+  TasksSuccess: data => {
     return {
-      type: actions.FILTER_TASKS_BEGIN,
-    };
-  },
-
-  filterTasksSuccess: data => {
-    return {
-      type: actions.FILTER_TASKS_SUCCESS,
+      type: actions.TASKS_SUCCESS,
       data,
     };
   },
 
-  filterTasksErr: err => {
+  TasksErr: err => {
     return {
-      type: actions.FILTER_TASKS_ERR,
-      err,
-    };
-  },
-
-  sortingTasksBegin: () => {
-    return {
-      type: actions.SORTING_TASKS_BEGIN,
-    };
-  },
-
-  sortingTasksSuccess: data => {
-    return {
-      type: actions.SORTING_TASKS_SUCCESS,
-      data,
-    };
-  },
-
-  sortingTasksErr: err => {
-    return {
-      type: actions.SORTING_TASKS_ERR,
+      type: actions.TASKSS_ERR,
       err,
     };
   },

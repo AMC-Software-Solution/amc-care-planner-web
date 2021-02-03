@@ -1,83 +1,34 @@
 import actions from './actions';
-import initialState from '../../demoData/countries.json';
-// import {fetchAllTaskss} from '../../config/dataService/TasksDataService';
+import { fetchAllTasks, fetchSingleTask } from '../../config/dataService/taskDataService';
 
 const {
-  singleTasksBegin,
-  singleTasksSuccess,
-  singleTasksErr,
+  singleTaskSuccess,
+  singleTaskErr,
 
-  filterTasksBegin,
-  filterTasksSuccess,
-  filterTasksErr,
-
-  sortingTasksBegin,
-  sortingTasksSuccess,
-  sortingTasksErr,
+  TasksSuccess,
+  TasksErr,
 } = actions;
 
-const filterSinglePage = paramsId => {
+const getAllTasks = employeeId => {
   return async dispatch => {
     try {
-      dispatch(singleTasksBegin());
-      const data = initialState.filter(tasks => {
-        return tasks.id === parseInt(paramsId, 10);
-      });
-      dispatch(singleTasksSuccess(data));
+      const response = await fetchAllTasks(employeeId);
+      dispatch(TasksSuccess(response.data));
     } catch (err) {
-      dispatch(singleTasksErr(err));
+      dispatch(TasksErr(err.toString()));
     }
   };
 };
 
-const filterTasksByGender = gender => {
+const getSingleTask = id => {
   return async dispatch => {
     try {
-      dispatch(filterTasksBegin());
-      const data = initialState.filter(tasks => {
-        if (gender !== 'all') {
-          return tasks.gender === gender;
-        }
-        return initialState;
-      });
-      dispatch(filterTasksSuccess(data));
+      const response = await fetchSingleTask(id);
+      dispatch(singleTaskSuccess(response.data));
     } catch (err) {
-      dispatch(filterTasksErr(err.toString()));
+      dispatch(singleTaskErr(err.toString()));
     }
   };
 };
 
-const sortingTasksByTasks = sortBy => {
-  return async dispatch => {
-    try {
-      dispatch(sortingTasksBegin());
-      const data = initialState.sort((a, b) => {
-        return b[sortBy] - a[sortBy];
-      });
-
-      setTimeout(() => {
-        dispatch(sortingTasksSuccess(data));
-      }, 500);
-    } catch (err) {
-      dispatch(sortingTasksErr(err));
-    }
-  };
-};
-
-
-// const getAllTaskss = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllTaskss();
-//           dispatch(filterTasksSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterTasksErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterTasksByGender, sortingTasksByTasks, getAllTaskss };
-
-
-export { filterSinglePage, filterTasksByGender, sortingTasksByTasks  };
+export { getAllTasks, getSingleTask };

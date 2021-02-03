@@ -25,7 +25,7 @@ import FileManager from './fileManager/reducers';
 import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
 import { branchReducer, singleBranchReducer } from './branch/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
-import { tasksReducer, SingleTasksReducer } from './tasks/reducers';
+import { tasksReducer, SingleTaskReducer } from './tasks/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employeeLocation/reducers';
@@ -69,7 +69,7 @@ const rootReducers = combineReducers({
   countries: countryReducer,
   country: SingleCountryReducer,
   tasks: tasksReducer,
-  task: SingleTasksReducer,
+  task: SingleTaskReducer,
   eligibilties: eligibilityReducer,
   eligibility: SingleEligibilityReducer,
   availabilities: availabilityReducer,
