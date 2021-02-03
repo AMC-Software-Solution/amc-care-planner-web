@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
@@ -11,8 +12,40 @@ import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
 import Heading from '../../../../components/heading/heading';
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
+import { getAllEmployees } from '../../../../redux/employees/actionCreator';
 
-const EmployeeListTable = (employees, handleSearch, notData) => {
+const EmployeeListTable = () => {
+
+  const dispatch = useDispatch();
+  const { searchData, employees } = useSelector(state => {
+    return {
+      searchData: state.headerSearchData,
+      employees: state.employees.data,
+    };
+  });
+
+  const [state, setState] = useState({
+    notData: searchData,
+    selectedRowKeys: 0,
+    selectedRows: 0,
+  });
+
+  useEffect(() => {
+    dispatch(getAllEmployees());
+  }, [dispatch]);
+
+  const { notData } = state;
+
+  const handleSearch = searchText => {
+    const data = searchData.filter(item => item.title.toUpperCase().startsWith(searchText.toUpperCase()));
+    setState({
+      ...state,
+      notData: data,
+    });
+  };
+
+
+
   const employeesTableData = [];
   if (employees) {
     employees.map(employee => {
@@ -77,7 +110,7 @@ const EmployeeListTable = (employees, handleSearch, notData) => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/employee/employeeProfile/${id}`}>
+                <Link to={`/admin/employees/employee/employeeProfile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>

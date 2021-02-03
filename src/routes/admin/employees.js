@@ -1,7 +1,6 @@
 import React, { lazy } from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
-const EmployeeListTable = lazy(() => import('../../container/employees/employee/overview/EmployeeListTable'));
 const EmployeeProfileContainer = lazy(() => import('../../container/employees/employee/EmployeeProfileContainer'));
 const Appraisals = lazy(() => import('../../container/employees/Appraisals'));
 const CarePlan = lazy(() => import('../../container/employees/CarePlan'));
@@ -15,13 +14,15 @@ const SpotCheck = lazy(() => import('../../container/employees/SpotCheck'));
 const Supervisions = lazy(() => import('../../container/employees/Supervisions'));
 const Timesheets = lazy(() => import('../../container/employees/Timesheets'));
 const UserList = lazy(() => import('../../container/employees/UserList'));
+const EmployeeListTable = lazy(() => import('../../container/employees/employee/overview/EmployeeListTable'));
+
 
 const EmployeesRoutes = () => {
   const { path } = useRouteMatch();
   return (
     <Switch>
-      <Route path={`${path}/view/list`} component={EmployeeListTable} />
-      <Route path={`${path}/employeeProfile/:id`} component={EmployeeProfileContainer} />
+      <Route path={`${path}/employee/view/list`} component={EmployeeListTable} />
+      <Route path={`${path}/employee/employeeProfile/:id`} component={EmployeeProfileContainer} />
       <Route path={`${path}/care-plan`} component={CarePlan} />
       <Route path={`${path}/rotas`} component={Rotas} />
       <Route path={`${path}/appraisals`} component={Appraisals} />
