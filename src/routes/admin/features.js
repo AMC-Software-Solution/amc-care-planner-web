@@ -1,7 +1,6 @@
 import React, { lazy } from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
-const Tables = lazy(() => import('./table'));
 const Editors = lazy(() => import('../../container/pages/Editor'));
 const Banners = lazy(() => import('../../container/pages/Banners'));
 const Components = lazy(() => import('./components'));
@@ -18,7 +17,6 @@ const FeaturesRoute = () => {
       <Route path={`${path}/components`} component={Components} />
       <Route path={`${path}/maps`} component={Maps} />
       <Route path={`${path}/icons`} component={Icons} />
-      <Route path={`${path}/tables`} component={Tables} />
       <Route path={`${path}/testimonials`} component={Testimonials} />
     </Switch>
   );

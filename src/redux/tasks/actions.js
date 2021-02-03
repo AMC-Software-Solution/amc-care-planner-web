@@ -28,7 +28,7 @@ const actions = {
 
   TasksErr: err => {
     return {
-      type: actions.TASKSS_ERR,
+      type: actions.TASKS_ERR,
       err,
     };
   },

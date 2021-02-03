@@ -3,19 +3,18 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
-import { EmployeeTableStyleWrapper } from '../style';
-import { CardToolbox, TableWrapper } from '../../../styled';
+import { EmployeeTableStyleWrapper } from './style';
+import { CardToolbox, TableWrapper } from '../../styled';
 
-import { PageHeader } from '../../../../components/page-headers/page-headers';
-import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
+import { PageHeader } from '../../../components/page-headers/page-headers';
+import { AutoComplete } from '../../../components/autoComplete/autoComplete';
 
-import Heading from '../../../../components/heading/heading';
-import { Button } from '../../../../components/buttons/buttons';
-import { Cards } from '../../../../components/cards/frame/cards-frame';
-import { getAllEmployees } from '../../../../redux/employees/actionCreator';
+import Heading from '../../../components/heading/heading';
+import { Button } from '../../../components/buttons/buttons';
+import { Cards } from '../../../components/cards/frame/cards-frame';
+import { getAllEmployees } from '../../../redux/employees/actionCreator';
 
 const EmployeeListTable = () => {
-
   const dispatch = useDispatch();
   const { searchData, employees } = useSelector(state => {
     return {
@@ -43,8 +42,6 @@ const EmployeeListTable = () => {
       notData: data,
     });
   };
-
-
 
   const employeesTableData = [];
   if (employees) {

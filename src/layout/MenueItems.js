@@ -157,22 +157,22 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu }) => {
       </SubMenu>
       <SubMenu key="serviceusers" icon={!topMenu && <FeatherIcon icon="users" />} title="Service Users">
         <Menu.Item key="userlist">
-          <NavLink onClick={toggleCollapsed} to={`${path}/users/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/service-users/user-list`}>
             User list
           </NavLink>
         </Menu.Item>
         <Menu.Item key="careplan">
-          <NavLink onClick={toggleCollapsed} to={`${path}/users/grid`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/service-users/care-plan`}>
             Care Plan
           </NavLink>
         </Menu.Item>
         <Menu.Item key="riskassessment">
-          <NavLink onClick={toggleCollapsed} to={`${path}/users/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/service-users/risk-assessment`}>
             Risk Assessment
           </NavLink>
         </Menu.Item>
         <Menu.Item key="qualityassurance">
-          <NavLink onClick={toggleCollapsed} to={`${path}/users/grid-style`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/service-users/quality-assurance`}>
             Quality Assurance
           </NavLink>
         </Menu.Item>
@@ -180,12 +180,12 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu }) => {
       {/* Tasks */}
       <SubMenu key="tasks" icon={!topMenu && <FeatherIcon icon="check-circle" />} title="Tasks">
         <Menu.Item key="tasklist">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/grid`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/tasks/task-list`}>
             Task list
           </NavLink>
         </Menu.Item>
         <Menu.Item key="newtask">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/tasks/new-task`}>
             New Task
           </NavLink>
         </Menu.Item>
@@ -193,32 +193,32 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu }) => {
       {/* Events */}
       <SubMenu key="events" icon={!topMenu && <FeatherIcon icon="activity" />} title="Events">
         <Menu.Item key="accidents">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/grid`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/accidents`}>
             Accidents
           </NavLink>
         </Menu.Item>
         <Menu.Item key="safeguarding">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/safeguarding`}>
             Safeguarding
           </NavLink>
         </Menu.Item>
         <Menu.Item key="missedvisits">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/missed-visits`}>
             Missed Visits
           </NavLink>
         </Menu.Item>
         <Menu.Item key="medicationerror">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/medication-errors`}>
             Medication Errors
           </NavLink>
         </Menu.Item>
         <Menu.Item key="Compliance">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/compliance`}>
             Compliance
           </NavLink>
         </Menu.Item>
         <Menu.Item key="Compliance">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/addNew`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/events/compliments`}>
             Compliments
           </NavLink>
         </Menu.Item>
@@ -226,21 +226,24 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu }) => {
       {/* Finance */}
       <SubMenu key="finance" icon={!topMenu && <FeatherIcon icon="shopping-bag" />} title="Finance">
         <Menu.Item key="funders">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/grid`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/finance/funders`}>
             Funders
           </NavLink>
         </Menu.Item>
         <Menu.Item key="invoice">
-          <NavLink onClick={toggleCollapsed} to={`${path}/contact/list`}>
+          <NavLink onClick={toggleCollapsed} to={`${path}/finance/invoice`}>
             Invoice
           </NavLink>
         </Menu.Item>
       </SubMenu>
-      <Menu.Item icon={!topMenu && <FeatherIcon icon="file" />} key="fileManager">
-        <NavLink onClick={toggleCollapsed} to={`${path}/app/fileManager`}>
-          Documents
-        </NavLink>
-      </Menu.Item>
+      {/* Documents */}
+      <SubMenu key="document-manager" icon={!topMenu && <FeatherIcon icon="file" />} title="Document Manager">
+        <Menu.Item key="documents">
+          <NavLink onClick={toggleCollapsed} to={`${path}/document-manager/documents`}>
+            Document
+          </NavLink>
+        </Menu.Item>
+      </SubMenu>
     </Menu>
   );
 };

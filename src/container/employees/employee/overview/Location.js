@@ -1,35 +1,31 @@
-import React from 'react';
-import { Row } from 'antd';
-import FeatherIcon from 'feather-icons-react';
-import { PageHeader } from '../../../../components/page-headers/page-headers';
-import { Button } from '../../../../components/buttons/buttons';
-import { Main } from '../../../styled';
-import { ExportButtonPageHeader } from '../../../../components/buttons/export-button/export-button';
-import { CalendarButtonPageHeader } from '../../../../components/buttons/calendar-button/calendar-button';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { Cards } from '../../../../components/cards/frame/cards-frame';
+import { GoogleMaps } from '../../../../components/maps/google-maps';
+
+import { getSingleEmployeeLocation } from '../../../../redux/employeeLocation/actionCreator';
 
 const Location = () => {
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const { employeeLocation } = useSelector(state => {
+    return {
+      employeeLocation: state.employeeLocation.data,
+    };
+  });
+
+  useEffect(() => {
+    dispatch(getSingleEmployeeLocation(id));
+  }, [dispatch, id]);
   return (
-    <>
-      <PageHeader
-        ghost
-        title="Location"
-        buttons={[
-          <div key="1" className="page-header-actions">
-            <CalendarButtonPageHeader />
-            <ExportButtonPageHeader />
-            <Button size="small" type="primary">
-              <FeatherIcon icon="plus" size={14} />
-              Add New
-            </Button>
-          </div>,
-        ]}
-      />
-      <Main>
-        <Row justify="center" gutter={25}>
-          <div>WELCOME!</div>
-        </Row>
-      </Main>
-    </>
+    <Cards headless>
+      {employeeLocation != null ? (
+        <GoogleMaps latitude={employeeLocation.latitude} longitude={employeeLocation.longitude} />
+      ) : (
+        <div>Employee Location not set yet</div>
+      )}
+    </Cards>
   );
 };
 

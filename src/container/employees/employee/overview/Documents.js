@@ -1,9 +1,13 @@
 import React from 'react';
-import { Row } from 'antd';
+import { Row, Col, Input } from 'antd';
 import FeatherIcon from 'feather-icons-react';
+import { NavLink } from 'react-router-dom';
+import { FileManagerContentWrap } from './documentStyle';
 import { PageHeader } from '../../../../components/page-headers/page-headers';
-import { Button } from '../../../../components/buttons/buttons';
 import { Main } from '../../../styled';
+import { Cards } from '../../../../components/cards/frame/cards-frame';
+import { Button } from '../../../../components/buttons/buttons';
+import { ShareButtonPageHeader } from '../../../../components/buttons/share-button/share-button';
 import { ExportButtonPageHeader } from '../../../../components/buttons/export-button/export-button';
 import { CalendarButtonPageHeader } from '../../../../components/buttons/calendar-button/calendar-button';
 
@@ -11,12 +15,12 @@ const Documents = () => {
   return (
     <>
       <PageHeader
-        ghost
         title="Documents"
         buttons={[
           <div key="1" className="page-header-actions">
             <CalendarButtonPageHeader />
             <ExportButtonPageHeader />
+            <ShareButtonPageHeader />
             <Button size="small" type="primary">
               <FeatherIcon icon="plus" size={14} />
               Add New
@@ -25,12 +29,38 @@ const Documents = () => {
         ]}
       />
       <Main>
-        <Row justify="center" gutter={25}>
-          <div>WELCOME!</div>
+        <Row gutter={25}>
+          <Col md={24}>
+            <FileManagerContentWrap>
+              <Cards headless>
+                <div className="file-manager-header">
+                  <Input
+                    style={{ width: '350px' }}
+                    size="large"
+                    placeholder="large size"
+                    prefix={<FeatherIcon icon="search" />}
+                  />
+                  <div className="view-mode">
+                    <NavLink to="#">
+                      <FeatherIcon icon="grid" />
+                    </NavLink>
+                    <NavLink to="#">
+                      <FeatherIcon icon="list" />
+                    </NavLink>
+                  </div>
+                </div>
+                <div className="file-manager-content">
+                  <h2 className="file-manager-content__title">Employee Documents</h2>
+                </div>
+              </Cards>
+            </FileManagerContentWrap>
+          </Col>
         </Row>
       </Main>
     </>
   );
 };
+
+Documents.propTypes = {};
 
 export default Documents;
