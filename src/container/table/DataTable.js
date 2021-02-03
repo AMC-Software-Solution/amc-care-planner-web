@@ -4,9 +4,9 @@ import { PageHeader } from '../../components/page-headers/page-headers';
 import { Cards } from '../../components/cards/frame/cards-frame';
 import { Main } from '../styled';
 import UserListTable from '../pages/overview/UserTable';
-import ProjectLists from '../project/overview/List';
-import TaskList from '../project/overview/TaskList';
-import { TaskLists } from '../project/style';
+// import ProjectLists from '../project/overview/List';
+// import TaskList from '../project/overview/TaskList';
+// import { TaskLists } from '../project/style';
 
 const DataTables = () => {
   const [state, setState] = useState({
@@ -179,9 +179,7 @@ const DataTables = () => {
       <Main>
         <Row gutter={15}>
           <Col xs={24}>
-            <Cards title="Project List">
-              <ProjectLists />
-            </Cards>
+            <Cards title="Project List">{/* <ProjectLists /> */}</Cards>
           </Col>
           <Col xs={24}>
             <Cards title="User List">
@@ -242,11 +240,7 @@ const DataTables = () => {
             </Cards>
           </Col>
           <Col xs={24}>
-            <Cards title="Task List">
-              <TaskLists>
-                <TaskList />
-              </TaskLists>
-            </Cards>
+            <Cards title="Task List" />
           </Col>
         </Row>
       </Main>

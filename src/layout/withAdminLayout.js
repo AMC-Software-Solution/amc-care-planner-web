@@ -308,7 +308,7 @@ const ThemeLayout = WrappedComponent => {
                   <Footer className="admin-footer" style={footerStyle}>
                     <Row>
                       <Col md={12} xs={24}>
-                        <span className="admin-footer__copyright">2020 © AazzTech</span>
+                        <span className="admin-footer__copyright">2021 © AMC SOFTWARE SOLUTIONS</span>
                       </Col>
                       <Col md={12} xs={24}>
                         <div className="admin-footer__links">

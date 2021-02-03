@@ -6,10 +6,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Card } from './style';
 import { Cards } from '../cards/frame/cards-frame';
 import { Dropdown } from '../dropdown/dropdown';
-import { Bullet } from '../../container/note/style';
 import { noteDeleteData, onStarUpdate, onLabelUpdate } from '../../redux/note/actionCreator';
 
-const NoteCard = ({ data, Dragger }) => {
+const NoteCard = ({ data }) => {
   const dispatch = useDispatch();
   const { noteData } = useSelector(state => {
     return {
@@ -25,24 +24,16 @@ const NoteCard = ({ data, Dragger }) => {
       <div className="nav-labels">
         <ul>
           <li>
-            <Link onClick={() => onLabelChange('personal')} to="#">
-              <Bullet className="personal" /> Personal
-            </Link>
+            <Link onClick={() => onLabelChange('personal')} to="#" />
           </li>
           <li>
-            <Link onClick={() => onLabelChange('work')} to="#">
-              <Bullet className="work" /> Work
-            </Link>
+            <Link onClick={() => onLabelChange('work')} to="#" />
           </li>
           <li>
-            <Link onClick={() => onLabelChange('social')} to="#">
-              <Bullet className="social" /> Social
-            </Link>
+            <Link onClick={() => onLabelChange('social')} to="#" />
           </li>
           <li>
-            <Link onClick={() => onLabelChange('important')} to="#">
-              <Bullet className="important" /> Important
-            </Link>
+            <Link onClick={() => onLabelChange('important')} to="#" />
           </li>
         </ul>
       </div>
@@ -60,7 +51,6 @@ const NoteCard = ({ data, Dragger }) => {
             {title}
             <span className={`status-bullet ${label}`} />
           </span>
-          <Dragger />
         </h4>
         <p>{description}</p>
         <div className="actions">

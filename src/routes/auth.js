@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import { Spin } from 'antd';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import AuthLayout from '../container/profile/authentication/Index';
+import AuthLayout from '../layout/AuthLayout';
 
-const Login = lazy(() => import('../container/profile/authentication/overview/SignIn'));
-const SignUp = lazy(() => import('../container/profile/authentication/overview/Signup'));
-const ForgotPass = lazy(() => import('../container/profile/authentication/overview/ForgotPassword'));
+const Login = lazy(() => import('../layout/overview/SignIn'));
+const SignUp = lazy(() => import('../layout/overview/Signup'));
+const ForgotPass = lazy(() => import('../layout/overview/ForgotPassword'));
 
 const NotFound = () => {
   return <Redirect to="/" />;
