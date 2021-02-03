@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
-import { Link } from 'react-router-dom';
 import { EmployeeTableStyleWrapper } from '../style';
 import { CardToolbox, TableWrapper } from '../../../styled';
 
 import { PageHeader } from '../../../../components/page-headers/page-headers';
 import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
 
-import Heading from '../../../../components/heading/heading';
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 import { getAllTasks } from '../../../../redux/tasks/actionCreator';
-import { useParams } from 'react-router-dom';
 
 const TaskListTable = () => {
   const { employeeId } = useParams();
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const { searchData, tasks } = useSelector(state => {
     return {
       searchData: state.headerSearchData,
@@ -33,7 +31,7 @@ const TaskListTable = () => {
 
   useEffect(() => {
     dispatch(getAllTasks(employeeId));
-  }, [dispatch]);
+  }, [dispatch, employeeId]);
 
   const { notData } = state;
 
@@ -44,8 +42,6 @@ const TaskListTable = () => {
       notData: data,
     });
   };
-
-
 
   const tasksTableData = [];
   if (tasks) {

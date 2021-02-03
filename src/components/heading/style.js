@@ -34,6 +34,7 @@ const H6 = Styled.h1`
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  color: #593196;
 `;
 
 export { H1, H2, H3, H4, H5, H6 };

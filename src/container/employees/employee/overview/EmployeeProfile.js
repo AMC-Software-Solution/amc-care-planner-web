@@ -43,11 +43,15 @@ const EmployeeProfile = ({ user }) => {
               </figure>
               <figcaption>
                 <div className="card__content">
-                  <Heading className="card__name" as="h6">
-                    {/* <Link to={`/admin/employee/employeeProfile/${id}`}> */}
+                  <Heading as="h6">
                     {title} {firstName} {middleInitial} {lastName}
-                    {/* </Link> */}
                   </Heading>
+                  <div className="card__actions">
+                    <Button size="default" type="white">
+                      <FeatherIcon icon="mail" size={14} />
+                      Message
+                    </Button>
+                  </div>
                 </div>
               </figcaption>
             </Cards>
@@ -73,9 +77,6 @@ const EmployeeProfile = ({ user }) => {
                 <p className="card__designation">
                   National Insurance :<b>{nationalInsuranceNumber}</b>
                 </p>
-                <p className="card__designation">
-                  Contract Type : <b>{employeeContractType}</b>
-                </p>
               </div>
             </Cards>
           </Col>
@@ -98,7 +99,7 @@ const EmployeeProfile = ({ user }) => {
                   User ID : <b>{userId}</b>
                 </p>
                 <p className="card__designation">
-                  Joining Date : <b>{lastUpdatedDate}</b>
+                  Contract Type : <b>{employeeContractType}</b>
                 </p>
               </div>
             </Cards>
@@ -113,22 +114,14 @@ const EmployeeProfile = ({ user }) => {
                   Address : <b>{address}</b>
                 </p>
                 <p className="card__designation">
-                  {' '}
-                  <b>
-                    {' '}
-                    {county} {postCode}
-                  </b>
+                  County : <b>{county}</b>
                 </p>
-              </div>
-              <div className="card__actions">
-                <Button size="default" type="white">
-                  <FeatherIcon icon="mail" size={14} />
-                  Message
-                </Button>
-                <Button size="default" type="white">
-                  <FeatherIcon icon="smile" size={14} />
-                  Favourite
-                </Button>
+                <p className="card__designation">
+                  Post Code : <b>{postCode}</b>
+                </p>
+                <p className="card__designation">
+                  Joining Date : <b>{lastUpdatedDate}</b>
+                </p>
               </div>
             </Cards>
           </Col>

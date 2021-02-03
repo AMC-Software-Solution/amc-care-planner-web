@@ -165,7 +165,7 @@ const SettingWrapper = Styled.div`
                         position: relative;
                         display: block;
                         padding: 20px 5px;
-                        color: ${({ theme }) => theme['light-color']};
+                        color: ${({ theme }) => theme['dark-color']};
                         @media only screen and (max-width: 375px){
                             padding: 10px 5px;
                         }
@@ -588,8 +588,8 @@ const EmployeeCards = Styled.div`
           min-width: 114px;
         }
       }
-    }
-    &.theme-grid-2{
+    } 
+     &.theme-grid-2{
       .ant-card-body{
         padding: 0 !important;
       }
@@ -624,8 +624,8 @@ const EmployeeCards = Styled.div`
         padding-top: 102px;
         border-radius: 30px 30px 10px 10px;
       }
-    }
-    &.theme-grid-3{
+    } 
+     &.theme-grid-3{
       .ant-card{
         text-align: left;
       }
@@ -716,7 +716,7 @@ const EmployeeCards = Styled.div`
           }
         }
       }
-    }
+    } 
   }
   .card{
     position: relative;
@@ -764,7 +764,7 @@ const EmployeeCards = Styled.div`
       font-size: 13px;
       margin-bottom: 5px;
       text-align: left;
-      color: ${({ theme }) => theme['light-color']};
+      color: ${({ theme }) => theme['dark-color']};
     }
     .card__social{
       margin-top: 16px;

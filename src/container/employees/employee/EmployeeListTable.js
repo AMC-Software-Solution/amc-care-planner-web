@@ -48,7 +48,6 @@ const EmployeeListTable = () => {
     employees.map(employee => {
       const {
         id,
-        title,
         firstName,
         middleInitial,
         lastName,
@@ -61,7 +60,6 @@ const EmployeeListTable = () => {
         pinCode,
         transportMode,
         address,
-        county,
         postCode,
         dateOfBirth,
         photoUrl,
@@ -80,11 +78,11 @@ const EmployeeListTable = () => {
               <img style={{ width: '50px' }} src={photoUrl} alt="" />
             </figure>
             <figcaption>
-              <Heading className="user-name" as="h6">
-                {title} {firstName} {middleInitial} {lastName}
+              <Heading className="user-magac" as="h6">
+                {firstName} {middleInitial} {lastName}
               </Heading>
               <span className="user-designation">
-                {address} {county} {postCode}
+                {address} {postCode}
               </span>
             </figcaption>
           </div>

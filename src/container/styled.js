@@ -1329,7 +1329,7 @@ const TableWrapper = Styled.div`
                     &:last-child{
                         text-align: ${({ theme }) => (theme.rtl ? 'left' : 'right')};
                     }
-                    color: ${({ theme }) => theme['gray-color']};
+                    color: ${({ theme }) => theme['dark-color']};
                     background: ${({ theme }) => theme['bg-color-light']};
                     border-top: 1px solid ${({ theme }) => theme['border-color-light']};
                     border-bottom: 1px solid ${({ theme }) => theme['border-color-light']};
@@ -1366,8 +1366,8 @@ const TableWrapper = Styled.div`
                 td{
                     border: 0 none;
                     font-weight: 500;
-                    color: #9299b8; 
-                    /* ${({ theme }) => theme['dark-color']}; */
+                    /* color: #9299b8;  */
+                    ${({ theme }) => theme['dark-color']};
                     &:first-child{
                         border-radius: ${({ theme }) => (!theme.rtl ? '10px 0 0 10px' : '0 10px 10px 0')} !important;
                     }
@@ -1439,10 +1439,15 @@ const TableWrapper = Styled.div`
                 margin-bottom: 4px;
                 font-weight: 500;
             }
+            .user-magac{
+                font-size: 14px;
+                font-weight: 700;
+                color: ${({ theme }) => theme['dark-color']};
+            }
             .user-designation{
                 font-size: 12px;
                 font-weight: 400;
-                color: ${({ theme }) => theme['light-color']};
+                color: ${({ theme }) => theme['dark-color']};
             }
         }
     }    

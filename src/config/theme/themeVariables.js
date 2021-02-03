@@ -13,7 +13,6 @@ const errorColor = '#f5222d';
 const errorHover = '#E30D0F';
 const infoColor = '#2C99FF';
 const infoHover = '#0D79DF';
-//const darkColor = '#272B41';
 const darkColor = '#593196';
 const darkHover = '#131623';
 const grayColor = '#5A5F7D';
