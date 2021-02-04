@@ -1,83 +1,34 @@
 import actions from './actions';
-import initialState from '../../demoData/timesheet.json';
-// import {fetchAllTimesheets} from '../../config/dataService/TimesheetDataService';
+import { fetchAllTimesheets, fetchSingleTimesheet } from '../../config/dataService/timesheetDataService';
 
 const {
-  singleTimesheetBegin,
   singleTimesheetSuccess,
   singleTimesheetErr,
 
-  filterTimesheetBegin,
-  filterTimesheetSuccess,
-  filterTimesheetErr,
-
-  sortingTimesheetBegin,
-  sortingTimesheetSuccess,
-  sortingTimesheetErr,
+  TimesheetsSuccess,
+  TimesheetsErr,
 } = actions;
 
-const filterSinglePage = paramsId => {
+const getAllTimesheets = employeeId => {
   return async dispatch => {
     try {
-      dispatch(singleTimesheetBegin());
-      const data = initialState.filter(timesheet => {
-        return timesheet.id === parseInt(paramsId, 10);
-      });
-      dispatch(singleTimesheetSuccess(data));
+      const response = await fetchAllTimesheets(employeeId);
+      dispatch(TimesheetsSuccess(response.data));
     } catch (err) {
-      dispatch(singleTimesheetErr(err));
+      dispatch(TimesheetsErr(err.toString()));
     }
   };
 };
 
-const filterTimesheetByGender = gender => {
+const getSingleTimesheet = id => {
   return async dispatch => {
     try {
-      dispatch(filterTimesheetBegin());
-      const data = initialState.filter(timesheet => {
-        if (gender !== 'all') {
-          return timesheet.gender === gender;
-        }
-        return initialState;
-      });
-      dispatch(filterTimesheetSuccess(data));
+      const response = await fetchSingleTimesheet(id);
+      dispatch(singleTimesheetSuccess(response.data));
     } catch (err) {
-      dispatch(filterTimesheetErr(err.toString()));
+      dispatch(singleTimesheetErr(err.toString()));
     }
   };
 };
 
-const sortingTimesheetByTimesheet = sortBy => {
-  return async dispatch => {
-    try {
-      dispatch(sortingTimesheetBegin());
-      const data = initialState.sort((a, b) => {
-        return b[sortBy] - a[sortBy];
-      });
-
-      setTimeout(() => {
-        dispatch(sortingTimesheetSuccess(data));
-      }, 500);
-    } catch (err) {
-      dispatch(sortingTimesheetErr(err));
-    }
-  };
-};
-
-
-// const getAllTimesheets = () => {
-//     return async dispatch => {
-//         try {
-//           const response = await fetchAllTimesheets();
-//           dispatch(filterTimesheetSuccess(response.data));
-//         } catch (err) {
-//           dispatch(filterTimesheetErr(err.toString()));
-//         }  
-//       };
-//     };
-    
-
-//export { filterSinglePage, filterTimesheetByGender, sortingTimesheetByTimesheet, getAllTimesheets };
-
-
-export { filterSinglePage, filterTimesheetByGender, sortingTimesheetByTimesheet  };
+export { getAllTimesheets, getSingleTimesheet };

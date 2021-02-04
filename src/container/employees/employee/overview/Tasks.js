@@ -94,7 +94,7 @@ const TaskListTable = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/employees/employee/employeeProfile/${id}`}>
+                <Link to={`/admin/tasks/task/taskProfile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>

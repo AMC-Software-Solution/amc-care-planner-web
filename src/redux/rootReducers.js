@@ -30,7 +30,7 @@ import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/re
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employeeLocation/reducers';
 import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
-import { timesheetReducer, SingleTimesheetReducer } from './timesheet/reducers';
+import { timesheetsReducer, SingleTimesheetReducer } from './timesheet/reducers';
 import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
 import { documentReducer, SingleDocumentReducer } from './document/reducers';
@@ -78,7 +78,7 @@ const rootReducers = combineReducers({
   employeeLocation: SingleEmployeeLocationReducer,
   employeeHolidays: employeeHolidayReducer,
   employeeHoliday: SingleEmployeeHolidayReducer,
-  timesheets: timesheetReducer,
+  timesheets: timesheetsReducer,
   timesheet: SingleTimesheetReducer,
   devices: deviceReducer,
   device: SingleDeviceReducer,

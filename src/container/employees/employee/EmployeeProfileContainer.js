@@ -95,12 +95,12 @@ const EmployeeProfileContainer = () => {
                   }
                 >
                   <Route exact path={`${path}/general/:id`} component={General} />
-                  <Route path={`${path}/tasks/:id`} component={Tasks} />
+                  <Route path={`${path}/tasks/:employeeId`} component={Tasks} />
                   <Route path={`${path}/location/:id`} component={Location} />
 
                   <Route exact path={`${path}/holidays/:id`} component={Holidays} />
                   <Route path={`${path}/documents/:id`} component={Documents} />
-                  <Route path={`${path}/timesheet/:id`} component={Timesheet} />
+                  <Route path={`${path}/timesheet/:employeeId`} component={Timesheet} />
 
                   <Route exact path={`${path}/communications/:id`} component={Communications} />
                   <Route path={`${path}/notifications/:id`} component={Notifications} />

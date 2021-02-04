@@ -1,21 +1,9 @@
 const actions = {
-  SINGLE_TIMESHEET_BEGIN: 'SINGLE_TIMESHEET_BEGIN',
   SINGLE_TIMESHEET_SUCCESS: 'SINGLE_TIMESHEET_SUCCESS',
   SINGLE_TIMESHEET_ERR: 'SINGLE_TIMESHEET_ERR',
 
-  FILTER_TIMESHEET_BEGIN: 'FILTER_TIMESHEET_BEGIN',
-  FILTER_TIMESHEET_SUCCESS: 'FILTER_TIMESHEET_SUCCESS',
-  FILTER_TIMESHEET_ERR: 'FILTER_TIMESHEET_ERR',
-
-  SORTING_TIMESHEET_BEGIN: 'SORTING_TIMESHEET_BEGIN',
-  SORTING_TIMESHEET_SUCCESS: 'SORTING_TIMESHEET_SUCCESS',
-  SORTING_TIMESHEET_ERR: 'SORTING_TIMESHEET_ERR',
-
-  singleTimesheetBegin: () => {
-    return {
-      type: actions.SINGLE_TIMESHEET_BEGIN,
-    };
-  },
+  TIMESHEETS_SUCCESS: 'TIMESHEETS_SUCCESS',
+  TIMESHEETS_ERR: 'TIMESHEETS_ERR',
 
   singleTimesheetSuccess: data => {
     return {
@@ -31,42 +19,16 @@ const actions = {
     };
   },
 
-  filterTimesheetBegin: () => {
+  TimesheetsSuccess: data => {
     return {
-      type: actions.FILTER_TIMESHEET_BEGIN,
-    };
-  },
-
-  filterTimesheetSuccess: data => {
-    return {
-      type: actions.FILTER_TIMESHEET_SUCCESS,
+      type: actions.TIMESHEETS_SUCCESS,
       data,
     };
   },
 
-  filterTimesheetErr: err => {
+  TimesheetsErr: err => {
     return {
-      type: actions.FILTER_TIMESHEET_ERR,
-      err,
-    };
-  },
-
-  sortingTimesheetBegin: () => {
-    return {
-      type: actions.SORTING_TIMESHEET_BEGIN,
-    };
-  },
-
-  sortingTimesheetSuccess: data => {
-    return {
-      type: actions.SORTING_TIMESHEET_SUCCESS,
-      data,
-    };
-  },
-
-  sortingTimesheetErr: err => {
-    return {
-      type: actions.SORTING_TIMESHEET_ERR,
+      type: actions.TIMESHEETS_ERR,
       err,
     };
   },
