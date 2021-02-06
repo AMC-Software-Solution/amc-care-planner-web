@@ -26,10 +26,11 @@ import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
 import { branchReducer, singleBranchReducer } from './branch/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
 import { tasksReducer, SingleTaskReducer } from './tasks/reducers';
+import {holidaysReducer, SingleHolidayReducer } from './ holidays/reducers'
+
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employeeLocation/reducers';
-import { employeeHolidayReducer, SingleEmployeeHolidayReducer } from './employeeHoliday/reducers';
 import { timesheetsReducer, SingleTimesheetReducer } from './timesheet/reducers';
 import { deviceReducer, SingleDeviceReducer } from './device/reducers';
 import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
@@ -76,8 +77,8 @@ const rootReducers = combineReducers({
   availability: SingleAvailabilityReducer,
   employeeLocations: employeeLocationReducer,
   employeeLocation: SingleEmployeeLocationReducer,
-  employeeHolidays: employeeHolidayReducer,
-  employeeHoliday: SingleEmployeeHolidayReducer,
+  holidays: holidaysReducer,
+  holiday: SingleHolidayReducer,
   timesheets: timesheetsReducer,
   timesheet: SingleTimesheetReducer,
   devices: deviceReducer,
