@@ -12,21 +12,21 @@ const actions = {
     };
   },
 
-  singleHOLIDAYErr: err => {
+  singleHolidayErr: err => {
     return {
       type: actions.SINGLE_HOLIDAY_ERR,
       err,
     };
   },
 
-  HolidaysSuccess: data => {
+  holidaysSuccess: data => {
     return {
-      type: actions.Holidays_SUCCESS,
+      type: actions.HOLIDAYS_SUCCESS,
       data,
     };
   },
 
-  HolidaysErr: err => {
+  holidaysErr: err => {
     return {
       type: actions.HOLIDAYS_ERR,
       err,

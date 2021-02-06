@@ -48,67 +48,66 @@ const HolidayListTable = () => {
 
   const holidaysTableData = [];
   if (holidays) {
-    holidays.map(holiday => {
-  const {
-    id,
-description	,
-employeeId	,
-employeeHolidayType	,
-note	,
-employeeEmployeeCode	,
-createdDate	,
-startDate,
-endDate	,
-approvedDate	,
-approvedById	,
-clientId	,
-hasExtraData	,
-lastUpdatedDate	,
-rejectionReason	,
-holidayStatus	,
-requestedDate	,
-approvedByEmployeeCode	,
-
-  } = holiday;
-  return holidaysTableData.push({
-    key: id,
-    id,
-description	,
-employeeHolidayType	,
-employeeId	,
-employeeEmployeeCode	,
-createdDate	,
-startDate,
-endDate	,
-approvedDate	,
-clientId	,
-hasExtraData	,
-lastUpdatedDate	,
-note	,
-rejectionReason	,
-holidayStatus	,
-requestedDate	,
-approvedById	,
-approvedByEmployeeCode	,
-        action: (
-          <div className="table-actions">
-            <>
-              <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/holidays/task/taskProfile/${id}`}>
-                  <FeatherIcon icon="eye" size={16} />
-                </Link>
-              </Button>
-              <Button className="btn-icon" type="info" to="#" shape="circle">
-                <FeatherIcon icon="edit" size={16} />
-              </Button>
-              <Button className="btn-icon" type="danger" to="#" shape="circle">
-                <FeatherIcon icon="trash-2" size={16} />
-              </Button>
-            </>
-          </div>
-        ),
-      });
-    });
+                holidays.map(holiday => {
+                          const {
+                            id,
+                            description	,
+                            employeeHolidayType	,
+                            employeeId	,
+                            employeeEmployeeCode	,
+                            createdDate	,
+                            startDate,
+                            endDate	,
+                            approvedDate	,
+                            clientId	,
+                            hasExtraData	,
+                            lastUpdatedDate	,
+                            note	,
+                            rejectionReason	,
+                            holidayStatus	,
+                            requestedDate	,
+                            approvedById	,
+                            approvedByEmployeeCode	,
+                          } = holiday;
+                          return holidaysTableData.push({
+                            key: id,
+                            id,
+                        description	,
+                        employeeHolidayType	,
+                        employeeId	,
+                        employeeEmployeeCode	,
+                        createdDate	,
+                        startDate,
+                        endDate	,
+                        approvedDate	,
+                        clientId	,
+                        hasExtraData	,
+                        lastUpdatedDate	,
+                        note	,
+                        rejectionReason	,
+                        holidayStatus	,
+                        requestedDate	,
+                        approvedById	,
+                        approvedByEmployeeCode	,
+                                action: (
+                                  <div className="table-actions">
+                                    <>
+                                      <Button className="btn-icon" type="primary" shape="circle">
+                                        <Link to={`/admin/holidays/holiday/holidayrofile/${id}`}>
+                                          <FeatherIcon icon="eye" size={16} />
+                                        </Link>
+                                      </Button>
+                                      <Button className="btn-icon" type="info" to="#" shape="circle">
+                                        <FeatherIcon icon="edit" size={16} />
+                                      </Button>
+                                      <Button className="btn-icon" type="danger" to="#" shape="circle">
+                                        <FeatherIcon icon="trash-2" size={16} />
+                                      </Button>
+                                    </>
+                                  </div>
+                                ),
+                              });
+                });
   }
 
   const holidaysTableColumns = [

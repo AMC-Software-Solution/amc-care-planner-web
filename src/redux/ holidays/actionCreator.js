@@ -5,17 +5,17 @@ const {
   singleHolidaySuccess,
   singleHolidayErr,
 
-  HolidaysSuccess,
-  HolidaysErr,
+  holidaysSuccess,
+  holidaysErr,
 } = actions;
 
 const getAllHolidays = employeeId => {
   return async dispatch => {
     try {
       const response = await fetchAllHolidays(employeeId);
-      dispatch(HolidaysSuccess(response.data));
+      dispatch(holidaysSuccess(response.data));
     } catch (err) {
-      dispatch(HolidaysErr(err.toString()));
+      dispatch(holidaysErr(err.toString()));
     }
   };
 };
