@@ -51,7 +51,7 @@ const DocumentListTable = () => {
                 documents.map(document => {
                           const {
                             id	,
-                            approvedByEmployeeCode	,
+                          approvedByEmployeeCode	,
                             clientId	,
                             createdDate	,
                             approvedById	,
