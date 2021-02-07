@@ -91,7 +91,7 @@ const API_URL = API;
 
 const fetchAllDocuments = employeeId => {
   const header = { headers: { Authorization: `Bearer ${getItem('access_token')}` } };
-  return axios.get(`${API_URL}/v1/get-all-documents-by-client-id-employee-id/${employeeId}`, header);
+  return axios.get(`${API_URL}/v1/get-all-employee-documents-by-client-id-employee-id/${employeeId}`, header);
 };
 
 const fetchSingleDocument = id => {

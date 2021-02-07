@@ -1,5 +1,5 @@
 import actions from './actions';
-import { fetchAllDocuments, fetchSingleDocument } from '../../config/dataService/documentDataService';
+import { fetchAllDocuments, fetchSingleDocument } from '../../config/dataService/employeeDocumentDataService';
 
 const {
   singleDocumentSuccess,
