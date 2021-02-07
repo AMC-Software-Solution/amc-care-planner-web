@@ -89,6 +89,8 @@ const HolidayListTable = () => {
                         requestedDate	,
                         approvedById	,
                         approvedByEmployeeCode	,
+
+                        
                                 action: (
                                   <div className="table-actions">
                                     <>
