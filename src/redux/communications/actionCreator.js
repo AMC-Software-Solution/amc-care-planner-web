@@ -1,67 +1,34 @@
 import actions from './actions';
-import initialState from '../../demoData/communication.json';
-// import {fetchAllCommunications} from '../../config/dataService/communicationDataService';
+import { fetchAllCommunications, fetchSingleCommunication } from '../../config/dataService/communicationDataService';
 
 const {
-  singleCommunicationBegin,
   singleCommunicationSuccess,
   singleCommunicationErr,
 
-  filterCommunicationBegin,
-  filterCommunicationSuccess,
-  filterCommunicationErr,
-
-  sortingCommunicationBegin,
-  sortingCommunicationSuccess,
-  sortingCommunicationErr,
+  CommunicationsSuccess,
+  CommunicationsErr,
 } = actions;
 
-const filterSinglePage = paramsId => {
+const getAllCommunications = employeeId => {
   return async dispatch => {
     try {
-      dispatch(singleCommunicationBegin());
-      const data = initialState.filter(communication => {
-        return communication.id === parseInt(paramsId, 10);
-      });
-      dispatch(singleCommunicationSuccess(data));
+      const response = await fetchAllCommunications(employeeId);
+      dispatch(CommunicationsSuccess(response.data));
     } catch (err) {
-      dispatch(singleCommunicationErr(err));
+      dispatch(CommunicationsErr(err.toString()));
     }
   };
 };
 
-const filterCommunicationByGender = gender => {
+const getSingleCommunication = id => {
   return async dispatch => {
     try {
-      dispatch(filterCommunicationBegin());
-      const data = initialState.filter(communication => {
-        if (gender !== 'all') {
-          return communication.gender === gender;
-        }
-        return initialState;
-      });
-      dispatch(filterCommunicationSuccess(data));
+      const response = await fetchSingleCommunication(id);
+      dispatch(singleCommunicationSuccess(response.data));
     } catch (err) {
-      dispatch(filterCommunicationErr(err.toString()));
+      dispatch(singleCommunicationErr(err.toString()));
     }
   };
 };
 
-const sortingCommunicationByCommunication = sortBy => {
-  return async dispatch => {
-    try {
-      dispatch(sortingCommunicationBegin());
-      const data = initialState.sort((a, b) => {
-        return b[sortBy] - a[sortBy];
-      });
-
-      setTimeout(() => {
-        dispatch(sortingCommunicationSuccess(data));
-      }, 500);
-    } catch (err) {
-      dispatch(sortingCommunicationErr(err));
-    }
-  };
-};
-
-export { filterSinglePage, filterCommunicationByGender, sortingCommunicationByCommunication };
+export { getAllCommunications, getSingleCommunication };

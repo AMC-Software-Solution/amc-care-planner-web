@@ -26,14 +26,13 @@ import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
 import { branchReducer, singleBranchReducer } from './branch/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
 import { tasksReducer, SingleTaskReducer } from './tasks/reducers';
+import { communicationsReducer, SingleCommunicationReducer } from './communications/reducers';
 import {holidaysReducer, SingleHolidayReducer } from './ holidays/reducers'
-
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
 import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employeeLocation/reducers';
 import { timesheetsReducer, SingleTimesheetReducer } from './timesheet/reducers';
 import { deviceReducer, SingleDeviceReducer } from './device/reducers';
-import { communicationReducer, SingleCommunicationReducer } from './communications/reducers';
 import { documentReducer, SingleDocumentReducer } from './document/reducers';
 import { disabilityReducer, SingleDisabilityReducer } from './disabilities/reducers';
 import kanbanBoardReducer from './kanban/reducers';
@@ -83,7 +82,7 @@ const rootReducers = combineReducers({
   timesheet: SingleTimesheetReducer,
   devices: deviceReducer,
   device: SingleDeviceReducer,
-  communications: communicationReducer,
+  communications: communicationsReducer,
   communication: SingleCommunicationReducer,
   documents: documentReducer,
   document: SingleDocumentReducer,

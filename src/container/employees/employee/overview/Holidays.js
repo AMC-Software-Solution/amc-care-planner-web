@@ -8,10 +8,12 @@ import { CardToolbox, TableWrapper } from '../../../styled';
 
 import { PageHeader } from '../../../../components/page-headers/page-headers';
 import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
+ import { Main } from '../../../styled';
 
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 import { getAllHolidays } from '../../../../redux/ holidays/actionCreator';
+
 
 
 
@@ -244,8 +246,17 @@ const HolidayListTable = () => {
                 placeholder="Search by Name"
                 width="100%"
                 patterns
+                
+                
               />
+           <Button size="small" type="primary" >
+               <FeatherIcon icon="plus" size={14} />
+            Create New Holiday
+            </Button>
             </>
+            
+            
+            
           }
         />
       </CardToolbox>
@@ -270,3 +281,45 @@ const HolidayListTable = () => {
 };
 
 export default HolidayListTable;
+
+
+
+
+
+
+// import React from 'react';
+// import { Row } from 'antd';
+// import FeatherIcon from 'feather-icons-react';
+// import { PageHeader } from '../../../../components/page-headers/page-headers';
+// import { Button } from '../../../../components/buttons/buttons';
+// import { Main } from '../../../styled';
+// import { ExportButtonPageHeader } from '../../../../components/buttons/export-button/export-button';
+// import { CalendarButtonPageHeader } from '../../../../components/buttons/calendar-button/calendar-button';
+
+// const Communications = () => {
+//   return (
+//     <>
+//       <PageHeader
+//         ghost
+//         title="Communications"
+//         buttons={[
+//           <div key="1" className="page-header-actions">
+//             <CalendarButtonPageHeader />
+//             <ExportButtonPageHeader />
+//             <Button size="small" type="primary">
+//               <FeatherIcon icon="plus" size={14} />
+//               Add New
+//             </Button>
+//           </div>,
+//         ]}
+//       />
+//       <Main>
+//         <Row justify="center" gutter={25}>
+//           <div>WELCOME!</div>
+//         </Row>
+//       </Main>
+//     </>
+//   );
+// };
+
+// export default Communications;
