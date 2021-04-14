@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { EmployeeTableStyleWrapper } from '../style';
@@ -11,38 +10,8 @@ import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
 
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
-import { getAllTasks } from '../../../../redux/tasks/actionCreator';
 
-const TaskListTable = () => {
-  const { employeeId } = useParams();
-  const dispatch = useDispatch();
-  const { searchData, tasks } = useSelector(state => {
-    return {
-      searchData: state.headerSearchData,
-      tasks: state.tasks.data,
-    };
-  });
-
-  const [state, setState] = useState({
-    notData: searchData,
-    selectedRowKeys: 0,
-    selectedRows: 0,
-  });
-
-  useEffect(() => {
-    dispatch(getAllTasks(employeeId));
-  }, [dispatch, employeeId]);
-
-  const { notData } = state;
-
-  const handleSearch = searchText => {
-    const data = searchData.filter(item => item.title.toUpperCase().startsWith(searchText.toUpperCase()));
-    setState({
-      ...state,
-      notData: data,
-    });
-  };
-
+const Task = ({tasks}) => {
   const tasksTableData = [];
   if (tasks) {
     tasks.map(task => {
@@ -232,13 +201,7 @@ const TaskListTable = () => {
           subTitle={
             <>
               <span className="title-counter">{tasksTableData.length} Your Tasks</span>
-              <AutoComplete
-                onSearch={handleSearch}
-                dataSource={notData}
-                placeholder="Search by Name"
-                width="100%"
-                patterns
-              />
+              <AutoComplete placeholder="Search by Name" width="100%" patterns />
             </>
           }
         />
@@ -263,4 +226,4 @@ const TaskListTable = () => {
   );
 };
 
-export default TaskListTable;
+export default Task;

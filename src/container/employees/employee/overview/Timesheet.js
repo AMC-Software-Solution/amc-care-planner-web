@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { EmployeeTableStyleWrapper } from '../style';
@@ -11,38 +10,8 @@ import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
 
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
-import { getAllTimesheets } from '../../../../redux/timesheet/actionCreator';
 
-const TimesheetListTable = () => {
-  const { employeeId } = useParams();
-  const dispatch = useDispatch();
-  const { searchData, timesheets } = useSelector(state => {
-    return {
-      searchData: state.headerSearchData,
-      timesheets: state.timesheets.data,
-    };
-  });
-
-  const [state, setState] = useState({
-    notData: searchData,
-    selectedRowKeys: 0,
-    selectedRows: 0,
-  });
-
-  useEffect(() => {
-    dispatch(getAllTimesheets(employeeId));
-  }, [dispatch, employeeId]);
-
-  const { notData } = state;
-
-  const handleSearch = searchText => {
-    const data = searchData.filter(item => item.title.toUpperCase().startsWith(searchText.toUpperCase()));
-    setState({
-      ...state,
-      notData: data,
-    });
-  };
-
+const Timesheet = ({ timesheets }) => {
   const timesheetsTableData = [];
   if (timesheets) {
     timesheets.map(timesheet => {
@@ -163,7 +132,7 @@ const TimesheetListTable = () => {
       dataIndex: 'careProviderEmployeeCode',
       key: 'careProviderEmployeeCode',
     },
-    
+
     {
       title: 'Service User Code',
       dataIndex: 'serviceUserServiceUserCode',
@@ -221,13 +190,7 @@ const TimesheetListTable = () => {
           subTitle={
             <>
               <span className="title-counter">{timesheetsTableData.length} Your Timesheets</span>
-              <AutoComplete
-                onSearch={handleSearch}
-                dataSource={notData}
-                placeholder="Search by Name"
-                width="100%"
-                patterns
-              />
+              <AutoComplete placeholder="Search by Name" width="100%" patterns />
             </>
           }
         />
@@ -252,4 +215,4 @@ const TimesheetListTable = () => {
   );
 };
 
-export default TimesheetListTable;
+export default Timesheet;

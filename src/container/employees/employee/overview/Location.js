@@ -1,23 +1,8 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 import { GoogleMaps } from '../../../../components/maps/google-maps';
 
-import { getSingleEmployeeLocation } from '../../../../redux/employeeLocation/actionCreator';
-
-const Location = () => {
-  const dispatch = useDispatch();
-  const { id } = useParams();
-  const { employeeLocation } = useSelector(state => {
-    return {
-      employeeLocation: state.employeeLocation.data,
-    };
-  });
-
-  useEffect(() => {
-    dispatch(getSingleEmployeeLocation(id));
-  }, [dispatch, id]);
+const Location = ({employeeLocation}) => {
   return (
     <Cards headless>
       {employeeLocation != null ? (

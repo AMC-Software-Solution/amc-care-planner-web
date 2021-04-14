@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Skeleton, Table } from 'antd';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
 
-const Branch = branch => {
+const Branch = ({branch}) => {
   const columns = [
     {
       title: 'Branch ID',

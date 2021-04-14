@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { EmployeeTableStyleWrapper } from '../style';
@@ -8,110 +7,74 @@ import { CardToolbox, TableWrapper } from '../../../styled';
 
 import { PageHeader } from '../../../../components/page-headers/page-headers';
 import { AutoComplete } from '../../../../components/autoComplete/autoComplete';
- import { Main } from '../../../styled';
 
 import { Button } from '../../../../components/buttons/buttons';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
-import { getAllHolidays } from '../../../../redux/ holidays/actionCreator';
 
-
-
-
-
-const HolidayListTable = () => {
-  const { employeeId } = useParams();
-  const dispatch = useDispatch();
-  const { searchData, holidays } = useSelector(state => {
-    return {
-      searchData: state.headerSearchData,
-      holidays: state.holidays.data,
-    };
-  });
-
-  const [state, setState] = useState({
-    notData: searchData,
-    selectedRowKeys: 0,
-    selectedRows: 0,
-  });
-
-  useEffect(() => {
-    dispatch(getAllHolidays(employeeId));
-  }, [dispatch, employeeId]);
-
-  const { notData } = state;
-
-  const handleSearch = searchText => {
-    const data = searchData.filter(item => item.title.toUpperCase().startsWith(searchText.toUpperCase()));
-    setState({
-      ...state,
-      notData: data,
-    });
-  };
-
+const Holiday = ({holidays}) => {
   const holidaysTableData = [];
   if (holidays) {
-                holidays.map(holiday => {
-                          const {
-                            id,
-                            description	,
-                            employeeHolidayType	,
-                            employeeId	,
-                            employeeEmployeeCode	,
-                            createdDate	,
-                            startDate,
-                            endDate	,
-                            approvedDate	,
-                            clientId	,
-                            hasExtraData	,
-                            lastUpdatedDate	,
-                            note	,
-                            rejectionReason	,
-                            holidayStatus	,
-                            requestedDate	,
-                            approvedById	,
-                            approvedByEmployeeCode	,
-                          } = holiday;
-                          return holidaysTableData.push({
-                            key: id,
-                            id,
-                        description	,
-                        employeeHolidayType	,
-                        employeeId	,
-                        employeeEmployeeCode	,
-                        createdDate	,
-                        startDate,
-                        endDate	,
-                        approvedDate	,
-                        clientId	,
-                        hasExtraData	,
-                        lastUpdatedDate	,
-                        note	,
-                        rejectionReason	,
-                        holidayStatus	,
-                        requestedDate	,
-                        approvedById	,
-                        approvedByEmployeeCode	,
+    holidays.map(holiday => {
+      const {
+        id,
+        description,
+        employeeHolidayType,
+        employeeId,
+        employeeEmployeeCode,
+        createdDate,
+        startDate,
+        endDate,
+        approvedDate,
+        clientId,
+        hasExtraData,
+        lastUpdatedDate,
+        note,
+        rejectionReason,
+        holidayStatus,
+        requestedDate,
+        approvedById,
+        approvedByEmployeeCode,
+      } = holiday;
+      return holidaysTableData.push({
+        key: id,
+        id,
+        description,
+        employeeHolidayType,
+        employeeId,
+        employeeEmployeeCode,
+        createdDate,
+        startDate,
+        endDate,
+        approvedDate,
+        clientId,
+        hasExtraData,
+        lastUpdatedDate,
+        note,
+        rejectionReason,
+        holidayStatus,
+        requestedDate,
+        approvedById,
+        approvedByEmployeeCode,
 
-                        
-                                action: (
-                                  <div className="table-actions">
-                                    <>
-                                      <Button className="btn-icon" type="primary" shape="circle">
-                                        <Link to={`/admin/holidays/holiday/holidayrofile/${id}`}>
-                                          <FeatherIcon icon="eye" size={16} />
-                                        </Link>
-                                      </Button>
-                                      <Button className="btn-icon" type="info" to="#" shape="circle">
-                                        <FeatherIcon icon="edit" size={16} />
-                                      </Button>
-                                      <Button className="btn-icon" type="danger" to="#" shape="circle">
-                                        <FeatherIcon icon="trash-2" size={16} />
-                                      </Button>
-                                    </>
-                                  </div>
-                                ),
-                              });
-                });
+        action: (
+          <div className="table-actions">
+            <>
+              <Button className="btn-icon" type="primary" shape="circle">
+                <Link to={`/admin/holidays/holiday/holidayrofile/${id}`}>
+                  <FeatherIcon icon="eye" size={16} />
+                </Link>
+              </Button>
+              <Button className="btn-icon" type="info" to="#" shape="circle">
+                <FeatherIcon icon="edit" size={16} />
+              </Button>
+              <Button className="btn-icon" type="danger" to="#" shape="circle">
+                <FeatherIcon icon="trash-2" size={16} />
+              </Button>
+            </>
+          </div>
+        ),
+      });
+    });
   }
 
   const holidaysTableColumns = [
@@ -140,7 +103,7 @@ const HolidayListTable = () => {
       dataIndex: 'note',
       key: 'note',
     },
-    
+
     {
       title: 'Employee Code',
       dataIndex: 'employeeEmployeeCode',
@@ -192,8 +155,6 @@ const HolidayListTable = () => {
       key: 'lastUpdatedDate',
     },
 
-   
-
     {
       title: 'Rejection Reason',
       dataIndex: 'rejectionReason',
@@ -210,13 +171,13 @@ const HolidayListTable = () => {
       dataIndex: 'requestedDate',
       key: 'requestedDate',
     },
-    
+
     {
       title: 'ApprovedBy Employee Code',
       dataIndex: 'approvedByEmployeeCode',
       key: 'approvedByEmployeeCode',
     },
-    
+
     {
       title: 'Actions',
       dataIndex: 'action',
@@ -242,23 +203,12 @@ const HolidayListTable = () => {
           subTitle={
             <>
               <span className="title-counter">{holidaysTableData.length} Your Holidays</span>
-              <AutoComplete
-                onSearch={handleSearch}
-                dataSource={notData}
-                placeholder="Search by Name"
-                width="100%"
-                patterns
-                
-                
-              />
-           <Button size="small" type="primary" >
-               <FeatherIcon icon="plus" size={14} />
-            Create New Holiday
-            </Button>
+              <AutoComplete placeholder="Search by Name" width="100%" patterns />
+              <Button size="small" type="primary">
+                <FeatherIcon icon="plus" size={14} />
+                Create New Holiday
+              </Button>
             </>
-            
-            
-            
           }
         />
       </CardToolbox>
@@ -282,46 +232,4 @@ const HolidayListTable = () => {
   );
 };
 
-export default HolidayListTable;
-
-
-
-
-
-
-// import React from 'react';
-// import { Row } from 'antd';
-// import FeatherIcon from 'feather-icons-react';
-// import { PageHeader } from '../../../../components/page-headers/page-headers';
-// import { Button } from '../../../../components/buttons/buttons';
-// import { Main } from '../../../styled';
-// import { ExportButtonPageHeader } from '../../../../components/buttons/export-button/export-button';
-// import { CalendarButtonPageHeader } from '../../../../components/buttons/calendar-button/calendar-button';
-
-// const Communications = () => {
-//   return (
-//     <>
-//       <PageHeader
-//         ghost
-//         title="Communications"
-//         buttons={[
-//           <div key="1" className="page-header-actions">
-//             <CalendarButtonPageHeader />
-//             <ExportButtonPageHeader />
-//             <Button size="small" type="primary">
-//               <FeatherIcon icon="plus" size={14} />
-//               Add New
-//             </Button>
-//           </div>,
-//         ]}
-//       />
-//       <Main>
-//         <Row justify="center" gutter={25}>
-//           <div>WELCOME!</div>
-//         </Row>
-//       </Main>
-//     </>
-//   );
-// };
-
-// export default Communications;
+export default Holiday;
