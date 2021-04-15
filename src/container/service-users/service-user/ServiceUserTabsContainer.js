@@ -2,27 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import AccessLogs from './tabs/AccessLogs';
-import Branch from './tabs/Branches';
-import Communication from './tabs/Communications';
-import Device from './tabs/Devices';
-import Document from './tabs/Documents';
-import General from './tabs/General';
-import Holiday from './tabs/Holidays';
-import Location from './tabs/Location';
-import Notification from './tabs/Notifications';
-import Task from './tabs/Tasks';
-import Timesheet from './tabs/Timesheet';
-
-import { getAllTimesheets } from '../../../redux/timesheet/actionCreator';
-import { getAllTasks } from '../../../redux/tasks/actionCreator';
-import { getSingleEmployeeLocation } from '../../../redux/employeeLocation/actionCreator';
-import { getAllHolidays } from '../../../redux/ holidays/actionCreator';
-import { getSingleBranch } from '../../../redux/branch/actionCreator';
-import { getAllDocuments } from '../../../redux/documents/actionCreator';
-import { getAllCommunications } from '../../../redux/communications/actionCreator';
-
-const EmployeeTabsContainer = () => {
+const ServiceUserTabsContainer = () => {
   const { employeeId, id } = useParams();
   const dispatch = useDispatch();
 
@@ -66,4 +46,4 @@ const EmployeeTabsContainer = () => {
   );
 };
 
-export default EmployeeTabsContainer;
+export default ServiceUserTabsContainer;
