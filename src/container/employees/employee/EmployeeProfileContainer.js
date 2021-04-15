@@ -2,23 +2,23 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { Row, Col, Skeleton } from 'antd';
 import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { SettingWrapper } from './overview/style';
+import { SettingWrapper } from './tabs/style';
 import { Main } from '../../styled';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
 import { getSingleEmployee } from '../../../redux/employees/actionCreator';
 
-const EmployeeCard = lazy(() => import('./overview/EmployeeProfile'));
-const General = lazy(() => import('./overview/General'));
-const Tasks = lazy(() => import('./overview/Tasks'));
-const Holidays = lazy(() => import('./overview/Holidays'));
-const Timesheet = lazy(() => import('./overview/Timesheet'));
-const Notifications = lazy(() => import('./overview/Notifications'));
-const AccessLogs = lazy(() => import('./overview/AccessLogs'));
-const Communications = lazy(() => import('./overview/Communications'));
-const Documents = lazy(() => import('./overview/Documents'));
-const Location = lazy(() => import('./overview/Location'));
-const Devices = lazy(() => import('./overview/Devices'));
+const EmployeeCard = lazy(() => import('./tabs/EmployeeProfile'));
+const General = lazy(() => import('./tabs/General'));
+const Tasks = lazy(() => import('./tabs/Tasks'));
+const Holidays = lazy(() => import('./tabs/Holidays'));
+const Timesheet = lazy(() => import('./tabs/Timesheet'));
+const Notifications = lazy(() => import('./tabs/Notifications'));
+const AccessLogs = lazy(() => import('./tabs/AccessLogs'));
+const Communications = lazy(() => import('./tabs/Communications'));
+const Documents = lazy(() => import('./tabs/Documents'));
+const Location = lazy(() => import('./tabs/Location'));
+const Devices = lazy(() => import('./tabs/Devices'));
 
 const EmployeeProfileContainer = () => {
   const { id } = useParams();
