@@ -105,7 +105,7 @@ const EmployeeListTable = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/employees/employee/employeeProfile/${id}`}>
+                <Link to={`/admin/employees/employee/tabs/employee-profile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>

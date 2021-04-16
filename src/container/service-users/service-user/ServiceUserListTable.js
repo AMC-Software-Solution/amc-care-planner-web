@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Table } from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
-import { EmployeeTableStyleWrapper } from '../style';
+import { EmployeeTableStyleWrapper } from '../../employees/employee/style';
 import { CardToolbox, TableWrapper } from '../../styled';
 
 import { PageHeader } from '../../../components/page-headers/page-headers';
@@ -105,7 +105,7 @@ const ServiceUserListTable = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/employees/employee/employeeProfile/${id}`}>
+                <Link to={`/admin/service-users/service-user/tabs/service-user-profile${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>
