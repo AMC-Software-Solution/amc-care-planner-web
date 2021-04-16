@@ -45,62 +45,63 @@ const ServiceUserListTable = () => {
 
   const serviceUsersTableData = [];
   if (serviceUsers) {
-    serviceUsers.map(employee => {
+    serviceUsers.map(serviceUser => {
       const {
         id,
         firstName,
-        middleInitial,
+        middleName,
         lastName,
         preferredName,
-        gender,
-        employeeCode,
         email,
-        nationalInsuranceNumber,
-        employeeContractType,
-        pinCode,
-        transportMode,
-        address,
-        postCode,
+        serviceUserCode,
         dateOfBirth,
-        photoUrl,
-        acruedHolidayHours,
-        lastUpdatedDate,
-        clientId,
-        userId,
-        nationalityCountryName,
-      } = employee;
+        lastVisitDate,
+        startDate,
+        supportType,
+        serviceUserCategory,
+        vulnerability,
+        servicePriority,
+        source,
+        firstLanguage,
+        interpreterRequired,
+        profilePhotoUrl,
+        lastRecordedHeight,
+        lastRecordedWeight,
+        hasMedicalCondition,
+        medicalConditionSummary,
+      } = serviceUser;
       return serviceUsersTableData.push({
         key: id,
         id,
-        employee: (
+        serviceUser: (
           <div className="user-info">
             <figure>
-              <img style={{ width: '50px' }} src={photoUrl} alt="" />
+              <img style={{ width: '50px' }} src={profilePhotoUrl} alt="" />
             </figure>
             <figcaption>
               <Heading className="user-magac" as="h6">
-                {firstName} {middleInitial} {lastName}
+                {firstName} {middleName} {lastName}
               </Heading>
-              <span className="user-designation">
-                {address} {postCode}
-              </span>
             </figcaption>
           </div>
         ),
         preferredName,
-        gender,
         email,
-        nationalInsuranceNumber,
+        startDate,
         dateOfBirth,
-        employeeCode,
-        employeeContractType,
-        pinCode,
-        transportMode,
-        acruedHolidayHours,
-        clientId,
-        userId,
-        nationality: nationalityCountryName,
-        lastUpdatedDate,
+        serviceUserCode,
+        supportType,
+        lastVisitDate,
+        serviceUserCategory,
+        vulnerability,
+        servicePriority,
+        source,
+        firstLanguage,
+        interpreterRequired,
+        lastRecordedHeight,
+        lastRecordedWeight,
+        hasMedicalCondition,
+        medicalConditionSummary,
         action: (
           <div className="table-actions">
             <>
@@ -129,9 +130,9 @@ const ServiceUserListTable = () => {
       key: 'id',
     },
     {
-      title: 'Employee',
-      dataIndex: 'employee',
-      key: 'employee',
+      title: 'Service User',
+      dataIndex: 'serviceUser',
+      key: 'serviceUser',
     },
     {
       title: 'PreferredName',
@@ -139,9 +140,9 @@ const ServiceUserListTable = () => {
       key: 'preferredName',
     },
     {
-      title: 'Gender',
-      dataIndex: 'gender',
-      key: 'gender',
+      title: 'Start Date',
+      dataIndex: 'startDate',
+      key: 'startDate',
     },
     {
       title: 'Email',
@@ -149,9 +150,9 @@ const ServiceUserListTable = () => {
       key: 'email',
     },
     {
-      title: 'National Insurance Number',
-      dataIndex: 'nationalInsuranceNumber',
-      key: 'nationalInsuranceNumber',
+      title: 'Service User Category',
+      dataIndex: 'serviceUserCategory',
+      key: 'serviceUserCategory',
     },
 
     {
@@ -161,9 +162,9 @@ const ServiceUserListTable = () => {
     },
 
     {
-      title: 'Employee Code',
-      dataIndex: 'employeeCode',
-      key: 'employeeCode',
+      title: 'Service User Code',
+      dataIndex: 'serviceUserCode',
+      key: 'serviceUserCode',
     },
 
     {
@@ -234,7 +235,7 @@ const ServiceUserListTable = () => {
       <CardToolbox>
         <PageHeader
           ghost
-          title="Employee List Data Table"
+          title="Service-User List Data Table"
           subTitle={
             <>
               <span className="title-counter">{serviceUsersTableData.length} Employees</span>
