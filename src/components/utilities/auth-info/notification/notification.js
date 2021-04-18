@@ -4,7 +4,7 @@ import FeatherIcon from 'feather-icons-react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Popover } from '../../../popup/popup';
-import { readNotificationList } from '../../../../redux/notification/actionCreator';
+import { readNotificationList } from '../../../../container/employees/employee/notification/redux/actionCreator';
 
 const NotificationBox = () => {
   const dispatch = useDispatch();

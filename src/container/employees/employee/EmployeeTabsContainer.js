@@ -2,25 +2,25 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import AccessLogs from './tabs/AccessLogs';
-import Branch from './tabs/Branches';
-import Communication from './tabs/Communications';
-import Device from './tabs/Devices';
-import Document from './tabs/Documents';
-import General from './tabs/General';
-import Holiday from './tabs/Holidays';
-import Location from './tabs/Location';
-import Notification from './tabs/Notifications';
-import Task from './tabs/Tasks';
-import Timesheet from './tabs/Timesheet';
+import AccessLogs from './access-logs/AccessLogs';
+import Branch from './branch/Branches';
+import Communication from './communication/Communications';
+import Device from './device/Devices';
+import Document from './document/Documents';
+import General from './general/General';
+import Holiday from './holiday/Holidays';
+import Location from './location/Location';
+import Notification from './notification/Notifications';
+import Task from './task/Tasks';
+import Timesheet from './timesheet/Timesheet';
 
-import { getAllTimesheets } from '../../../redux/timesheet/actionCreator';
-import { getAllTasks } from '../../../redux/tasks/actionCreator';
-import { getSingleEmployeeLocation } from '../../../redux/employeeLocation/actionCreator';
-import { getAllHolidays } from '../../../redux/ holidays/actionCreator';
-import { getSingleBranch } from '../../../redux/branch/actionCreator';
-import { getAllDocuments } from '../../../redux/documents/actionCreator';
-import { getAllCommunications } from '../../../redux/communications/actionCreator';
+import { getAllTimesheets } from './timesheet/redux/actionCreator';
+import { getAllTasks } from './task/redux/actionCreator';
+import { getSingleEmployeeLocation } from './location/redux/actionCreator';
+import { getAllHolidays } from './holiday/redux/actionCreator';
+import { getSingleBranch } from './branch/redux/actionCreator';
+import { getAllDocuments } from './document/redux/actionCreator';
+import { getAllCommunications } from './communication/redux/actionCreator';
 
 const EmployeeTabsContainer = () => {
   const { employeeId, id } = useParams();

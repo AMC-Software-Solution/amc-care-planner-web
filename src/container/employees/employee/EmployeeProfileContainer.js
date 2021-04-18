@@ -2,23 +2,23 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { Row, Col, Skeleton } from 'antd';
 import { NavLink, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { SettingWrapper } from './tabs/style';
+import { SettingWrapper } from './profile/style';
 import { Main } from '../../styled';
 import { Cards } from '../../../components/cards/frame/cards-frame';
 
-import { getSingleEmployee } from '../../../redux/employees/actionCreator';
+import { getSingleEmployee } from '../redux/actionCreator';
 
-const EmployeeCard = lazy(() => import('./tabs/EmployeeProfile'));
-const General = lazy(() => import('./tabs/General'));
-const Tasks = lazy(() => import('./tabs/Tasks'));
-const Holidays = lazy(() => import('./tabs/Holidays'));
-const Timesheet = lazy(() => import('./tabs/Timesheet'));
-const Notifications = lazy(() => import('./tabs/Notifications'));
-const AccessLogs = lazy(() => import('./tabs/AccessLogs'));
-const Communications = lazy(() => import('./tabs/Communications'));
-const Documents = lazy(() => import('./tabs/Documents'));
-const Location = lazy(() => import('./tabs/Location'));
-const Devices = lazy(() => import('./tabs/Devices'));
+const EmployeeCard = lazy(() => import('./profile/EmployeeProfile'));
+const General = lazy(() => import('./general/General'));
+const Tasks = lazy(() => import('./task/Tasks'));
+const Holidays = lazy(() => import('./holiday/Holidays'));
+const Timesheet = lazy(() => import('./timesheet/Timesheet'));
+const Notifications = lazy(() => import('./notification/Notifications'));
+const AccessLogs = lazy(() => import('./access-logs/AccessLogs'));
+const Communications = lazy(() => import('./communication/Communications'));
+const Documents = lazy(() => import('./document/Documents'));
+const Location = lazy(() => import('./location/Location'));
+const Devices = lazy(() => import('./device/Devices'));
 
 const EmployeeProfileContainer = () => {
   const { id } = useParams();

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Cards } from '../../components/cards/frame/cards-frame';
 import { GoogleMaps } from '../../components/maps/google-maps';
 
-import { getSingleEmployeeLocation } from '../../redux/employeeLocation/actionCreator';
+import { getSingleEmployeeLocation } from '../employees/employee/location/redux/actionCreator';
 
 const EmployeeLocationMap = () => {
   const dispatch = useDispatch();

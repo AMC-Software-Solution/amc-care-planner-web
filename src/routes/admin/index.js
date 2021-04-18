@@ -1,21 +1,21 @@
 import React, { lazy, Suspense } from 'react';
 import { Spin } from 'antd';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import Dashboard from './dashboard';
-import Administration from './administration';
 import Pages from './pages';
 import Features from './features';
+import Administration from '../../container/administration/routes/administration';
+import Dashboard from '../../container/dashboard/routes/dashboard';
 import withAdminLayout from '../../layout/withAdminLayout';
 
 const Calendars = lazy(() => import('../../container/Calendar'));
 const Calendar = lazy(() => import('../../container/calendar/Calendar'));
 
-const Employees = lazy(() => import('./employees'));
-const ServiceUser = lazy(() => import('./serviceUsers'));
-const Tasks = lazy(() => import('./tasks'));
-const Finance = lazy(() => import('./finance'));
-const Documents = lazy(() => import('./documents'));
-const Events = lazy(() => import('./events'));
+const Employees = lazy(() => import('../../container/employees/routes/employees'));
+const ServiceUser = lazy(() => import('../../container/service-users/routes/serviceUsers'));
+const Tasks = lazy(() => import('../../container/tasks/routes/tasks'));
+const Finance = lazy(() => import('../../container/finance/routes/finance'));
+const Documents = lazy(() => import('../../container/document/routes/documents'));
+const Events = lazy(() => import('../../container/events/routes/events'));
 
 const Admin = () => {
   const { path } = useRouteMatch();

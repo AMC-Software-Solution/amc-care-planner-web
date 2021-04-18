@@ -12,7 +12,7 @@ import { AutoComplete } from '../../../components/autoComplete/autoComplete';
 import Heading from '../../../components/heading/heading';
 import { Button } from '../../../components/buttons/buttons';
 import { Cards } from '../../../components/cards/frame/cards-frame';
-import { getAllServiceUsers } from '../../../redux/service-users/actionCreator';
+import { getAllServiceUsers } from '../redux/actionCreator';
 
 const ServiceUserListTable = () => {
   const dispatch = useDispatch();

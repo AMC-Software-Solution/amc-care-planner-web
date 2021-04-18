@@ -12,7 +12,7 @@ import { AutoComplete } from '../../../components/autoComplete/autoComplete';
 import Heading from '../../../components/heading/heading';
 import { Button } from '../../../components/buttons/buttons';
 import { Cards } from '../../../components/cards/frame/cards-frame';
-import { getAllEmployees } from '../../../redux/employees/actionCreator';
+import { getAllEmployees } from '../redux/actionCreator';
 
 const EmployeeListTable = () => {
   const dispatch = useDispatch();

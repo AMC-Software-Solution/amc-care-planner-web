@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import themeUsersReducer from './themeUsers/reducers';
 import { readMessageReducer } from './message/reducers';
-import { readNotificationReducer } from './notification/reducers';
 import authReducer from './authentication/reducers';
 import ChangeLayoutMode from './themeLayout/reducers';
 import { teamReducer } from './team/reducers';
@@ -22,22 +21,29 @@ import Contact from './contact/reducers';
 import Profile from './profile/reducers';
 import Calender from './calendar/reducers';
 import FileManager from './fileManager/reducers';
-import { employeeReducer, singleEmployeeReducer } from './employees/reducers';
-import { branchReducer, singleBranchReducer } from './branch/reducers';
 import { countryReducer, SingleCountryReducer } from './countries/reducers';
-import { tasksReducer, SingleTaskReducer } from './tasks/reducers';
-import { communicationsReducer, SingleCommunicationReducer } from './communications/reducers';
-import { holidaysReducer, SingleHolidayReducer } from './ holidays/reducers';
+import { disabilityReducer, SingleDisabilityReducer } from './disabilities/reducers';
 import { eligibilityReducer, SingleEligibilityReducer } from './eligibilities/reducers';
 import { availabilityReducer, SingleAvailabilityReducer } from './availabilities/reducers';
-import { SingleEmployeeLocationReducer, employeeLocationReducer } from './employeeLocation/reducers';
-import { timesheetsReducer, SingleTimesheetReducer } from './timesheet/reducers';
-import { deviceReducer, SingleDeviceReducer } from './device/reducers';
-import { documentsReducer, SingleDocumentReducer } from './documents/reducers';
-import { disabilityReducer, SingleDisabilityReducer } from './disabilities/reducers';
-import { singleServiceUserReducer, serviceUsersReducer } from './service-users/reducers';
-
 import kanbanBoardReducer from './kanban/reducers';
+import { holidaysReducer, SingleHolidayReducer } from '../container/employees/employee/holiday/redux/reducers';
+import {
+  SingleEmployeeLocationReducer,
+  employeeLocationReducer,
+} from '../container/employees/employee/location/redux/reducers';
+import { timesheetsReducer, SingleTimesheetReducer } from '../container/employees/employee/timesheet/redux/reducers';
+import { deviceReducer, SingleDeviceReducer } from '../container/employees/employee/device/redux/reducers';
+import { documentsReducer, SingleDocumentReducer } from '../container/employees/employee/document/redux/reducers';
+import { singleServiceUserReducer, serviceUsersReducer } from '../container/service-users/redux/reducers';
+
+import {
+  communicationsReducer,
+  SingleCommunicationReducer,
+} from '../container/employees/employee/communication/redux/reducers';
+import { tasksReducer, SingleTaskReducer } from '../container/employees/employee/task/redux/reducers';
+import { branchReducer, singleBranchReducer } from '../container/employees/employee/branch/redux/reducers';
+import { employeeReducer, singleEmployeeReducer } from '../container/employees/redux/reducers';
+import { readNotificationReducer } from '../container/employees/employee/notification/redux/reducers';
 
 const rootReducers = combineReducers({
   themeUsers: themeUsersReducer,
