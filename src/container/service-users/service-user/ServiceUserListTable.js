@@ -55,12 +55,9 @@ const ServiceUserListTable = () => {
         email,
         serviceUserCode,
         dateOfBirth,
-        lastVisitDate,
-        startDate,
         supportType,
         serviceUserCategory,
         vulnerability,
-        servicePriority,
         source,
         firstLanguage,
         interpreterRequired,
@@ -87,14 +84,11 @@ const ServiceUserListTable = () => {
         ),
         preferredName,
         email,
-        startDate,
         dateOfBirth,
         serviceUserCode,
         supportType,
-        lastVisitDate,
         serviceUserCategory,
         vulnerability,
-        servicePriority,
         source,
         firstLanguage,
         interpreterRequired,
@@ -106,7 +100,7 @@ const ServiceUserListTable = () => {
           <div className="table-actions">
             <>
               <Button className="btn-icon" type="primary" shape="circle">
-                <Link to={`/admin/service-users/service-user/tabs/service-user-profile${id}`}>
+                <Link to={`/admin/service-users/service-user/profile/${id}`}>
                   <FeatherIcon icon="eye" size={16} />
                 </Link>
               </Button>
@@ -130,9 +124,9 @@ const ServiceUserListTable = () => {
       key: 'id',
     },
     {
-      title: 'Service User',
-      dataIndex: 'serviceUser',
-      key: 'serviceUser',
+      title: 'Service User Code',
+      dataIndex: 'serviceUserCode',
+      key: 'serviceUserCode',
     },
     {
       title: 'PreferredName',
@@ -140,9 +134,9 @@ const ServiceUserListTable = () => {
       key: 'preferredName',
     },
     {
-      title: 'Start Date',
-      dataIndex: 'startDate',
-      key: 'startDate',
+      title: 'Support Type',
+      dataIndex: 'supportType',
+      key: 'supportType',
     },
     {
       title: 'Email',
@@ -168,50 +162,50 @@ const ServiceUserListTable = () => {
     },
 
     {
-      title: 'Employee Contract Type',
-      dataIndex: 'employeeContractType',
-      key: 'employeeContractType',
+      title: 'Interpreter Required',
+      dataIndex: 'interpreterRequired',
+      key: 'interpreterRequired',
     },
     {
-      title: 'PIN Code',
-      dataIndex: 'pinCode',
-      key: 'pinCode',
-    },
-
-    {
-      title: 'Transport Mode',
-      dataIndex: 'transportMode',
-      key: 'transportMode',
+      title: 'LastRecorded Height',
+      dataIndex: 'lastRecordedHeight',
+      key: 'lastRecordedHeight',
     },
 
     {
-      title: 'Acrued Holiday Hours',
-      dataIndex: 'acruedHolidayHours',
-      key: 'acruedHolidayHours',
+      title: 'Has Medical Condition',
+      dataIndex: 'hasMedicalCondition',
+      key: 'hasMedicalCondition',
     },
 
     {
-      title: 'Client ID',
-      dataIndex: 'clientId',
-      key: 'clientId',
+      title: 'Medical Condition Summary',
+      dataIndex: 'medicalConditionSummary',
+      key: 'medicalConditionSummary',
     },
 
     {
-      title: 'User Id',
-      dataIndex: 'userId',
-      key: 'userId',
+      title: 'First Language',
+      dataIndex: 'firstLanguage',
+      key: 'firstLanguage',
     },
 
     {
-      title: 'Nationality',
-      dataIndex: 'nationality',
-      key: 'nationality',
+      title: 'Vulnerability',
+      dataIndex: 'vulnerability',
+      key: 'vulnerability',
     },
 
     {
-      title: 'Last Updated Date',
-      dataIndex: 'lastUpdatedDate',
-      key: 'lastUpdatedDate',
+      title: 'Source',
+      dataIndex: 'source',
+      key: 'source',
+    },
+
+    {
+      title: 'Last Recorded Weight',
+      dataIndex: 'lastRecordedWeight',
+      key: 'lastRecordedWeight',
     },
 
     {

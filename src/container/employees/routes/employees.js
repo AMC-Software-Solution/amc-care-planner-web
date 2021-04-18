@@ -17,7 +17,7 @@ const EmployeesRoutes = () => {
   return (
     <Switch>
       <Route path={`${path}/employee/view/list`} component={EmployeeListTable} />
-      <Route path={`${path}/employee/employeeProfile/:id`} component={EmployeeProfileContainer} />
+      <Route path={`${path}/employee/profile/:id`} component={EmployeeProfileContainer} />
       <Route path={`${path}/rotas`} component={Rotas} />
       <Route path={`${path}/appraisals`} component={Appraisals} />
       <Route path={`${path}/spot-check`} component={SpotCheck} />
