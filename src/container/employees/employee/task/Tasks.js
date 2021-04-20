@@ -202,6 +202,11 @@ const Task = ({tasks}) => {
             <>
               <span className="title-counter">{tasksTableData.length} Your Tasks</span>
               <AutoComplete placeholder="Search by Name" width="100%" patterns />
+              <Button size="small" type="primary">
+                <FeatherIcon icon="plus" size={14} />
+                Create New Tasks
+              </Button>
+
             </>
           }
         />

@@ -184,6 +184,11 @@ const Communication = ({communications}) => {
             <>
               <span className="title-counter">{communicationsTableData.length} Your Communications</span>
               <AutoComplete placeholder="Search by Name" width="100%" patterns />
+              <Button size="small" type="primary">
+                <FeatherIcon icon="plus" size={14} />
+                Create New Communication
+              </Button>
+          
             </>
           }
         />
